@@ -2,9 +2,25 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
-- file: notebooks/Galveston_testbed_2022-09-19
+root: notebooks/Galveston_testbed_2022-09-19  # TODO:make an introduction document
+parts:
+#  - chapters:
+#      - file: notebooks/Galveston_testbed_2022-09-19
+  - caption: Building
+    chapters:
+    - file: notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22
+#      sections:
+#      - file: path/to/part1/chapter2/section1
+  - caption: Power
+    chapters:
+    - file: notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22
+    - file: notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22
+#    - file: path/to/part2/chapter2
+#      sections:
+#      - file: path/to/part2/chapter2/section1
+#  - caption: Social
+#      chapters:
+#          - file: path/to/part2/chapter1
+#            - file: path/to/part2/chapter2
+#              sections:
+#                - file: path/to/part2/chapter2/section1
