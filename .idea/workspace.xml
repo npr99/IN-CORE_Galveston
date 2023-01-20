@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Adding Electric Power Substations' notebook to the book.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_toc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_toc.yml" afterDir="false" />
-    </list>
+    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Adding Electric Power Towers' notebook to the book." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +85,7 @@
       <workItem from="1673486860710" duration="7248000" />
       <workItem from="1673529580877" duration="7493000" />
       <workItem from="1674237869717" duration="612000" />
-      <workItem from="1674242112053" duration="3645000" />
+      <workItem from="1674242112053" duration="3947000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Jupyter Book.">
       <created>1673531499662</created>
@@ -118,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674244074160</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adding Electric Power Towers' notebook to the book.">
+      <created>1674246422088</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674246422088</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +143,7 @@
     <MESSAGE value="Adding Jupyter Book." />
     <MESSAGE value="Modifying Jupyter book + adding some notebooks related to power infrastructure." />
     <MESSAGE value="Adding Electric Power Substations' notebook to the book." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Electric Power Substations' notebook to the book." />
+    <MESSAGE value="Adding Electric Power Towers' notebook to the book." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Electric Power Towers' notebook to the book." />
   </component>
 </project>
