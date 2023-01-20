@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Adding Electric Power Towers' notebook to the book." />
+    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Updating webpage for Jupyter book." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +85,7 @@
       <workItem from="1673486860710" duration="7248000" />
       <workItem from="1673529580877" duration="7493000" />
       <workItem from="1674237869717" duration="612000" />
-      <workItem from="1674242112053" duration="3947000" />
+      <workItem from="1674242112053" duration="4410000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Jupyter Book.">
       <created>1673531499662</created>
@@ -122,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674246422088</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updating webpage for Jupyter book.">
+      <created>1674246741439</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674246741439</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +151,7 @@
     <MESSAGE value="Modifying Jupyter book + adding some notebooks related to power infrastructure." />
     <MESSAGE value="Adding Electric Power Substations' notebook to the book." />
     <MESSAGE value="Adding Electric Power Towers' notebook to the book." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Electric Power Towers' notebook to the book." />
+    <MESSAGE value="Updating webpage for Jupyter book." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating webpage for Jupyter book." />
   </component>
 </project>
