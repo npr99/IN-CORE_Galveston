@@ -2,21 +2,21 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: jupyter_book/notebooks/Galveston_testbed_2022-09-19  # TODO:make an introduction document
+root: notebooks/Galveston_testbed_2022-09-19  # TODO:make an introduction document
 parts:
 #  - chapters:
 #      - file: notebooks/Galveston_testbed_2022-09-19
   - caption: Building
     chapters:
-    - file: jupyter_book/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22
+    - file: notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22
 #      sections:
 #      - file: path/to/part1/chapter2/section1
   - caption: Power
     chapters:
-    - file: jupyter_book/notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22
-    - file: jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22
-    - file: jupyter_book/notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22
-    - file: jupyter_book/notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22
+    - file: notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22
+    - file: notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22
+    - file: notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22
+    - file: notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22
 #    - file: path/to/part2/chapter2
 #      sections:
 #      - file: path/to/part2/chapter2/section1
