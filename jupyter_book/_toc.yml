@@ -15,6 +15,7 @@ parts:
     chapters:
     - file: notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22
     - file: notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22
+    - file: notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22
 #    - file: path/to/part2/chapter2
 #      sections:
 #      - file: path/to/part2/chapter2/section1
