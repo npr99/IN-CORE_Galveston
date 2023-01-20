@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: notebooks # TODO:make an introduction document
+root: intro # TODO:make an introduction document
 parts:
 #  - chapters:
 #      - file: notebooks/Galveston_testbed_2022-09-19
