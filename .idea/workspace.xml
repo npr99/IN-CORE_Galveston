@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Adding several Jupyter notebooks">
+    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Adding interactive environment to Jupyter book.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jupyter_book/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_config.yml" afterDir="false" />
     </list>
@@ -88,7 +88,7 @@
       <workItem from="1674242112053" duration="9106000" />
       <workItem from="1674607464227" duration="12000" />
       <workItem from="1674708077337" duration="676000" />
-      <workItem from="1674709168086" duration="8799000" />
+      <workItem from="1674709168086" duration="9859000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Jupyter Book.">
       <created>1673531499662</created>
@@ -174,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674718972985</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Adding interactive environment to Jupyter book.">
+      <created>1674721045954</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674721045954</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +208,7 @@
     <MESSAGE value="A minor bug is resolved." />
     <MESSAGE value="Adding several Jupyter notebooks + Editing some features of Jupyter book" />
     <MESSAGE value="Adding several Jupyter notebooks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding several Jupyter notebooks" />
+    <MESSAGE value="Adding interactive environment to Jupyter book." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding interactive environment to Jupyter book." />
   </component>
 </project>
