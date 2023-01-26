@@ -27,7 +27,7 @@ repository:
 
 # Control the notebook interface that opens
 launch_buttons:
-  notebook_interface: "jupyterlab" # or "classic"
+  notebook_interface: "classic" # or "jupyterlab"
   binderhub_url: "https://mybinder.org"  # The URL for your BinderHub (e.g., https://mybinder.org)
   thebe: true
   colab_url: "https://colab.research.google.com"

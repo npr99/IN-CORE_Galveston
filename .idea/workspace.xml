@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Adding interactive environment to Jupyter book.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_config.yml" afterDir="false" />
-    </list>
+    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="a minor test." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +85,7 @@
       <workItem from="1674242112053" duration="9106000" />
       <workItem from="1674607464227" duration="12000" />
       <workItem from="1674708077337" duration="676000" />
-      <workItem from="1674709168086" duration="9859000" />
+      <workItem from="1674709168086" duration="10220000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Jupyter Book.">
       <created>1673531499662</created>
@@ -181,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674721045954</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="a minor test.">
+      <created>1674723385918</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674723385918</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +213,7 @@
     <MESSAGE value="Adding several Jupyter notebooks + Editing some features of Jupyter book" />
     <MESSAGE value="Adding several Jupyter notebooks" />
     <MESSAGE value="Adding interactive environment to Jupyter book." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding interactive environment to Jupyter book." />
+    <MESSAGE value="a minor test." />
+    <option name="LAST_COMMIT_MESSAGE" value="a minor test." />
   </component>
 </project>
