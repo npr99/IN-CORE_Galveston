@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="A minor bug is resolved.">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Adding several Jupyter notebooks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/.buildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/.buildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_toc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_toc.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/output/Results for Hurricane No1/Galv_EPN_prestressedpoles_result_hurNo1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/output/Results for Hurricane No2/Galv_EPN_prestressedpoles_result_hurNo2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/output/Results for Hurricane No3/Galv_EPN_prestressedpoles_result_hurNo3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/output/Results for Hurricane No4/Galv_EPN_prestressedpoles_result_hurNo4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +88,7 @@
       <workItem from="1674242112053" duration="9106000" />
       <workItem from="1674607464227" duration="12000" />
       <workItem from="1674708077337" duration="676000" />
-      <workItem from="1674709168086" duration="6635000" />
+      <workItem from="1674709168086" duration="8799000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Jupyter Book.">
       <created>1673531499662</created>
@@ -168,7 +160,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674249770881</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adding several Jupyter notebooks + Editing some features of Jupyter book">
+      <created>1674718925127</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674718925127</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Adding several Jupyter notebooks">
+      <created>1674718972985</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674718972985</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +199,8 @@
     <MESSAGE value="Updating webpage for Jupyter book." />
     <MESSAGE value="test." />
     <MESSAGE value="A minor bug is resolved." />
-    <option name="LAST_COMMIT_MESSAGE" value="A minor bug is resolved." />
+    <MESSAGE value="Adding several Jupyter notebooks + Editing some features of Jupyter book" />
+    <MESSAGE value="Adding several Jupyter notebooks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding several Jupyter notebooks" />
   </component>
 </project>
