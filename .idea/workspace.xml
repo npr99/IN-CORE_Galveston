@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="a minor test.">
+    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Changing the titles on notebooks.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/intro.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +90,7 @@
       <workItem from="1674607464227" duration="12000" />
       <workItem from="1674708077337" duration="676000" />
       <workItem from="1674709168086" duration="11779000" />
-      <workItem from="1674745073944" duration="1073000" />
+      <workItem from="1674745073944" duration="4263000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Jupyter Book.">
       <created>1673531499662</created>
@@ -213,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674723851165</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Changing the titles on notebooks.">
+      <created>1674746361536</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1674746361536</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +240,7 @@
     <MESSAGE value="Adding several Jupyter notebooks" />
     <MESSAGE value="Adding interactive environment to Jupyter book." />
     <MESSAGE value="a minor test." />
-    <option name="LAST_COMMIT_MESSAGE" value="a minor test." />
+    <MESSAGE value="Changing the titles on notebooks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing the titles on notebooks." />
   </component>
 </project>
