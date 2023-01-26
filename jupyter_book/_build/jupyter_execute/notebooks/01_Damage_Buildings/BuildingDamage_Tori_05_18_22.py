@@ -75,7 +75,7 @@ fragility_service = FragilityService(client)
 
 # ## 2) Setting up an alternative plotting function to plot spatially
 
-# In[30]:
+# In[5]:
 
 
 from mpl_toolkits.axes_grid1 import make_axes_locatable
@@ -119,7 +119,7 @@ matplotlib.rc('ytick', labelsize=20)
 
 # ## 3) Hazard Model (Hurricane)
 
-# In[41]:
+# In[6]:
 
 
 hazard_type = "hurricane"
@@ -144,7 +144,7 @@ hazard_type = "hurricane"
 
 # ### What is the your desired hurricane simulation?
 
-# In[60]:
+# In[7]:
 
 
 hur_hazard_dict = {1: "5fa5a228b6429615aeea4410", 
@@ -155,14 +155,14 @@ hur_hazard_dict = {1: "5fa5a228b6429615aeea4410",
 hur_no = int(input('The No. of your desired hurricane simulation: '))
 
 
-# In[61]:
+# In[8]:
 
 
 hazard_id=hur_hazard_dict[hur_no]
 hazard_id
 
 
-# In[62]:
+# In[9]:
 
 
 path_to_output = os.path.join(os.getcwd(), 'output', 'Results for Hurricane No{}' .format(hur_no))
@@ -176,7 +176,7 @@ if not os.path.exists(path_to_output):
 
 # The building inventory for Galveston consists of 18,962 individual residential households. 
 
-# In[63]:
+# In[10]:
 
 
 bldg_dataset_id = "60354b6c123b4036e6837ef7"                    # defining building dataset (GIS point layer)       

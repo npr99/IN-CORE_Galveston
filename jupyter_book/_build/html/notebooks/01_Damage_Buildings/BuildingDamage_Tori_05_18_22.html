@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Galveston Island Damage Model: WOOD POLES" href="../01_Damage_Electric%20Power/WoodPolesDamage_05_23_22.html" />
-    <link rel="prev" title="Galveston Notebook Gallery" href="../../intro.html" />
+    <link rel="prev" title="Galveston Testbed" href="../Galveston_testbed_2022-09-19.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -115,6 +115,18 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Overview
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Galveston_testbed_2022-09-19.html">
+   Galveston Testbed
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Building
  </span>
 </p>
@@ -149,6 +161,50 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../01_Damage_Electric%20Power_Towers/TowerDamage_05_23_22.html">
    Galveston Island Damage Model: TOWERS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_Damage_Electric%20Power_WoodPoles/WoodPolesDamage_05_23_22.html">
+   Galveston Island Damage Model: WOOD POLES
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22.html">
+   Galveston Island Damage Model: EPN NETWORK ANALYSIS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03_AdditionalNotebooks/Nearest%20neighbor%20analysis_Poles%20and%20Buildings/PolesBldgsNearestNeighbor_05_23_22.html">
+   Galveston Island Damage Model: EPN NETWORK ANALYSIS
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Transportation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_Damage_Transportation_Bridges/BridgesDamage_05_18_22.html">
+   Galveston Island Damage Model: BRIDGES
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22.html">
+   Galveston Island Damage Model: Roadways
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Social
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22.html">
+   Galveston Island Population Dislocation Analysis
   </a>
  </li>
 </ul>
@@ -578,7 +634,7 @@ numpy version:  1.24.1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C:\\Users\\ka50\\Box\\Rice\\Software_Projects\\Pycharm\\IN-CORE_Galveston\\jupyter_book\\notebooks\\01_Damage_Buildings&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C:\\Users\\Kooshan\\Box\\Rice\\Software_Projects\\Pycharm\\IN-CORE_Galveston\\jupyter_book\\notebooks\\01_Damage_Buildings&#39;
 </pre></div>
 </div>
 </div>
@@ -603,21 +659,21 @@ numpy version:  1.24.1
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#client.clear_cache() </span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">data_service</span> <span class="o">=</span> <span class="n">DataService</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="c1"># create data_service object for loading files</span>
 
-<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\client.py:228,</span> in <span class="ni">IncoreClient.__init__</span><span class="nt">(self, service_url, token_file_name)</span>
+<span class="nn">File ~\anaconda3\envs\IN-CORE_Galveston\lib\site-packages\pyincore\client.py:228,</span> in <span class="ni">IncoreClient.__init__</span><span class="nt">(self, service_url, token_file_name)</span>
 <span class="g g-Whitespace">    </span><span class="mi">225</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection successful to IN-CORE services.&quot;</span><span class="p">,</span> <span class="s2">&quot;pyIncore version detected:&quot;</span><span class="p">,</span> <span class="n">pyglobals</span><span class="o">.</span><span class="n">PACKAGE_VERSION</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">227</span> <span class="k">else</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">228</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="p">():</span>
 <span class="g g-Whitespace">    </span><span class="mi">229</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection successful to IN-CORE services.&quot;</span><span class="p">,</span> <span class="s2">&quot;pyIncore version detected:&quot;</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">230</span>               <span class="n">pyglobals</span><span class="o">.</span><span class="n">PACKAGE_VERSION</span><span class="p">)</span>
 
-<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\client.py:235,</span> in <span class="ni">IncoreClient.login</span><span class="nt">(self)</span>
+<span class="nn">File ~\anaconda3\envs\IN-CORE_Galveston\lib\site-packages\pyincore\client.py:235,</span> in <span class="ni">IncoreClient.login</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">233</span> <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pyglobals</span><span class="o">.</span><span class="n">MAX_LOGIN_ATTEMPTS</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">234</span>     <span class="k">try</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">235</span>         <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter username: &quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">236</span>         <span class="n">password</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getpass</span><span class="p">(</span><span class="s2">&quot;Enter password: &quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="k">except</span> <span class="ne">EOFError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 
-<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\ipykernel\kernelbase.py:1186,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="nn">File ~\anaconda3\envs\IN-CORE_Galveston\lib\site-packages\ipykernel\kernelbase.py:1186,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1184</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
 <span class="g g-Whitespace">   </span><span class="mi">1185</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
 <span class="ne">-&gt; </span><span class="mi">1186</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -753,11 +809,6 @@ numpy version:  1.24.1
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The No. of your desired hurricane simulation: 4
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -767,7 +818,7 @@ numpy version:  1.24.1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;5fa5aa19b6429615aeea4476&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;5fa5a228b6429615aeea4410&#39;
 </pre></div>
 </div>
 </div>
@@ -803,9 +854,7 @@ numpy version:  1.24.1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-Galveston testbed building inventory as a function of age group
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Galveston testbed building inventory as a function of age group
 Number of buildings: 18962
 </pre></div>
 </div>
@@ -992,11 +1041,11 @@ Unzipped folder found in the local cache. Reading from it...
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../../intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../Galveston_testbed_2022-09-19.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Galveston Notebook Gallery</p>
+            <p class="prev-next-title">Galveston Testbed</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../01_Damage_Electric%20Power/WoodPolesDamage_05_23_22.html" title="next page">
