@@ -9,6 +9,7 @@
 # **Jupyter Notebook Created by**:
 #    - Mehrzad Rahimi, Postdoctoral fellow at Rice University (mr77@rice.edu)
 #    - Nathanael Rosenheim, Research Associate Professor at Texas A&M University (nrosenheim@arch.tamu.edu)
+#    - Test edit to notebook
 #    - Jamie E. Padgett, Professor at Rice University (jamie.padgett@rice.edu)
 
 # ## 1) Initialization
