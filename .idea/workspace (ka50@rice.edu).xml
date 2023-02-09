@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Some modifications.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.ipynb" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KCmING3cKoPsVUgKNmOnRkCROA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ka50\Box\Rice\Software_Projects\Pycharm\IN-CORE_Galveston\jupyter_book\notebooks" />
+      <recent name="C:\Users\Kooshan\Box\Rice\Software Projects\Pycharm\IN-CORE_Galveston\jupyter_book\notebooks" />
+      <recent name="C:\Users\Kooshan\Box\Rice\Software Projects\Pycharm\IN-CORE_Galveston\jupyter_book\images" />
+      <recent name="C:\Users\Kooshan\Box\Rice\Software Projects\Pycharm\IN-CORE_Galveston\jupyter_book" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="debug" type="PythonConfigurationType" factoryName="Python">
+      <module name="IN-CORE_Galveston" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Kooshan\anaconda3\envs\IN-CORE_Galveston\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="" />
+      <created>1673486858851</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673486858851</updated>
+      <workItem from="1673486860710" duration="7248000" />
+      <workItem from="1673529580877" duration="7493000" />
+      <workItem from="1674237869717" duration="612000" />
+      <workItem from="1674242112053" duration="9106000" />
+      <workItem from="1674607464227" duration="12000" />
+      <workItem from="1674708077337" duration="676000" />
+      <workItem from="1674709168086" duration="11779000" />
+      <workItem from="1674745073944" duration="5106000" />
+      <workItem from="1675030659097" duration="1355000" />
+      <workItem from="1675032289813" duration="18745000" />
+    </task>
+    <task id="LOCAL-00001" summary="Adding Jupyter Book.">
+      <created>1673531499662</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673531499662</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Modifying Jupyter book + adding some notebooks related to power infrastructure.">
+      <created>1673543497166</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673543497166</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Modifying Jupyter book + adding some notebooks related to power infrastructure.">
+      <created>1673543593148</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673543593148</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adding Electric Power Substations' notebook to the book.">
+      <created>1674244074160</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674244074160</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adding Electric Power Towers' notebook to the book.">
+      <created>1674246422088</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674246422088</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updating webpage for Jupyter book.">
+      <created>1674246741439</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674246741439</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test.">
+      <created>1674247325205</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674247325205</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test.">
+      <created>1674248028507</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674248028507</updated>
+    </task>
+    <task id="LOCAL-00009" summary="test.">
+      <created>1674248121760</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674248121760</updated>
+    </task>
+    <task id="LOCAL-00010" summary="A minor bug is resolved.">
+      <created>1674249770881</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674249770881</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Adding several Jupyter notebooks + Editing some features of Jupyter book">
+      <created>1674718925127</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674718925127</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Adding several Jupyter notebooks">
+      <created>1674718972985</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674718972985</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Adding interactive environment to Jupyter book.">
+      <created>1674721045954</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674721045954</updated>
+    </task>
+    <task id="LOCAL-00014" summary="a minor test.">
+      <created>1674723385918</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674723385918</updated>
+    </task>
+    <task id="LOCAL-00015" summary="a minor test.">
+      <created>1674723788867</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674723788867</updated>
+    </task>
+    <task id="LOCAL-00016" summary="a minor test.">
+      <created>1674723851165</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1674723851165</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Changing the titles on notebooks.">
+      <created>1674746361536</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1674746361536</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Some modifications + changing logo.">
+      <created>1674750933076</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1674750933076</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Some modifications.">
+      <created>1674750976117</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1674750976117</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding Jupyter Book." />
+    <MESSAGE value="Modifying Jupyter book + adding some notebooks related to power infrastructure." />
+    <MESSAGE value="Adding Electric Power Substations' notebook to the book." />
+    <MESSAGE value="Adding Electric Power Towers' notebook to the book." />
+    <MESSAGE value="Updating webpage for Jupyter book." />
+    <MESSAGE value="test." />
+    <MESSAGE value="A minor bug is resolved." />
+    <MESSAGE value="Adding several Jupyter notebooks + Editing some features of Jupyter book" />
+    <MESSAGE value="Adding several Jupyter notebooks" />
+    <MESSAGE value="Adding interactive environment to Jupyter book." />
+    <MESSAGE value="a minor test." />
+    <MESSAGE value="Changing the titles on notebooks." />
+    <MESSAGE value="Some modifications + changing logo." />
+    <MESSAGE value="Some modifications." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some modifications." />
+  </component>
+</project>
