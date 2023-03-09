@@ -12,3 +12,7 @@
 .vscode/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
+
+# Ignore any folder that starts with Work or work
+###################
+**/[Ww]ork**/
