@@ -7,6 +7,7 @@ parts:
   - caption: Overview
     chapters:
     - file: notebooks/Galveston_testbed_2022-09-19
+    - file: notebooks/Galveston_Test
   - caption: Building
     chapters:
     - file: notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22

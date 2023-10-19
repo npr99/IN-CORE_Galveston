@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Some modifications + editing &quot;pole-building&quot; assignment notebook.">
+    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Some modifications.">
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/Galveston_Test.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/IN-CORE_Galveston.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IN-CORE_Galveston.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace (ka50@rice.edu).xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace (ka50@rice.edu).xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/output/closest_poles_to_bldgs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/output/closest_poles_to_bldgs.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/_toc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_toc.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_environment/environment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/python_environment/environment.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +19,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
+  </component>
   <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
     <envs>
       <env key="FLASK_APP" value="app" />
@@ -51,7 +58,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ka50/Box/Rice/Software_Projects/Pycharm/IN-CORE_Galveston",
+    "last_opened_file_path": "C:/Users/ka50/miniconda3/envs/IN-CORE_GAlveston",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -114,7 +121,7 @@
       <workItem from="1676525367523" duration="3078000" />
       <workItem from="1676844278270" duration="2965000" />
       <workItem from="1677022748759" duration="60000" />
-      <workItem from="1697659881326" duration="1873000" />
+      <workItem from="1697659881326" duration="7360000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Jupyter Book.">
       <created>1673531499662</created>
@@ -263,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675979876641</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Some modifications.">
+      <created>1697671408000</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1697671408000</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,8 +308,8 @@
     <MESSAGE value="a minor test." />
     <MESSAGE value="Changing the titles on notebooks." />
     <MESSAGE value="Some modifications + changing logo." />
-    <MESSAGE value="Some modifications." />
     <MESSAGE value="Some modifications + editing &quot;pole-building&quot; assignment notebook." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some modifications + editing &quot;pole-building&quot; assignment notebook." />
+    <MESSAGE value="Some modifications." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some modifications." />
   </component>
 </project>
