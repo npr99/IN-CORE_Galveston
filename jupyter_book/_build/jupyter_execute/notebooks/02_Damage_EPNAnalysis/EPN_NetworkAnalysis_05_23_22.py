@@ -76,7 +76,7 @@ fragility_service = FragilityService(client)
 
 # ## 2) Setting up an alternative plotting function to plot spatially
 
-# In[5]:
+# In[7]:
 
 
 from mpl_toolkits.axes_grid1 import make_axes_locatable
@@ -122,13 +122,13 @@ matplotlib.rc('ytick', labelsize=20)
 
 # ### What is the your desired hurricane simulation?
 
-# In[6]:
+# In[18]:
 
 
 hur_no = int(input('The No. of your desired hurricane simulation: '))
 
 
-# In[71]:
+# In[19]:
 
 
 woodpole_dict        =  {1: "Galv_EPN_woodpoles_result_hurNo1.csv", 
@@ -157,7 +157,7 @@ substation_dict      =  {1: "Galv_EPN_substations_result_hurNo1.csv",
                          4: "Galv_EPN_substations_result_hurNo4.csv",}
 
 
-# In[72]:
+# In[20]:
 
 
 WoodPoleDamage_csv        = woodpole_dict[hur_no]
@@ -167,7 +167,7 @@ TowerDamage_csv           = tower_dict[hur_no]
 SubstationDamage_csv      = substation_dict[hur_no]
 
 
-# In[73]:
+# In[21]:
 
 
 path_to_output = os.path.join(os.getcwd(), 'output', 'Results for Hurricane No{}' .format(hur_no))
@@ -179,7 +179,7 @@ if not os.path.exists(path_to_output):
 
 # ## Importing damage data
 
-# In[74]:
+# In[22]:
 
 
 WoodPoleDamage_df        = pd.read_csv(WoodPoleDamage_csv)
@@ -191,7 +191,7 @@ SubstationDamage_df      = pd.read_csv(SubstationDamage_csv)
 
 # ## Importing network data
 
-# In[11]:
+# In[23]:
 
 
 Galv_TransmissionNetwork_df = pd.read_csv('Galv_TransmissionNetwork.csv')
@@ -199,7 +199,7 @@ Galv_DistributionNetwork_df = pd.read_csv('Galv_DistributionNetwork.csv')
 Galv_UndergroundNetwork_df  = pd.read_csv('Galv_UndergroundNetwork.csv')
 
 
-# In[12]:
+# In[24]:
 
 
 Galv_DistributionUndergroundNetwork_df = pd.concat([Galv_DistributionNetwork_df, Galv_UndergroundNetwork_df], ignore_index=True)
@@ -207,13 +207,13 @@ Galv_DistributionUndergroundNetwork_df = pd.concat([Galv_DistributionNetwork_df,
 
 # ## Creating adjacency matrix for distribution-underground network
 
-# In[13]:
+# In[25]:
 
 
 Galv_DistributionUndergroundNetwork_df
 
 
-# In[15]:
+# In[26]:
 
 
 start_node_DU = Galv_DistributionUndergroundNetwork_df[['Start Node']].to_numpy()
@@ -235,13 +235,13 @@ print(sum(sum(Adj_DU)))
 
 # ## Creating adjacency matrix for transportation network
 
-# In[16]:
+# In[27]:
 
 
 Galv_TransmissionNetwork_df
 
 
-# In[17]:
+# In[28]:
 
 
 start_node_T = Galv_TransmissionNetwork_df[['Start Node']].to_numpy()

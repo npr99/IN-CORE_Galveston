@@ -123,6 +123,11 @@ const thebe_selector_output = ".output, .cell_output"
    Galveston Testbed
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Galveston_Test.html">
+   Galveston Test File
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -265,7 +270,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/npr99/IN-CORE_Galveston/kooshan_main?urlpath=tree/jupyter_book/notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22.ipynb"
+        <a href="https://mybinder.org/v2/gh/npr99/IN-CORE_Galveston.git/HEAD/v2/gh/npr99/IN-CORE_Galveston/kooshan_main?urlpath=tree/jupyter_book/notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -996,7 +1001,7 @@ numpy version:  1.24.1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C:\\Users\\Kooshan\\Box\\Rice\\Software_Projects\\Pycharm\\IN-CORE_Galveston\\jupyter_book\\notebooks\\03_Social_PopulationDislocationAnalysis&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C:\\Users\\ka50\\Box\\Rice\\Software_Projects\\Pycharm\\IN-CORE_Galveston\\jupyter_book\\notebooks\\03_Social_PopulationDislocationAnalysis&#39;
 </pre></div>
 </div>
 </div>
@@ -1021,21 +1026,21 @@ numpy version:  1.24.1
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#client.clear_cache() </span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">data_service</span> <span class="o">=</span> <span class="n">DataService</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="c1"># create data_service object for loading files</span>
 
-<span class="nn">File ~\anaconda3\envs\IN-CORE_Galveston\lib\site-packages\pyincore\client.py:228,</span> in <span class="ni">IncoreClient.__init__</span><span class="nt">(self, service_url, token_file_name)</span>
+<span class="nn">File ~\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\client.py:228,</span> in <span class="ni">IncoreClient.__init__</span><span class="nt">(self, service_url, token_file_name)</span>
 <span class="g g-Whitespace">    </span><span class="mi">225</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection successful to IN-CORE services.&quot;</span><span class="p">,</span> <span class="s2">&quot;pyIncore version detected:&quot;</span><span class="p">,</span> <span class="n">pyglobals</span><span class="o">.</span><span class="n">PACKAGE_VERSION</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">227</span> <span class="k">else</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">228</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="p">():</span>
 <span class="g g-Whitespace">    </span><span class="mi">229</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection successful to IN-CORE services.&quot;</span><span class="p">,</span> <span class="s2">&quot;pyIncore version detected:&quot;</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">230</span>               <span class="n">pyglobals</span><span class="o">.</span><span class="n">PACKAGE_VERSION</span><span class="p">)</span>
 
-<span class="nn">File ~\anaconda3\envs\IN-CORE_Galveston\lib\site-packages\pyincore\client.py:235,</span> in <span class="ni">IncoreClient.login</span><span class="nt">(self)</span>
+<span class="nn">File ~\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\client.py:235,</span> in <span class="ni">IncoreClient.login</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">233</span> <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pyglobals</span><span class="o">.</span><span class="n">MAX_LOGIN_ATTEMPTS</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">234</span>     <span class="k">try</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">235</span>         <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter username: &quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">236</span>         <span class="n">password</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getpass</span><span class="p">(</span><span class="s2">&quot;Enter password: &quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="k">except</span> <span class="ne">EOFError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 
-<span class="nn">File ~\anaconda3\envs\IN-CORE_Galveston\lib\site-packages\ipykernel\kernelbase.py:1186,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="nn">File ~\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\ipykernel\kernelbase.py:1186,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1184</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
 <span class="g g-Whitespace">   </span><span class="mi">1185</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
 <span class="ne">-&gt; </span><span class="mi">1186</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -1117,11 +1122,6 @@ numpy version:  1.24.1
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hazard_type</span> <span class="o">=</span> <span class="s2">&quot;hurricane&quot;</span>
 <span class="n">hur_no</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;The No. of your desired hurricane simulation: &#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The No. of your desired hurricane simulation: 1
 </pre></div>
 </div>
 </div>
@@ -1294,9 +1294,7 @@ numpy version:  1.24.1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-Galveston testbed building inventory as a function of age group
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Galveston testbed building inventory as a function of age group
 Number of buildings: 18962
 </pre></div>
 </div>
@@ -1320,61 +1318,7 @@ Number of buildings: 18962
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset already exists locally. Reading from local cached zip.
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">BadZipFile</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">Input In [11],</span> in <span class="ni">&lt;cell line: 4&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">housing_unit_inv_id</span> <span class="o">=</span> <span class="s2">&quot;61d783eb3ed7dd5c873b42d2&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># load housing unit inventory as pandas dataframe</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">housing_unit_inv</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">from_data_service</span><span class="p">(</span><span class="n">housing_unit_inv_id</span><span class="p">,</span> <span class="n">data_service</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">housing_unit_inv</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(</span><span class="s1">&#39;csv&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The IN-CORE Dataservice has saved the Housing Unit Inventory on your local machine: &quot;</span><span class="o">+</span><span class="n">filename</span><span class="p">)</span>
-
-<span class="nn">File ~/opt/anaconda3/envs/pyincoreEnv/lib/python3.9/site-packages/pyincore/dataset.py:59,</span> in <span class="ni">Dataset.from_data_service</span><span class="nt">(cls, id, data_service)</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="n">metadata</span> <span class="o">=</span> <span class="n">data_service</span><span class="o">.</span><span class="n">get_dataset_metadata</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="n">instance</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">59</span> <span class="n">instance</span><span class="o">.</span><span class="n">cache_files</span><span class="p">(</span><span class="n">data_service</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span> <span class="k">return</span> <span class="n">instance</span>
-
-<span class="nn">File ~/opt/anaconda3/envs/pyincoreEnv/lib/python3.9/site-packages/pyincore/dataset.py:178,</span> in <span class="ni">Dataset.cache_files</span><span class="nt">(self, data_service)</span>
-<span class="g g-Whitespace">    </span><span class="mi">176</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">local_file_path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">177</span>     <span class="k">return</span>
-<span class="ne">--&gt; </span><span class="mi">178</span> <span class="bp">self</span><span class="o">.</span><span class="n">local_file_path</span> <span class="o">=</span> <span class="n">data_service</span><span class="o">.</span><span class="n">get_dataset_blob</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">local_file_path</span>
-
-<span class="nn">File ~/opt/anaconda3/envs/pyincoreEnv/lib/python3.9/site-packages/pyincore/dataservice.py:115,</span> in <span class="ni">DataService.get_dataset_blob</span><span class="nt">(self, dataset_id, join)</span>
-<span class="g g-Whitespace">    </span><span class="mi">112</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">local_filename</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">113</span>         <span class="n">local_filename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">download_dataset_blob</span><span class="p">(</span><span class="n">cache_data_dir</span><span class="p">,</span> <span class="n">dataset_id</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">115</span> <span class="n">folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">unzip_dataset</span><span class="p">(</span><span class="n">local_filename</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">116</span> <span class="k">if</span> <span class="n">folder</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">117</span>     <span class="k">return</span> <span class="n">folder</span>
-
-<span class="nn">File ~/opt/anaconda3/envs/pyincoreEnv/lib/python3.9/site-packages/pyincore/dataservice.py:379,</span> in <span class="ni">DataService.unzip_dataset</span><span class="nt">(self, local_filename)</span>
-<span class="g g-Whitespace">    </span><span class="mi">376</span>     <span class="k">return</span> <span class="n">foldername</span>
-<span class="g g-Whitespace">    </span><span class="mi">377</span> <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">foldername</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">379</span> <span class="n">zip_ref</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">local_filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">380</span> <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">foldername</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">381</span> <span class="n">zip_ref</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="nn">File ~/opt/anaconda3/envs/pyincoreEnv/lib/python3.9/zipfile.py:1266,</span> in <span class="ni">ZipFile.__init__</span><span class="nt">(self, file, mode, compression, allowZip64, compresslevel, strict_timestamps)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1264</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1265</span>     <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;r&#39;</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1266</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_RealGetContents</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1267</span>     <span class="k">elif</span> <span class="n">mode</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1268</span>         <span class="c1"># set the modified flag so central directory gets written</span>
-<span class="g g-Whitespace">   </span><span class="mi">1269</span>         <span class="c1"># even if no files are added to the archive</span>
-<span class="g g-Whitespace">   </span><span class="mi">1270</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_didModify</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="nn">File ~/opt/anaconda3/envs/pyincoreEnv/lib/python3.9/zipfile.py:1333,</span> in <span class="ni">ZipFile._RealGetContents</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1331</span>     <span class="k">raise</span> <span class="n">BadZipFile</span><span class="p">(</span><span class="s2">&quot;File is not a zip file&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1332</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">endrec</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1333</span>     <span class="k">raise</span> <span class="n">BadZipFile</span><span class="p">(</span><span class="s2">&quot;File is not a zip file&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1334</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1335</span>     <span class="nb">print</span><span class="p">(</span><span class="n">endrec</span><span class="p">)</span>
-
-<span class="ne">BadZipFile</span>: File is not a zip file
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The IN-CORE Dataservice has saved the Housing Unit Inventory on your local machine: C:\Users\ka50\.incore\cache_data\648c22dd689743dc9dedf242006adc5a9c21de9a89c016323dccfedef94f7737\61d783eb3ed7dd5c873b42d2\hui_v0-1-0_Galveston_TX_2010_rs9876\hui_v0-1-0_Galveston_TX_2010_rs9876.csv
 </pre></div>
 </div>
 </div>
@@ -1386,10 +1330,143 @@ Number of buildings: 18962
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>huid</th>
+      <th>blockid</th>
+      <th>tractid</th>
+      <th>bgid</th>
+      <th>FIPScounty</th>
+      <th>numprec</th>
+      <th>ownershp</th>
+      <th>race</th>
+      <th>hispan</th>
+      <th>vacancy</th>
+      <th>gqtype</th>
+      <th>incomegroup</th>
+      <th>randincome</th>
+      <th>hhinc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>B481677201001000H001</td>
+      <td>481677201001000</td>
+      <td>48167720100</td>
+      <td>481677201001</td>
+      <td>48167</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>16.0</td>
+      <td>249702.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B481677201001000H002</td>
+      <td>481677201001000</td>
+      <td>48167720100</td>
+      <td>481677201001</td>
+      <td>48167</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>16.0</td>
+      <td>206115.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>B481677201001000H003</td>
+      <td>481677201001000</td>
+      <td>48167720100</td>
+      <td>481677201001</td>
+      <td>48167</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>15.0</td>
+      <td>185826.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>B481677201001000H004</td>
+      <td>481677201001000</td>
+      <td>48167720100</td>
+      <td>481677201001</td>
+      <td>48167</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>36896.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>B481677201001000H005</td>
+      <td>481677201001000</td>
+      <td>48167720100</td>
+      <td>481677201001</td>
+      <td>48167</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>11.0</td>
+      <td>63897.0</td>
+      <td>3.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">housing_unit_inv_df</span><span class="p">[</span><span class="s1">&#39;huid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count                   132553
+unique                  132553
+top       B481677201001000H001
+freq                         1
+Name: huid, dtype: object
 </pre></div>
 </div>
 </div>
@@ -1406,6 +1483,76 @@ Number of buildings: 18962
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_005de caption {
+  text-align: center;
+  caption-side: top;
+  font-size: 150%;
+}
+</style>
+<table id="T_005de">
+  <caption>Table. Total Population by Householder by Race, Ethnicity, Galveston County TX, 2010.</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Tenure Status</th>
+      <th id="T_005de_level0_col0" class="col_heading level0 col0" >1 Owner Occupied (%)</th>
+      <th id="T_005de_level0_col1" class="col_heading level0 col1" >2 Renter Occupied (%)</th>
+      <th id="T_005de_level0_col2" class="col_heading level0 col2" >Total Population by Householder (%)</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Race Ethnicity</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_005de_level0_row0" class="row_heading level0 row0" >1 White alone, Not Hispanic</th>
+      <td id="T_005de_row0_col0" class="data row0 col0" >53,469	 (71.3%)</td>
+      <td id="T_005de_row0_col1" class="data row0 col1" >17,903	 (52.6%)</td>
+      <td id="T_005de_row0_col2" class="data row0 col2" >71,372	 (65.5%)</td>
+    </tr>
+    <tr>
+      <th id="T_005de_level0_row1" class="row_heading level0 row1" >2 Black alone, Not Hispanic</th>
+      <td id="T_005de_row1_col0" class="data row1 col0" >7,209	 (9.6%)</td>
+      <td id="T_005de_row1_col1" class="data row1 col1" >7,275	 (21.4%)</td>
+      <td id="T_005de_row1_col2" class="data row1 col2" >14,484	 (13.3%)</td>
+    </tr>
+    <tr>
+      <th id="T_005de_level0_row2" class="row_heading level0 row2" >3 American Indian and Alaska Native alone, Not Hispanic</th>
+      <td id="T_005de_row2_col0" class="data row2 col0" >288	 (0.4%)</td>
+      <td id="T_005de_row2_col1" class="data row2 col1" >152	 (0.4%)</td>
+      <td id="T_005de_row2_col2" class="data row2 col2" >440	 (0.4%)</td>
+    </tr>
+    <tr>
+      <th id="T_005de_level0_row3" class="row_heading level0 row3" >4 Asian alone, Not Hispanic</th>
+      <td id="T_005de_row3_col0" class="data row3 col0" >1,903	 (2.5%)</td>
+      <td id="T_005de_row3_col1" class="data row3 col1" >776	 (2.3%)</td>
+      <td id="T_005de_row3_col2" class="data row3 col2" >2,679	 (2.5%)</td>
+    </tr>
+    <tr>
+      <th id="T_005de_level0_row4" class="row_heading level0 row4" >5 Other Race, Not Hispanic</th>
+      <td id="T_005de_row4_col0" class="data row4 col0" >708	 (0.9%)</td>
+      <td id="T_005de_row4_col1" class="data row4 col1" >381	 (1.1%)</td>
+      <td id="T_005de_row4_col2" class="data row4 col2" >1,089	 (1.0%)</td>
+    </tr>
+    <tr>
+      <th id="T_005de_level0_row5" class="row_heading level0 row5" >6 Any Race, Hispanic</th>
+      <td id="T_005de_row5_col0" class="data row5 col0" >11,367	 (15.2%)</td>
+      <td id="T_005de_row5_col1" class="data row5 col1" >7,538	 (22.2%)</td>
+      <td id="T_005de_row5_col2" class="data row5 col2" >18,905	 (17.3%)</td>
+    </tr>
+    <tr>
+      <th id="T_005de_level0_row6" class="row_heading level0 row6" >Total</th>
+      <td id="T_005de_row6_col0" class="data row6 col0" >74,944	 (100.0%)</td>
+      <td id="T_005de_row6_col1" class="data row6 col1" >34,025	 (100.0%)</td>
+      <td id="T_005de_row6_col2" class="data row6 col2" >108,969	 (100.0%)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 </section>
 <section id="a-1b-interdependent-community-description">
@@ -1446,11 +1593,27 @@ The housing unit allocation method will provide detail demographic characteristi
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset already exists locally. Reading from local cached zip.
+Unzipped folder found in the local cache. Reading from it...
+Dataset already exists locally. Reading from local cached zip.
+Unzipped folder found in the local cache. Reading from it...
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run Housing unit allocation analysis</span>
 <span class="n">hua</span><span class="o">.</span><span class="n">run_analysis</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -1471,6 +1634,70 @@ The housing unit allocation method will provide detail demographic characteristi
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>guid</th>
+      <th>numprec</th>
+      <th>incomegroup</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>eca98323-d57f-4691-a340-b4e0e19c2346</td>
+      <td>2</td>
+      <td>10.0</td>
+      <td>POINT (-94.79252 29.3092)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>eca98323-d57f-4691-a340-b4e0e19c2346</td>
+      <td>2</td>
+      <td>3.0</td>
+      <td>POINT (-94.79252 29.3092)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>eca98323-d57f-4691-a340-b4e0e19c2346</td>
+      <td>1</td>
+      <td>10.0</td>
+      <td>POINT (-94.79252 29.3092)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>eca98323-d57f-4691-a340-b4e0e19c2346</td>
+      <td>2</td>
+      <td>14.0</td>
+      <td>POINT (-94.79252 29.3092)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>eca98323-d57f-4691-a340-b4e0e19c2346</td>
+      <td>2</td>
+      <td>16.0</td>
+      <td>POINT (-94.79252 29.3092)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1478,6 +1705,53 @@ The housing unit allocation method will provide detail demographic characteristi
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>guid</th>
+      <th>huid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>32501</td>
+      <td>132553</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>18962</td>
+      <td>132553</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>1554a55e-59db-4cc2-bff5-b46297a61a42</td>
+      <td>B481677240001040H002</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>428</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1488,6 +1762,53 @@ The housing unit allocation method will provide detail demographic characteristi
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>guid</th>
+      <th>huid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>32501</td>
+      <td>32501</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>18962</td>
+      <td>32501</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>1554a55e-59db-4cc2-bff5-b46297a61a42</td>
+      <td>B481677240001040H002</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>428</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1511,6 +1832,76 @@ The housing unit allocation method will provide detail demographic characteristi
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_9289a caption {
+  text-align: center;
+  caption-side: top;
+  font-size: 150%;
+}
+</style>
+<table id="T_9289a">
+  <caption>Table. Total Population by Householder by Race, Ethnicity, Galveston Island, TX - Buildings in Inventory, 2010.</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Tenure Status</th>
+      <th id="T_9289a_level0_col0" class="col_heading level0 col0" >1 Owner Occupied (%)</th>
+      <th id="T_9289a_level0_col1" class="col_heading level0 col1" >2 Renter Occupied (%)</th>
+      <th id="T_9289a_level0_col2" class="col_heading level0 col2" >Total Population by Householder (%)</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Race Ethnicity</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_9289a_level0_row0" class="row_heading level0 row0" >1 White alone, Not Hispanic</th>
+      <td id="T_9289a_row0_col0" class="data row0 col0" >6,199	 (62.5%)</td>
+      <td id="T_9289a_row0_col1" class="data row0 col1" >4,705	 (45.9%)</td>
+      <td id="T_9289a_row0_col2" class="data row0 col2" >10,904	 (54.0%)</td>
+    </tr>
+    <tr>
+      <th id="T_9289a_level0_row1" class="row_heading level0 row1" >2 Black alone, Not Hispanic</th>
+      <td id="T_9289a_row1_col0" class="data row1 col0" >1,212	 (12.2%)</td>
+      <td id="T_9289a_row1_col1" class="data row1 col1" >2,286	 (22.3%)</td>
+      <td id="T_9289a_row1_col2" class="data row1 col2" >3,498	 (17.3%)</td>
+    </tr>
+    <tr>
+      <th id="T_9289a_level0_row2" class="row_heading level0 row2" >3 American Indian and Alaska Native alone, Not Hispanic</th>
+      <td id="T_9289a_row2_col0" class="data row2 col0" >28	 (0.3%)</td>
+      <td id="T_9289a_row2_col1" class="data row2 col1" >55	 (0.5%)</td>
+      <td id="T_9289a_row2_col2" class="data row2 col2" >83	 (0.4%)</td>
+    </tr>
+    <tr>
+      <th id="T_9289a_level0_row3" class="row_heading level0 row3" >4 Asian alone, Not Hispanic</th>
+      <td id="T_9289a_row3_col0" class="data row3 col0" >238	 (2.4%)</td>
+      <td id="T_9289a_row3_col1" class="data row3 col1" >398	 (3.9%)</td>
+      <td id="T_9289a_row3_col2" class="data row3 col2" >636	 (3.2%)</td>
+    </tr>
+    <tr>
+      <th id="T_9289a_level0_row4" class="row_heading level0 row4" >5 Other Race, Not Hispanic</th>
+      <td id="T_9289a_row4_col0" class="data row4 col0" >101	 (1.0%)</td>
+      <td id="T_9289a_row4_col1" class="data row4 col1" >131	 (1.3%)</td>
+      <td id="T_9289a_row4_col2" class="data row4 col2" >232	 (1.1%)</td>
+    </tr>
+    <tr>
+      <th id="T_9289a_level0_row5" class="row_heading level0 row5" >6 Any Race, Hispanic</th>
+      <td id="T_9289a_row5_col0" class="data row5 col0" >2,147	 (21.6%)</td>
+      <td id="T_9289a_row5_col1" class="data row5 col1" >2,679	 (26.1%)</td>
+      <td id="T_9289a_row5_col2" class="data row5 col2" >4,826	 (23.9%)</td>
+    </tr>
+    <tr>
+      <th id="T_9289a_level0_row6" class="row_heading level0 row6" >Total</th>
+      <td id="T_9289a_row6_col0" class="data row6 col0" >9,925	 (100.0%)</td>
+      <td id="T_9289a_row6_col1" class="data row6 col1" >10,254	 (100.0%)</td>
+      <td id="T_9289a_row6_col2" class="data row6 col2" >20,179	 (100.0%)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1524,6 +1915,76 @@ The housing unit allocation method will provide detail demographic characteristi
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_31030 caption {
+  text-align: center;
+  caption-side: top;
+  font-size: 150%;
+}
+</style>
+<table id="T_31030">
+  <caption>Table. Median Household Income by Race, Ethnicity, Galveston Island, TX - Buildings in Inventory, 2010.</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Tenure Status</th>
+      <th id="T_31030_level0_col0" class="col_heading level0 col0" >1 Owner Occupied</th>
+      <th id="T_31030_level0_col1" class="col_heading level0 col1" >2 Renter Occupied</th>
+      <th id="T_31030_level0_col2" class="col_heading level0 col2" >Median Household Income</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Race Ethnicity</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_31030_level0_row0" class="row_heading level0 row0" >1 White alone, Not Hispanic</th>
+      <td id="T_31030_row0_col0" class="data row0 col0" >$56,630</td>
+      <td id="T_31030_row0_col1" class="data row0 col1" >$44,895</td>
+      <td id="T_31030_row0_col2" class="data row0 col2" >$50,364</td>
+    </tr>
+    <tr>
+      <th id="T_31030_level0_row1" class="row_heading level0 row1" >2 Black alone, Not Hispanic</th>
+      <td id="T_31030_row1_col0" class="data row1 col0" >$20,675</td>
+      <td id="T_31030_row1_col1" class="data row1 col1" >$20,090</td>
+      <td id="T_31030_row1_col2" class="data row1 col2" >$20,334</td>
+    </tr>
+    <tr>
+      <th id="T_31030_level0_row2" class="row_heading level0 row2" >3 American Indian and Alaska Native alone, Not Hispanic</th>
+      <td id="T_31030_row2_col0" class="data row2 col0" >$26,463</td>
+      <td id="T_31030_row2_col1" class="data row2 col1" >$35,313</td>
+      <td id="T_31030_row2_col2" class="data row2 col2" >$33,276</td>
+    </tr>
+    <tr>
+      <th id="T_31030_level0_row3" class="row_heading level0 row3" >4 Asian alone, Not Hispanic</th>
+      <td id="T_31030_row3_col0" class="data row3 col0" >$45,312</td>
+      <td id="T_31030_row3_col1" class="data row3 col1" >$29,293</td>
+      <td id="T_31030_row3_col2" class="data row3 col2" >$32,773</td>
+    </tr>
+    <tr>
+      <th id="T_31030_level0_row4" class="row_heading level0 row4" >5 Other Race, Not Hispanic</th>
+      <td id="T_31030_row4_col0" class="data row4 col0" >$41,987</td>
+      <td id="T_31030_row4_col1" class="data row4 col1" >$42,966</td>
+      <td id="T_31030_row4_col2" class="data row4 col2" >$42,740</td>
+    </tr>
+    <tr>
+      <th id="T_31030_level0_row5" class="row_heading level0 row5" >6 Any Race, Hispanic</th>
+      <td id="T_31030_row5_col0" class="data row5 col0" >$35,726</td>
+      <td id="T_31030_row5_col1" class="data row5 col1" >$33,545</td>
+      <td id="T_31030_row5_col2" class="data row5 col2" >$34,463</td>
+    </tr>
+    <tr>
+      <th id="T_31030_level0_row6" class="row_heading level0 row6" >Total</th>
+      <td id="T_31030_row6_col0" class="data row6 col0" >$44,879</td>
+      <td id="T_31030_row6_col1" class="data row6 col1" >$33,946</td>
+      <td id="T_31030_row6_col2" class="data row6 col2" >$38,880</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 <section id="validate-the-housing-unit-allocation-has-worked">
 <h4>Validate the Housing Unit Allocation has worked<a class="headerlink" href="#validate-the-housing-unit-allocation-has-worked" title="Permalink to this headline">#</a></h4>
@@ -1650,6 +2111,9 @@ Then Pf= 0.2620</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/PopulationDisAnalysis_05_31_22_43_0.png" src="../../_images/PopulationDisAnalysis_05_31_22_43_0.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1677,6 +2141,10 @@ Then Pf= 0.2620</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "8c5ef4a3b87e4e8a8558ee26038b6b19"}
+</script></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1685,6 +2153,10 @@ Then Pf= 0.2620</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "44bb59ddc571408db0a32622429388a5"}
+</script></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1695,6 +2167,10 @@ Then Pf= 0.2620</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "f38ab99ded484dfe853af3bb3319de74"}
+</script></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1703,6 +2179,10 @@ Then Pf= 0.2620</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "a7c1314b780c40309b9e2e4a2e7e4bf0"}
+</script></div>
 </div>
 </section>
 <section id="id1">
@@ -1713,6 +2193,15 @@ Then Pf= 0.2620</p>
 
 <span class="n">bldg_dmg</span><span class="o">.</span><span class="n">load_remote_input_dataset</span><span class="p">(</span><span class="s2">&quot;buildings&quot;</span><span class="p">,</span> <span class="n">bldg_dataset_id</span><span class="p">)</span>
 <span class="n">bldg_dmg</span><span class="o">.</span><span class="n">set_input_dataset</span><span class="p">(</span><span class="s2">&quot;dfr3_mapping_set&quot;</span><span class="p">,</span> <span class="n">mapping_set</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset already exists locally. Reading from local cached zip.
+Unzipped folder found in the local cache. Reading from it...
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -1729,10 +2218,20 @@ Then Pf= 0.2620</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bldg_dmg</span><span class="o">.</span><span class="n">run_analysis</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -1766,6 +2265,100 @@ Then Pf= 0.2620</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>guid</th>
+      <th>LS_0</th>
+      <th>LS_1</th>
+      <th>LS_2</th>
+      <th>DS_0</th>
+      <th>DS_1</th>
+      <th>DS_2</th>
+      <th>DS_3</th>
+      <th>haz_expose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>b39dd67f-802e-402b-b7d5-51c4bbed3464</td>
+      <td>0.000000e+00</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.000000e+00</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>e7467617-6844-437e-a938-7300418facb8</td>
+      <td>8.600000e-08</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8.600000e-08</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>d7ce12df-660d-42fc-9786-f0f543c00002</td>
+      <td>0.000000e+00</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.000000e+00</td>
+      <td>partial</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>74aac543-8aae-4779-addf-754e307a772b</td>
+      <td>0.000000e+00</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.000000e+00</td>
+      <td>partial</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ed3147d3-b7b8-49da-96a9-ddedfccae60c</td>
+      <td>0.000000e+00</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.000000e+00</td>
+      <td>partial</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1773,10 +2366,36 @@ Then Pf= 0.2620</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    18962.000000
+mean         0.885130
+std          0.307711
+min          0.000000
+25%          0.999588
+50%          1.000000
+75%          1.000000
+max          1.000000
+Name: DS_0, dtype: float64
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bdmg_df</span><span class="o">.</span><span class="n">DS_3</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    18962.000000
+mean         0.114870
+std          0.307711
+min          0.000000
+25%          0.000000
+50%          0.000000
+75%          0.000412
+max          1.000000
+Name: DS_3, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1801,6 +2420,20 @@ Population dislocation refers to households that will be forced to leave their p
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO - censusutil.py:get_blockgroupdata_for_dislocation() - Census API data from: https://api.census.gov/data/2010/dec/sf1?get=GEO_ID,NAME,P005001,P005003,P005004,P005010&amp;for=block%20group&amp;in=state:48&amp;in=county:167
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1940
+P005001 converted from object to integer
+P005003 converted from object to integer
+P005004 converted from object to integer
+P005010 converted from object to integer
+Downloading Shapefiles for State_County: 48167 from: https://www2.census.gov/geo/tiger/TIGER2010/BG/2010/tl_2010_48167_bg10.zip
+CSV data file saved to: BlockGroupData/BlockGroupData_Galveston.csv
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1808,6 +2441,76 @@ Population dislocation refers to households that will be forced to leave their p
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bgid</th>
+      <th>bgidstr</th>
+      <th>Survey</th>
+      <th>pblackbg</th>
+      <th>phispbg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>481677201001</td>
+      <td>BG481677201001</td>
+      <td>2010 dec/sf1</td>
+      <td>1.726539</td>
+      <td>8.911167</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>481677201002</td>
+      <td>BG481677201002</td>
+      <td>2010 dec/sf1</td>
+      <td>0.808407</td>
+      <td>18.108327</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>481677201003</td>
+      <td>BG481677201003</td>
+      <td>2010 dec/sf1</td>
+      <td>0.956023</td>
+      <td>17.304015</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>481677202001</td>
+      <td>BG481677202001</td>
+      <td>2010 dec/sf1</td>
+      <td>1.625282</td>
+      <td>6.952596</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>481677202002</td>
+      <td>BG481677202002</td>
+      <td>2010 dec/sf1</td>
+      <td>1.735488</td>
+      <td>9.634949</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1852,10 +2555,20 @@ Population dislocation refers to households that will be forced to leave their p
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pop_dis</span><span class="o">.</span><span class="n">run_analysis</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -1887,6 +2600,58 @@ Population dislocation refers to households that will be forced to leave their p
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_5ce86 caption {
+  text-align: center;
+  caption-side: top;
+  font-size: 150%;
+}
+</style>
+<table id="T_5ce86">
+  <caption>Table. Total Population by Households by Tenure Status and Dislocation, Galveston Island TX, 2010.</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Population Dislocation</th>
+      <th id="T_5ce86_level0_col0" class="col_heading level0 col0" >0 Does not dislocate (%)</th>
+      <th id="T_5ce86_level0_col1" class="col_heading level0 col1" >1 Dislocates (%)</th>
+      <th id="T_5ce86_level0_col2" class="col_heading level0 col2" >Total Population by Households (%)</th>
+      <th id="T_5ce86_level0_col3" class="col_heading level0 col3" >Percent Row 
+1 Dislocates</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Tenure Status</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_5ce86_level0_row0" class="row_heading level0 row0" >1 Owner Occupied</th>
+      <td id="T_5ce86_row0_col0" class="data row0 col0" >18,994	 (52.1%)</td>
+      <td id="T_5ce86_row0_col1" class="data row0 col1" >3,983	 (44.4%)</td>
+      <td id="T_5ce86_row0_col2" class="data row0 col2" >22,977	 (50.6%)</td>
+      <td id="T_5ce86_row0_col3" class="data row0 col3" >17.3%</td>
+    </tr>
+    <tr>
+      <th id="T_5ce86_level0_row1" class="row_heading level0 row1" >2 Renter Occupied</th>
+      <td id="T_5ce86_row1_col0" class="data row1 col0" >17,456	 (47.9%)</td>
+      <td id="T_5ce86_row1_col1" class="data row1 col1" >4,989	 (55.6%)</td>
+      <td id="T_5ce86_row1_col2" class="data row1 col2" >22,445	 (49.4%)</td>
+      <td id="T_5ce86_row1_col3" class="data row1 col3" >22.2%</td>
+    </tr>
+    <tr>
+      <th id="T_5ce86_level0_row2" class="row_heading level0 row2" >Total</th>
+      <td id="T_5ce86_row2_col0" class="data row2 col0" >36,450	 (100.0%)</td>
+      <td id="T_5ce86_row2_col1" class="data row2 col1" >8,972	 (100.0%)</td>
+      <td id="T_5ce86_row2_col2" class="data row2 col2" >45,422	 (100.0%)</td>
+      <td id="T_5ce86_row2_col3" class="data row2 col3" >19.8%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1901,6 +2666,93 @@ Population dislocation refers to households that will be forced to leave their p
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_85628 caption {
+  text-align: center;
+  caption-side: top;
+  font-size: 150%;
+}
+</style>
+<table id="T_85628">
+  <caption>Table. Total Population by Households by Race, Ethnicity and Dislocation, Galveston Island TX, 2010.</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Population Dislocation</th>
+      <th id="T_85628_level0_col0" class="col_heading level0 col0" >0 Does not dislocate (%)</th>
+      <th id="T_85628_level0_col1" class="col_heading level0 col1" >1 Dislocates (%)</th>
+      <th id="T_85628_level0_col2" class="col_heading level0 col2" >Total Population by Households (%)</th>
+      <th id="T_85628_level0_col3" class="col_heading level0 col3" >Percent Row 
+1 Dislocates</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Race Ethnicity</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_85628_level0_row0" class="row_heading level0 row0" >1 White alone, Not Hispanic</th>
+      <td id="T_85628_row0_col0" class="data row0 col0" >16,673	 (45.6%)</td>
+      <td id="T_85628_row0_col1" class="data row0 col1" >4,536	 (50.0%)</td>
+      <td id="T_85628_row0_col2" class="data row0 col2" >21,209	 (46.4%)</td>
+      <td id="T_85628_row0_col3" class="data row0 col3" >21.4%</td>
+    </tr>
+    <tr>
+      <th id="T_85628_level0_row1" class="row_heading level0 row1" >2 Black alone, Not Hispanic</th>
+      <td id="T_85628_row1_col0" class="data row1 col0" >6,798	 (18.6%)</td>
+      <td id="T_85628_row1_col1" class="data row1 col1" >1,264	 (13.9%)</td>
+      <td id="T_85628_row1_col2" class="data row1 col2" >8,062	 (17.7%)</td>
+      <td id="T_85628_row1_col3" class="data row1 col3" >15.7%</td>
+    </tr>
+    <tr>
+      <th id="T_85628_level0_row2" class="row_heading level0 row2" >3 American Indian and Alaska Native alone, Not Hispanic</th>
+      <td id="T_85628_row2_col0" class="data row2 col0" >155	 (0.4%)</td>
+      <td id="T_85628_row2_col1" class="data row2 col1" >36	 (0.4%)</td>
+      <td id="T_85628_row2_col2" class="data row2 col2" >191	 (0.4%)</td>
+      <td id="T_85628_row2_col3" class="data row2 col3" >18.8%</td>
+    </tr>
+    <tr>
+      <th id="T_85628_level0_row3" class="row_heading level0 row3" >4 Asian alone, Not Hispanic</th>
+      <td id="T_85628_row3_col0" class="data row3 col0" >950	 (2.6%)</td>
+      <td id="T_85628_row3_col1" class="data row3 col1" >439	 (4.8%)</td>
+      <td id="T_85628_row3_col2" class="data row3 col2" >1,389	 (3.0%)</td>
+      <td id="T_85628_row3_col3" class="data row3 col3" >31.6%</td>
+    </tr>
+    <tr>
+      <th id="T_85628_level0_row4" class="row_heading level0 row4" >5 Other Race, Not Hispanic</th>
+      <td id="T_85628_row4_col0" class="data row4 col0" >427	 (1.2%)</td>
+      <td id="T_85628_row4_col1" class="data row4 col1" >96	 (1.1%)</td>
+      <td id="T_85628_row4_col2" class="data row4 col2" >523	 (1.1%)</td>
+      <td id="T_85628_row4_col3" class="data row4 col3" >18.4%</td>
+    </tr>
+    <tr>
+      <th id="T_85628_level0_row5" class="row_heading level0 row5" >6 Any Race, Hispanic</th>
+      <td id="T_85628_row5_col0" class="data row5 col0" >11,447	 (31.3%)</td>
+      <td id="T_85628_row5_col1" class="data row5 col1" >2,601	 (28.7%)</td>
+      <td id="T_85628_row5_col2" class="data row5 col2" >14,048	 (30.8%)</td>
+      <td id="T_85628_row5_col3" class="data row5 col3" >18.5%</td>
+    </tr>
+    <tr>
+      <th id="T_85628_level0_row6" class="row_heading level0 row6" >7 Group Quarters no Race Ethnicity Data</th>
+      <td id="T_85628_row6_col0" class="data row6 col0" >149	 (0.4%)</td>
+      <td id="T_85628_row6_col1" class="data row6 col1" >91	 (1.0%)</td>
+      <td id="T_85628_row6_col2" class="data row6 col2" >240	 (0.5%)</td>
+      <td id="T_85628_row6_col3" class="data row6 col3" >37.9%</td>
+    </tr>
+    <tr>
+      <th id="T_85628_level0_row7" class="row_heading level0 row7" >Total</th>
+      <td id="T_85628_row7_col0" class="data row7 col0" >36,599	 (100.0%)</td>
+      <td id="T_85628_row7_col1" class="data row7 col1" >9,063	 (100.0%)</td>
+      <td id="T_85628_row7_col2" class="data row7 col2" >45,662	 (100.0%)</td>
+      <td id="T_85628_row7_col3" class="data row7 col3" >19.8%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1990,6 +2842,79 @@ Population dislocation refers to households that will be forced to leave their p
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_6389c caption {
+  text-align: center;
+  caption-side: top;
+  font-size: 150%;
+}
+</style>
+<table id="T_6389c">
+  <caption>Table. Total Households by Household Income Group and Dislocation, Galveston Island TX, 2010.</caption>
+  <thead>
+    <tr>
+      <th class="index_name level0" >Population Dislocation</th>
+      <th id="T_6389c_level0_col0" class="col_heading level0 col0" >0 Does not dislocate (%)</th>
+      <th id="T_6389c_level0_col1" class="col_heading level0 col1" >1 Dislocates (%)</th>
+      <th id="T_6389c_level0_col2" class="col_heading level0 col2" >Total Households (%)</th>
+      <th id="T_6389c_level0_col3" class="col_heading level0 col3" >Percent Row 
+1 Dislocates</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >Household Income Group</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_6389c_level0_row0" class="row_heading level0 row0" >1 Less than $15,000</th>
+      <td id="T_6389c_row0_col0" class="data row0 col0" >3,391	 (21.2%)</td>
+      <td id="T_6389c_row0_col1" class="data row0 col1" >837	 (20.2%)</td>
+      <td id="T_6389c_row0_col2" class="data row0 col2" >4,228	 (21.0%)</td>
+      <td id="T_6389c_row0_col3" class="data row0 col3" >19.8%</td>
+    </tr>
+    <tr>
+      <th id="T_6389c_level0_row1" class="row_heading level0 row1" >2 $15,000 to $24,999</th>
+      <td id="T_6389c_row1_col0" class="data row1 col0" >2,079	 (13.0%)</td>
+      <td id="T_6389c_row1_col1" class="data row1 col1" >481	 (11.6%)</td>
+      <td id="T_6389c_row1_col2" class="data row1 col2" >2,560	 (12.7%)</td>
+      <td id="T_6389c_row1_col3" class="data row1 col3" >18.8%</td>
+    </tr>
+    <tr>
+      <th id="T_6389c_level0_row2" class="row_heading level0 row2" >3 $25,000 to $74,999</th>
+      <td id="T_6389c_row2_col0" class="data row2 col0" >6,591	 (41.1%)</td>
+      <td id="T_6389c_row2_col1" class="data row2 col1" >1,776	 (42.8%)</td>
+      <td id="T_6389c_row2_col2" class="data row2 col2" >8,367	 (41.5%)</td>
+      <td id="T_6389c_row2_col3" class="data row2 col3" >21.2%</td>
+    </tr>
+    <tr>
+      <th id="T_6389c_level0_row3" class="row_heading level0 row3" >4 $75,000 to $99,999</th>
+      <td id="T_6389c_row3_col0" class="data row3 col0" >1,594	 (9.9%)</td>
+      <td id="T_6389c_row3_col1" class="data row3 col1" >377	 (9.1%)</td>
+      <td id="T_6389c_row3_col2" class="data row3 col2" >1,971	 (9.8%)</td>
+      <td id="T_6389c_row3_col3" class="data row3 col3" >19.1%</td>
+    </tr>
+    <tr>
+      <th id="T_6389c_level0_row4" class="row_heading level0 row4" >5 $100,000 or more</th>
+      <td id="T_6389c_row4_col0" class="data row4 col0" >2,371	 (14.8%)</td>
+      <td id="T_6389c_row4_col1" class="data row4 col1" >682	 (16.4%)</td>
+      <td id="T_6389c_row4_col2" class="data row4 col2" >3,053	 (15.1%)</td>
+      <td id="T_6389c_row4_col3" class="data row4 col3" >22.3%</td>
+    </tr>
+    <tr>
+      <th id="T_6389c_level0_row5" class="row_heading level0 row5" >Total</th>
+      <td id="T_6389c_row5_col0" class="data row5 col0" >16,026	 (100.0%)</td>
+      <td id="T_6389c_row5_col1" class="data row5 col1" >4,153	 (100.0%)</td>
+      <td id="T_6389c_row5_col2" class="data row5 col2" >20,179	 (100.0%)</td>
+      <td id="T_6389c_row5_col3" class="data row5 col3" >20.6%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 </section>
 <section id="d-4-explore-population-dislocation-and-building-damage-results">

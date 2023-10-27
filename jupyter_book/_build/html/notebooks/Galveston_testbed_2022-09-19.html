@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Building Damage" href="01_Damage_Buildings/BuildingDamage_Tori_05_18_22.html" />
+    <link rel="next" title="Galveston Test File" href="Galveston_Test.html" />
     <link rel="prev" title="Galveston Notebook Gallery" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -122,6 +122,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Galveston Testbed
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Galveston_Test.html">
+   Galveston Test File
   </a>
  </li>
 </ul>
@@ -266,7 +271,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/npr99/IN-CORE_Galveston/kooshan_main?urlpath=tree/jupyter_book/notebooks/Galveston_testbed_2022-09-19.ipynb"
+        <a href="https://mybinder.org/v2/gh/npr99/IN-CORE_Galveston.git/HEAD/v2/gh/npr99/IN-CORE_Galveston/kooshan_main?urlpath=tree/jupyter_book/notebooks/Galveston_testbed_2022-09-19.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1141,7 +1146,7 @@ numpy version:  1.24.1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C:\\Users\\Kooshan\\Box\\Rice\\Software_Projects\\Pycharm\\IN-CORE_Galveston\\jupyter_book\\notebooks&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C:\\Users\\ka50\\Box\\Rice\\Software_Projects\\Pycharm\\IN-CORE_Galveston\\jupyter_book\\notebooks&#39;
 </pre></div>
 </div>
 </div>
@@ -1166,21 +1171,21 @@ numpy version:  1.24.1
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># client.clear_cache() </span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">data_service</span> <span class="o">=</span> <span class="n">DataService</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="c1"># create data_service object for loading files</span>
 
-<span class="nn">File ~\anaconda3\envs\IN-CORE_Galveston\lib\site-packages\pyincore\client.py:228,</span> in <span class="ni">IncoreClient.__init__</span><span class="nt">(self, service_url, token_file_name)</span>
+<span class="nn">File ~\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\client.py:228,</span> in <span class="ni">IncoreClient.__init__</span><span class="nt">(self, service_url, token_file_name)</span>
 <span class="g g-Whitespace">    </span><span class="mi">225</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection successful to IN-CORE services.&quot;</span><span class="p">,</span> <span class="s2">&quot;pyIncore version detected:&quot;</span><span class="p">,</span> <span class="n">pyglobals</span><span class="o">.</span><span class="n">PACKAGE_VERSION</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">227</span> <span class="k">else</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">228</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="p">():</span>
 <span class="g g-Whitespace">    </span><span class="mi">229</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection successful to IN-CORE services.&quot;</span><span class="p">,</span> <span class="s2">&quot;pyIncore version detected:&quot;</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">230</span>               <span class="n">pyglobals</span><span class="o">.</span><span class="n">PACKAGE_VERSION</span><span class="p">)</span>
 
-<span class="nn">File ~\anaconda3\envs\IN-CORE_Galveston\lib\site-packages\pyincore\client.py:235,</span> in <span class="ni">IncoreClient.login</span><span class="nt">(self)</span>
+<span class="nn">File ~\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\client.py:235,</span> in <span class="ni">IncoreClient.login</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">233</span> <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pyglobals</span><span class="o">.</span><span class="n">MAX_LOGIN_ATTEMPTS</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">234</span>     <span class="k">try</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">235</span>         <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter username: &quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">236</span>         <span class="n">password</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getpass</span><span class="p">(</span><span class="s2">&quot;Enter password: &quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="k">except</span> <span class="ne">EOFError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 
-<span class="nn">File ~\anaconda3\envs\IN-CORE_Galveston\lib\site-packages\ipykernel\kernelbase.py:1186,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="nn">File ~\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\ipykernel\kernelbase.py:1186,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1184</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
 <span class="g g-Whitespace">   </span><span class="mi">1185</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
 <span class="ne">-&gt; </span><span class="mi">1186</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -1359,9 +1364,55 @@ Number of buildings: 172534
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-The IN-CORE Dataservice has saved the Housing Unit Inventory on your local machine: C:\Users\nathanael99\.incore\cache_data\648c22dd689743dc9dedf242006adc5a9c21de9a89c016323dccfedef94f7737\626322a7e74a5c2dfb3a72b0\hui_v2-0-0_Galveston_TX_2010_rs1000\hui_v2-0-0_Galveston_TX_2010_rs1000.csv
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">HTTPError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">housing_unit_inv_id</span> <span class="o">=</span> <span class="s2">&quot;626322a7e74a5c2dfb3a72b0&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># load housing unit inventory as pandas dataframe</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">housing_unit_inv</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">from_data_service</span><span class="p">(</span><span class="n">housing_unit_inv_id</span><span class="p">,</span> <span class="n">data_service</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">housing_unit_inv</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(</span><span class="s1">&#39;csv&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The IN-CORE Dataservice has saved the Housing Unit Inventory on your local machine: &quot;</span><span class="o">+</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\dataset.py:57,</span> in <span class="ni">Dataset.from_data_service</span><span class="nt">(cls, id, data_service)</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span> <span class="nd">@classmethod</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="k">def</span> <span class="nf">from_data_service</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data_service</span><span class="p">:</span> <span class="n">DataService</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Get Dataset from Data service, get metadata as well.</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span><span class="sd">     Args:</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">57</span>     <span class="n">metadata</span> <span class="o">=</span> <span class="n">data_service</span><span class="o">.</span><span class="n">get_dataset_metadata</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span>     <span class="n">instance</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="n">instance</span><span class="o">.</span><span class="n">cache_files</span><span class="p">(</span><span class="n">data_service</span><span class="p">)</span>
+
+<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\dataservice.py:47,</span> in <span class="ni">DataService.get_dataset_metadata</span><span class="nt">(self, dataset_id)</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span> <span class="c1"># construct url with service, dataset api, and id</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="n">url</span> <span class="o">=</span> <span class="n">urljoin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">dataset_id</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">47</span> <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\client.py:314,</span> in <span class="ni">IncoreClient.get</span><span class="nt">(self, url, params, timeout, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">311</span>     <span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span>     <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">314</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">return_http_response</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+
+<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\client.py:166,</span> in <span class="ni">Client.return_http_response</span><span class="nt">(http_response)</span>
+<span class="g g-Whitespace">    </span><span class="mi">163</span> <span class="nd">@staticmethod</span>
+<span class="g g-Whitespace">    </span><span class="mi">164</span> <span class="k">def</span> <span class="nf">return_http_response</span><span class="p">(</span><span class="n">http_response</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">166</span>         <span class="n">http_response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">167</span>         <span class="k">return</span> <span class="n">http_response</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span>     <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">HTTPError</span><span class="p">:</span>
+
+<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\requests\models.py:1021,</span> in <span class="ni">Response.raise_for_status</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1016</span>     <span class="n">http_error_msg</span> <span class="o">=</span> <span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1017</span>         <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2"> Server Error: </span><span class="si">{</span><span class="n">reason</span><span class="si">}</span><span class="s2"> for url: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1018</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1020</span> <span class="k">if</span> <span class="n">http_error_msg</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1021</span>     <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">http_error_msg</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+
+<span class="ne">HTTPError</span>: 403 Client Error: Forbidden for url: https://incore.ncsa.illinois.edu/data/api/datasets/626322a7e74a5c2dfb3a72b0
 </pre></div>
 </div>
 </div>
@@ -1374,141 +1425,16 @@ The IN-CORE Dataservice has saved the Housing Unit Inventory on your local machi
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">housing_unit_inv_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="s2">&quot;infer&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">housing_unit_inv_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>huid</th>
-      <th>blockid</th>
-      <th>bgid</th>
-      <th>tractid</th>
-      <th>FIPScounty</th>
-      <th>numprec</th>
-      <th>ownershp</th>
-      <th>race</th>
-      <th>hispan</th>
-      <th>family</th>
-      <th>vacancy</th>
-      <th>gqtype</th>
-      <th>incomegroup</th>
-      <th>hhinc</th>
-      <th>randincome</th>
-      <th>poverty</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>B481677201001000H001</td>
-      <td>481677201001000</td>
-      <td>481677201001</td>
-      <td>48167720100</td>
-      <td>48167</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>6</td>
-      <td>3</td>
-      <td>31459.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>B481677201001000H002</td>
-      <td>481677201001000</td>
-      <td>481677201001</td>
-      <td>48167720100</td>
-      <td>48167</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>6</td>
-      <td>3</td>
-      <td>34695.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>B481677201001000H003</td>
-      <td>481677201001000</td>
-      <td>481677201001</td>
-      <td>48167720100</td>
-      <td>48167</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7</td>
-      <td>3</td>
-      <td>38776.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>B481677201001000H004</td>
-      <td>481677201001000</td>
-      <td>481677201001</td>
-      <td>48167720100</td>
-      <td>48167</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>10</td>
-      <td>3</td>
-      <td>52398.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>B481677201001000H005</td>
-      <td>481677201001000</td>
-      <td>481677201001</td>
-      <td>48167720100</td>
-      <td>48167</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>11</td>
-      <td>3</td>
-      <td>69564.0</td>
-      <td>0.0</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<span class="ne">NameError</span>: name &#39;filename&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1649,15 +1575,67 @@ The housing unit allocation method will provide detail demographic characteristi
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">HTTPError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">address_point_inv_id</span> <span class="o">=</span> <span class="s2">&quot;6320da3661fe1122867c2fa2&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Load input dataset</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">hua</span><span class="o">.</span><span class="n">load_remote_input_dataset</span><span class="p">(</span><span class="s2">&quot;housing_unit_inventory&quot;</span><span class="p">,</span> <span class="n">housing_unit_inv_id</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">hua</span><span class="o">.</span><span class="n">load_remote_input_dataset</span><span class="p">(</span><span class="s2">&quot;address_point_inventory&quot;</span><span class="p">,</span> <span class="n">address_point_inv_id</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">hua</span><span class="o">.</span><span class="n">load_remote_input_dataset</span><span class="p">(</span><span class="s2">&quot;buildings&quot;</span><span class="p">,</span> <span class="n">bldg_dataset_id</span><span class="p">)</span>
+
+<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\baseanalysis.py:72,</span> in <span class="ni">BaseAnalysis.load_remote_input_dataset</span><span class="nt">(self, analysis_param_id, remote_id)</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span> <span class="k">def</span> <span class="nf">load_remote_input_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">analysis_param_id</span><span class="p">,</span> <span class="n">remote_id</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Convenience function for loading a remote dataset by id.</span>
+<span class="g g-Whitespace">     </span><span class="mi">66</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">67</span><span class="sd">     Args:</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">70</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">72</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">from_data_service</span><span class="p">(</span><span class="n">remote_id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_service</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span>     <span class="c1"># TODO: Need to handle failing to set input dataset.</span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span>     <span class="bp">self</span><span class="o">.</span><span class="n">set_input_dataset</span><span class="p">(</span><span class="n">analysis_param_id</span><span class="p">,</span> <span class="n">dataset</span><span class="p">)</span>
+
+<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\dataset.py:57,</span> in <span class="ni">Dataset.from_data_service</span><span class="nt">(cls, id, data_service)</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span> <span class="nd">@classmethod</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="k">def</span> <span class="nf">from_data_service</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data_service</span><span class="p">:</span> <span class="n">DataService</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Get Dataset from Data service, get metadata as well.</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span><span class="sd">     Args:</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">57</span>     <span class="n">metadata</span> <span class="o">=</span> <span class="n">data_service</span><span class="o">.</span><span class="n">get_dataset_metadata</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span>     <span class="n">instance</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="n">instance</span><span class="o">.</span><span class="n">cache_files</span><span class="p">(</span><span class="n">data_service</span><span class="p">)</span>
+
+<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\dataservice.py:47,</span> in <span class="ni">DataService.get_dataset_metadata</span><span class="nt">(self, dataset_id)</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span> <span class="c1"># construct url with service, dataset api, and id</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="n">url</span> <span class="o">=</span> <span class="n">urljoin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">dataset_id</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">47</span> <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\client.py:314,</span> in <span class="ni">IncoreClient.get</span><span class="nt">(self, url, params, timeout, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">311</span>     <span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span>     <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">314</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">return_http_response</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+
+<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\client.py:166,</span> in <span class="ni">Client.return_http_response</span><span class="nt">(http_response)</span>
+<span class="g g-Whitespace">    </span><span class="mi">163</span> <span class="nd">@staticmethod</span>
+<span class="g g-Whitespace">    </span><span class="mi">164</span> <span class="k">def</span> <span class="nf">return_http_response</span><span class="p">(</span><span class="n">http_response</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">166</span>         <span class="n">http_response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">167</span>         <span class="k">return</span> <span class="n">http_response</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span>     <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">HTTPError</span><span class="p">:</span>
+
+<span class="nn">File ~\Anaconda3\envs\IN-CORE_GAlveston\lib\site-packages\requests\models.py:1021,</span> in <span class="ni">Response.raise_for_status</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1016</span>     <span class="n">http_error_msg</span> <span class="o">=</span> <span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1017</span>         <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2"> Server Error: </span><span class="si">{</span><span class="n">reason</span><span class="si">}</span><span class="s2"> for url: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1018</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1020</span> <span class="k">if</span> <span class="n">http_error_msg</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1021</span>     <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">http_error_msg</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+
+<span class="ne">HTTPError</span>: 403 Client Error: Forbidden for url: https://incore.ncsa.illinois.edu/data/api/datasets/626322a7e74a5c2dfb3a72b0
 </pre></div>
 </div>
 </div>
@@ -1691,10 +1669,6 @@ Unzipped folder found in the local cache. Reading from it...
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-</pre></div>
-</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2379,11 +2353,16 @@ Unzipped folder found in the local cache. Reading from it...
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># EPF fragility mapping</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">epf_mapping_id</span> <span class="o">=</span> <span class="s2">&quot;62fac92ecef2881193f22613&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">epf_mapping_set</span> <span class="o">=</span> <span class="n">MappingSet</span><span class="p">(</span><span class="n">fragility_service</span><span class="o">.</span><span class="n">get_mapping</span><span class="p">(</span><span class="n">epf_mapping_id</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">epf_dmg_hurricane_galveston</span> <span class="o">=</span> <span class="n">EpfDamage</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">epf_dmg_hurricane_galveston</span><span class="o">.</span><span class="n">load_remote_input_dataset</span><span class="p">(</span><span class="s2">&quot;epfs&quot;</span><span class="p">,</span> <span class="s2">&quot;62fc000f88470b319561b58d&quot;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;fragility_service&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -5934,10 +5913,10 @@ Name: guid, dtype: object
             <p class="prev-next-title">Galveston Notebook Gallery</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="01_Damage_Buildings/BuildingDamage_Tori_05_18_22.html" title="next page">
+    <a class='right-next' id="next-link" href="Galveston_Test.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Building Damage</p>
+        <p class="prev-next-title">Galveston Test File</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -76,7 +76,7 @@ fragility_service = FragilityService(client)
 
 # ## 2-1) Functions for visualizing the population data results as tables
 
-# In[5]:
+# In[9]:
 
 
 # Functions for visualizing the population data results as tables
@@ -85,7 +85,7 @@ from pyincore_viz.analysis.popresultstable import PopResultsTable as poptable
 
 # ## 2-2) Setting up an alternative plotting function to plot spatially
 
-# In[6]:
+# In[10]:
 
 
 from mpl_toolkits.axes_grid1 import make_axes_locatable
@@ -131,14 +131,14 @@ matplotlib.rc('ytick', labelsize=20)
 
 # ### What is the your desired hurricane simulation?
 
-# In[7]:
+# In[11]:
 
 
 hazard_type = "hurricane"
 hur_no = int(input('The No. of your desired hurricane simulation: '))
 
 
-# In[8]:
+# In[12]:
 
 
 hazard_id_dict      = {1: "5fa5a228b6429615aeea4410", 
@@ -157,7 +157,7 @@ surge_level_id      = {1: "5fa5a1f893e8142dedeca251",
                        4: "5fa5a9f893e8142dedeca4c8",}
 
 
-# In[9]:
+# In[13]:
 
 
 hazard_id = hazard_id_dict[hur_no]
@@ -205,7 +205,7 @@ surge_level_id = surge_level_id[hur_no]
 # c) Elevation of the building with respect to the ground
 # 
 
-# In[10]:
+# In[14]:
 
 
 bldg_dataset_id = "60354b6c123b4036e6837ef7"               # defining building dataset (GIS point layer)       
@@ -221,7 +221,7 @@ print('Number of buildings: {}' .format(len(bldg_df)))
 # ## 1b) Social Systems
 # The Galveston Island has a permanent resident population of approximately 53,695 people (US Census, 2020). In 2010, the total population living on Galveston Island was 48,726. This section performs a housing unit allocation. The housing unit inventory includes characteristics for individual households and housing units that can be linked to residential buildings. For more information see Rosenheim et al. (2019).
 
-# In[11]:
+# In[15]:
 
 
 # Housing Unit inventory
@@ -232,20 +232,20 @@ filename = housing_unit_inv.get_file_path('csv')
 print("The IN-CORE Dataservice has saved the Housing Unit Inventory on your local machine: "+filename)
 
 
-# In[ ]:
+# In[16]:
 
 
 housing_unit_inv_df = pd.read_csv(filename, header="infer")
 housing_unit_inv_df.head()
 
 
-# In[ ]:
+# In[17]:
 
 
 housing_unit_inv_df['huid'].describe()
 
 
-# In[ ]:
+# In[18]:
 
 
 poptable.pop_results_table(housing_unit_inv_df, 
@@ -274,7 +274,7 @@ poptable.pop_results_table(housing_unit_inv_df,
 # ### Set Up and Run Housing Unit Allocation
 # The building and housing unit inventories have already by loaded. The address point inventory is needed to link the population with the structures.
 
-# In[ ]:
+# In[19]:
 
 
 # Create housing allocation 
@@ -299,7 +299,7 @@ hua.set_parameter("seed", seed)
 hua.set_parameter("iterations", iterations)
 
 
-# In[ ]:
+# In[20]:
 
 
 # Run Housing unit allocation analysis
@@ -308,7 +308,7 @@ hua.run_analysis()
 
 # ### Explore results from Housing Unit Allocation
 
-# In[ ]:
+# In[21]:
 
 
 # Retrieve result dataset
@@ -321,13 +321,13 @@ hua_df = hua_result.get_dataframe_from_csv(low_memory=False)
 hua_df[['guid','numprec','incomegroup','geometry']].head()
 
 
-# In[ ]:
+# In[22]:
 
 
 hua_df[['guid','huid']].describe()
 
 
-# In[ ]:
+# In[23]:
 
 
 # Limit HUA Results to only observations with GUID and HUID
@@ -336,7 +336,7 @@ hua_df_buildings = hua_df.loc[(hua_df['guid'].notnull()) &
 hua_df_buildings[['guid','huid']].describe()
 
 
-# In[ ]:
+# In[24]:
 
 
 # Update HUA results with housing unit inventory linked to buildings
@@ -345,7 +345,7 @@ hua_result = Dataset.from_dataframe(dataframe = hua_df_buildings,
                                     data_type='incore:housingUnitAllocation')
 
 
-# In[ ]:
+# In[25]:
 
 
 poptable.pop_results_table(hua_df_buildings, 
@@ -357,7 +357,7 @@ poptable.pop_results_table(hua_df_buildings,
                   col_index = 'Tenure Status')
 
 
-# In[ ]:
+# In[26]:
 
 
 poptable.pop_results_table(hua_df_buildings, 
@@ -455,7 +455,7 @@ poptable.pop_results_table(hua_df_buildings,
 # Then Pf= 0.2620
 # 
 
-# In[ ]:
+# In[27]:
 
 
 # use utility method of pyicore-viz package to visualize the fragility
@@ -467,7 +467,7 @@ plt = plotviz.get_fragility_plot_3d(fragility_set,
 plt.show()
 
 
-# In[ ]:
+# In[28]:
 
 
 hazard_type = "hurricane"
@@ -483,7 +483,7 @@ fragility_service = FragilityService(client)
 mapping_set = MappingSet(fragility_service.get_mapping(mapping_id))
 
 
-# In[ ]:
+# In[29]:
 
 
 # visualize wave height
@@ -492,14 +492,14 @@ map = geoviz.map_raster_overlay_from_file(dataset.get_file_path('tif'))
 map
 
 
-# In[ ]:
+# In[30]:
 
 
 # add opacity control - NOTE: It takes time before the opacity takes effect.
 map.layers[1].interact(opacity=(0.0,1.0,0.01))
 
 
-# In[ ]:
+# In[31]:
 
 
 # visualize surge level
@@ -508,7 +508,7 @@ map = geoviz.map_raster_overlay_from_file(dataset.get_file_path('tif'))
 map
 
 
-# In[ ]:
+# In[32]:
 
 
 # add opacity control - NOTE: It takes time before the opacity takes effect.
@@ -517,7 +517,7 @@ map.layers[1].interact(opacity=(0.0,1.0,0.01))
 
 # ### 2.2 Building Damage
 
-# In[ ]:
+# In[33]:
 
 
 bldg_dmg = BuildingDamage(client)
@@ -526,7 +526,7 @@ bldg_dmg.load_remote_input_dataset("buildings", bldg_dataset_id)
 bldg_dmg.set_input_dataset("dfr3_mapping_set", mapping_set)
 
 
-# In[ ]:
+# In[34]:
 
 
 result_name = "Galveston_bldg_dmg_result"
@@ -538,7 +538,7 @@ bldg_dmg.set_parameter("hazard_id", hazard_id)
 bldg_dmg.set_parameter("num_cpu", 4)
 
 
-# In[ ]:
+# In[35]:
 
 
 bldg_dmg.run_analysis()
@@ -552,14 +552,14 @@ bldg_dmg.run_analysis()
 
 # ## 3b) Functionality of Physical Infrastructure
 
-# In[ ]:
+# In[36]:
 
 
 # Retrieve result dataset
 building_dmg_result = bldg_dmg.get_output_dataset('ds_result')
 
 
-# In[ ]:
+# In[37]:
 
 
 # Convert dataset to Pandas DataFrame
@@ -569,13 +569,13 @@ bdmg_df = building_dmg_result.get_dataframe_from_csv(low_memory=False)
 bdmg_df.head()
 
 
-# In[ ]:
+# In[38]:
 
 
 bdmg_df.DS_0.describe()
 
 
-# In[ ]:
+# In[39]:
 
 
 bdmg_df.DS_3.describe()
@@ -588,7 +588,7 @@ bdmg_df.DS_3.describe()
 
 # #### 3d.1 Use new pyincore-data utility to obtain Block Group Data for County
 
-# In[ ]:
+# In[40]:
 
 
 from pyincore_data.censusutil import CensusUtil
@@ -601,13 +601,13 @@ blockgroup_df, bgmap = CensusUtil.get_blockgroupdata_for_dislocation(state_count
                                                 geo_name = "Galveston")
 
 
-# In[ ]:
+# In[41]:
 
 
 blockgroup_df.head()
 
 
-# In[ ]:
+# In[42]:
 
 
 bg_data = Dataset.from_file(
@@ -617,20 +617,20 @@ bg_data = Dataset.from_file(
 
 # #### 3d.2 Population Dislocation
 
-# In[ ]:
+# In[43]:
 
 
 pop_dis = PopulationDislocation(client)
 
 
-# In[ ]:
+# In[44]:
 
 
 # Value loss parameters DS 0-3
 value_loss = "60354810e379f22e16560dbd"
 
 
-# In[ ]:
+# In[45]:
 
 
 pop_dis.set_input_dataset("block_group_data", bg_data)
@@ -646,7 +646,7 @@ pop_dis.set_parameter("result_name", result_name)
 pop_dis.set_parameter("seed", seed)
 
 
-# In[ ]:
+# In[46]:
 
 
 pop_dis.run_analysis()
@@ -654,7 +654,7 @@ pop_dis.run_analysis()
 
 # #### 3.d.3 Explore Population Dislocation Results
 
-# In[ ]:
+# In[47]:
 
 
 # Retrieve result dataset
@@ -664,7 +664,7 @@ population_dislocation_result = pop_dis.get_output_dataset("result")
 pd_df = population_dislocation_result.get_dataframe_from_csv(low_memory=False)
 
 
-# In[ ]:
+# In[48]:
 
 
 poptable.pop_results_table(pd_df, 
@@ -677,7 +677,7 @@ poptable.pop_results_table(pd_df,
                   row_percent = '1 Dislocates')
 
 
-# In[ ]:
+# In[49]:
 
 
 poptable.pop_results_table(pd_df, 
@@ -690,7 +690,7 @@ poptable.pop_results_table(pd_df,
                   row_percent = '1 Dislocates')
 
 
-# In[ ]:
+# In[50]:
 
 
 # Add household income group categories for table
@@ -764,7 +764,7 @@ hhinc_valuelabels = {'categorical_variable': {'variable' : 'hhinc',
 pd_df = add_label_cat_values_df(pd_df, valuelabels = hhinc_valuelabels)
 
 
-# In[ ]:
+# In[51]:
 
 
 poptable.pop_results_table(pd_df, 

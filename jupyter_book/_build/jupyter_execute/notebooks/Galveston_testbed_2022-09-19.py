@@ -179,7 +179,7 @@ fragility_services = FragilityService(client)
 # The building inventory for Galveston consists of 172,534 individual buildings. This inventory is also mappable to housing unit info of 132,553 individual households explained later in this notebook. It should be noted that the reason that the building and household data are different in terms of numbers is that each individual building can be composed of a few households or no households in the case of commercial or industrial buildings. The building inventory consists of major parameters that are used to estimate the fragility of buildings explained shortly later in this notebook.
 # 
 
-# In[6]:
+# In[17]:
 
 
 bldg_dataset_id = "63053ddaf5438e1f8c517fed" # Prod              # defining building dataset (GIS point layer)       
@@ -199,7 +199,7 @@ print('Number of buildings: {}' .format(len(bldg_df)))
 # > Rosenheim, Nathanael (2021) “Detailed Household and Housing Unit Characteristics: Data and Replication Code.” DesignSafe-CI. https://doi.org/10.17603/ds2-jwf6-s535 v2
 # 
 
-# In[7]:
+# In[18]:
 
 
 # Housing Unit inventory
@@ -210,7 +210,7 @@ filename = housing_unit_inv.get_file_path('csv')
 print("The IN-CORE Dataservice has saved the Housing Unit Inventory on your local machine: "+filename)
 
 
-# In[8]:
+# In[16]:
 
 
 housing_unit_inv_df = pd.read_csv(filename, header="infer")
@@ -252,7 +252,7 @@ poptable.pop_results_table(housing_unit_inv_df,
 # ### Set Up and Run Housing Unit Allocation
 # The building and housing unit inventories have already by loaded. The address point inventory is needed to link the population with the structures.
 
-# In[11]:
+# In[19]:
 
 
 # Create housing allocation 
@@ -286,7 +286,7 @@ hua.set_parameter("iterations", iterations)
 
 # ### Explore results from Housing Unit Allocation
 
-# In[13]:
+# In[20]:
 
 
 # Retrieve result dataset
@@ -555,7 +555,7 @@ combined_bldg_dmg.set_parameter("result_name", result_name)
 
 # ### 2.3 Electric Power Facility Damage
 
-# In[29]:
+# In[22]:
 
 
 # EPF fragility mapping
@@ -1108,7 +1108,7 @@ df = sv_result.get_dataframe_from_csv()
 df.head()
 
 
-# In[60]:
+# In[26]:
 
 
 # Transition probability matrix per social vulnerability level, from Sutley and Hamideh (2020).

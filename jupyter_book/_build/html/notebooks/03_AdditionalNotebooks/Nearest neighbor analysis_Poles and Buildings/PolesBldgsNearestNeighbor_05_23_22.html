@@ -266,7 +266,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/npr99/IN-CORE_Galveston/kooshan_main?urlpath=tree/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.ipynb"
+        <a href="https://mybinder.org/v2/gh/npr99/IN-CORE_Galveston.git/HEAD/v2/gh/npr99/IN-CORE_Galveston/kooshan_main?urlpath=tree/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -455,26 +455,19 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#poles-buildings-matching">
-   Poles-Buildings matching
+  <a class="reference internal nav-link" href="#getting-needed-data">
+   2) Getting needed data
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lets-also-make-maps-out-of-them-to-get-a-better-understanding-of-the-data">
-     Let’s also make maps out of them to get a better understanding of the data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#we-can-see-from-the-coordinates-and-the-map-that-both-of-the-layers-share-the-same-coordinate-reference-system-hence-we-are-ready-to-find-closest-pole-on-the-right-for-each-building-on-the-left-map-lets-first-prepare-a-couple-of-functions-that-does-the-work">
-     we can see from the coordinates and the map that both of the layers share the same coordinate reference system. Hence, we are ready to find closest pole (on the right) for each building on the left map. Let’s first prepare a couple of functions that does the work
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#okay-now-we-have-our-functions-defined-so-lets-use-them-and-find-the-nearest-neighbors">
-     Okay, now we have our functions defined. So let’s use them and find the nearest neighbors!
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#poles-substations-building-matching">
+   3) Poles-substations-building matching
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exporting-results">
+   4) Exporting results
+  </a>
  </li>
 </ul>
 
@@ -501,26 +494,19 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#poles-buildings-matching">
-   Poles-Buildings matching
+  <a class="reference internal nav-link" href="#getting-needed-data">
+   2) Getting needed data
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lets-also-make-maps-out-of-them-to-get-a-better-understanding-of-the-data">
-     Let’s also make maps out of them to get a better understanding of the data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#we-can-see-from-the-coordinates-and-the-map-that-both-of-the-layers-share-the-same-coordinate-reference-system-hence-we-are-ready-to-find-closest-pole-on-the-right-for-each-building-on-the-left-map-lets-first-prepare-a-couple-of-functions-that-does-the-work">
-     we can see from the coordinates and the map that both of the layers share the same coordinate reference system. Hence, we are ready to find closest pole (on the right) for each building on the left map. Let’s first prepare a couple of functions that does the work
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#okay-now-we-have-our-functions-defined-so-lets-use-them-and-find-the-nearest-neighbors">
-     Okay, now we have our functions defined. So let’s use them and find the nearest neighbors!
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#poles-substations-building-matching">
+   3) Poles-substations-building matching
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exporting-results">
+   4) Exporting results
+  </a>
  </li>
 </ul>
 
@@ -532,13 +518,12 @@ title="Print to PDF"
                 
               <div>
                 
-  <p>![IN-CORE_resilience-logo.png](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATQAAADACAYAAACK9Z8kAAAAAXNSR0IArs4c6QAAActpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx4bXA6Q3JlYXRvclRvb2w+QWRvYmUgSW1hZ2VSZWFkeTwveG1wOkNyZWF0b3JUb29sPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KKS7NPQAAEoZJREFUeAHtnVusFdUZx9c+HKsR5WLiLVABaVohyqUPikkVqNT2QQ+oD8ZoBVK1MRWRlzYCCSERTe2DoDWm1sixlTaaqIA+VKEV9AE0TQU0YpoKaDX1FhErttZz9nR96+y92ezrzOy1ZtbM/FZCmD0ze11+3zr//X1r1lqjFAkCEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAELBEoW8iALCEAggwTKR/cGaugzazXvGzs3dT1JvQLWaJIRBApEoF6Mgi/3qWDoSK31wb9frh3LQXB0r1LDx64fd9Hih2/M+U/qepJ6BSzyJCsIZJ5A+b+HAvXVOyow/9417akJVOW8r41E0Hy1DPWCgEMC5SM7g0B7TMHRfUr9710jXlURc1is86wRNOeIKQAC6RAIhj4LJNQz4eBXWrQkLEwo9EunxUr5IGj9aTWeciGQFwISJo4IlhYtPX4lwvX1X8/OS/My1Q7G0DJlLiqbNgHxvMqfv2TCxap4JTHgnna7w5SPhxaGEvdAIEUC8jQxEAH78nUl/+N5pWiMEEXjoYWAxC3FIWDCx8PPavF6WYknhvcV3vZ4aOFZcScEnBCohZCHnzMe2NCeaU7KIdNkCPBQIBnOlOIRgWoYWdYiRgjpkWEsVAVBswCRLPwnICJW/vhxFehwcuj1Of5XmBrGIoCgxcLGl7JAABHLgpXs1hFBs8uT3FImIIP65Q8exBNL2Q5pFY+gpUWecq0RMAP7n25VImQM6lvDmsmMELRMmo1KCwFZE1n+ZBMD+xG7Q2nMpR2/UTpxkl7HdE7He5ou6qVdSj3ZdDrpE8xDS5o45fVEwHhjH//eeGOyI0Uh06ixqjR6pml6SR+rk2fUMPSNuaR2LAc+7FF2XIUcf0DQHAMmezsEzNjY+3ersg4tcz3ZtSJW9UJVFSkRsVL/OP5mO3Qp4HSAw6X0CZiwUo+NlfV0i7wkE9LpsK4knpUWMCNY/eNU3+iZ/D32aGQA9giQr7shMPzp1pGnlbL8KKup6m2deokqnXiO/jepcCFg0qZD0JImTnkdCQx/9LugrEPLrI2PiVgZj0t7XeJxER52NLOziwiaM7RkHIVA1oRMnhSWxPMaLQKmjxnbimJuZ/ciaM7QknEYAjJGNiwemeehZVXAxPsq2pPDMHb05R4EzRdLFKwesixp+J2feytkEj6Wxl9pwkcELDudE0HLjq1yUVOZRyZCVtZzybxK8rTxtAEdRn5v5H9CSK/ME7YyCFpYUtzXM4Ghf96ln1z+2pt5ZGYgX7yw8VcQRvZsXT8yQND8sEOua2HGyQ781IsnlzURO/0G5n3lsNd5IWhmFrjeq4rUO4E++UM9abIXdvUmvJRw8vQf63+IWO89zO8cvOj48gs+tP9HfpPKSO36p/3Ji/BJJsYOv31LquFlnw4nS1rERp024EU/z0gXynQ12W0j0+bzr/LGK9NCNvz3a1OpnJmNf9bPjEc2Mjcs/R0gUgFR0EIRtIIa3kWzxSv7+rXzUvHKjvfGlunmyT9S0QggaEWzuIP2VsfKEvfKKlMt+iasrIwb4o05MG+mskTQMmUu/yorE2TlpSOJrr0UITvrNjXq7NsqS44e9g8MNUqFAIKWCvZ8FDr8rweMmCXVGjM+Jt6YTIA1E19XJ1U05WSEAIKWEUP5VM1aiKln/CeRqkI26owb9dPKG5MokjIySgBBy6jh0qq2CTHf/KEKzB7yjmtRCS37v7kaIXOMOi/ZI2h5sWQC7TDzBbWYOd8Cu2mMLIHGUUQuCPTlohU0wjkB2a/MTH4ePuK0LJnR33/BbiVeGXuMOUWdy8wRtFya1W6jht6+JRjWazFdJtmuR1Y59E99uOTL0i2X7SVvNwQQNDdcc5GrDP6LmDnd6keHl6Mm3atOmPFKiX3HctFtUm0EY2ip4ve3cCNmjgf/ZXZ/nxYzPDJ/+0HWaoaHljWLJVBf52ImXtm3n1D933mS8DIBexapCC88NHlDjoyfkEYIlD/ZlNqOrrKV05BDz0y8slFTH+alInR2JwT8EDS2Oz7OuLKz63EnEvpQXcbkZFqGeGUTV+nlSsv0nDLWXCZk0sIV44WgFY66hw2uTph1IWbyBFO8Mt4M7qHhc1YlxtByZtA4zXEpZrKI3DzBHD2TTRbjGIfvRCKAhxYJV/5urj4AsO6ZVaZjjKy/zB83WuQnAQTNT7skUquqmNlelymLyeUpJiFmImakkDoCCFodjCIdOhOzMZeqfi1mLFsqUm/yp62Moflji0RrIi8wse2ZyTrME6Y/zxrMRC1JYfUEELR6GgU5NsuZDj9rtbWyfEnWYVrNlMwgEJEAghYRWNZvl10zbK/NHHXubyrzy7JOh/pnnQBjaFm3YIT6W3//KU8yI9Dn1iQIIGhJUPagDLOkSb/MxFrSYtY//XmeZFoDSkY2CBBy2qCYgTzMK+Zsbc6ImGXA4sWsIoJWALvLQwBrTzQRswL0mOw2EUHLru1C1VzeZm7tIQBiFoo5N6VHgDG09Ng7L9n2uJlMzWD2v3OzUUAPBPDQeoDn+1fNewAsjZuZqRnmvZi+t5r6FZkAgpZT68ueasHnL1lpXd8EvY8ZYmaFJZm4JUDI6ZZvKrnXNmq0ULp5rZx50a+FzMgCAo4J4KE5BpxG9rJO00Yyr5ZjOZMNlOSREAEELSHQSRVT/uBBO4vOK080k6o35UDABgEEzQZFj/IoW1p0LqsA2ALII8NSlVAEELRQmIp1E9MzimXvPLUWQcuTNS20xbxmzryZyUJmZAGBhAkgaAkD97o4PW4mb2ciQSCrBJi2kVXLOah3HrfOfu3tN4PPjn7eltasc6ep8aeMZWPKtoSydcELQTv44XvB4PanIpGbfOZEtXTBNS074sbtTwWHPnzPWn6S0Yv7dgc7Xn8ldJ5rr1/esm6hM0j4RnndXN/YubHrXOWz9+BbqpOARGnWfTetUrOnTg9dJ+lHm3dtUzvfeFXtOfCmOvTR+2r28oHuRV7xrUCEbd4FF6m551+orrr48tBlVjNfs2mDs5dDjxs9Rkn95s+YE6leVZtU6+j6fx/6vBeCJuKz9o8PROItna9deuzPT6so4iP5SKfplCS/qHXslJ9P18xbmvRbzZX6VeRq3bd5Y7Bh66Cav/KGyN/t9oXNu7d1u8VcFyFb8dt1aspP5oW6v9VNew7s1yK4X63fMqjGXfvdYPnAYnXHwiWhvbdE+oYW3iWXXa2WDywJJfR57rOtbCjnGEOrkBGv4pldLzj7lW1nAB/OyzrNqFM0Dn9xJJh35/XBikfWGU8orXaINy5CFlb8wtRT+oII1OzbB5SErGG+k9Q9g/rHWrxOaXdSZWapHAStzlpbdm+v+1SMQ3mqGSfUFI8oqhdsm6j8US9d/wvb2dbyk5BVPE/fRE0qKO1G1Gqmqh0gaDUUSv/Kb1fiedSdyvehfqrZp7cEippkbEY8hTST1MGlmFXbJt7aVetu9bJfyI9Kofpr1Sgd/kfQ6uBI5xVRK0oyDwJOmhxpoFnYyBhl2imRMatKI8VTk7E135L018Ht6dvCJy4IWoM1ihJ2mgcBZ9/W0PpwH9MWfQkBkw53N2x9LBychO+SJ7qkYwQQtGMszJEMLhfBje+bsDLygwABJE8UxTNIMz32l+S9Emmzjw+NZHoK6RgBBO0Yi9pR2h5IrSKODox3FnPDxqjz+1w0QaZXpJHSKrdTWyUcJh0jgKAdY1E7knlVeU5xHgT4xCPpcLPadsK7Kgl///diYq1veOSXWEKrKWdOjDxgbqMtpRPPUaUxl9rIqikP452dNhC7XXHEZPIZE5Ss7Iia4nynVRkyy15WHTQmF5OBG8vo9LnV5PA4fDuVEfVaXFtJOTue+0fU4qzfj6C1QSpLaNJKedu/f7Ge3R5nWcyOezZZMYGsAmm5bEjPvLdSQMxMdPuaf1hSrlNcW8VEYP1rhJxtkKYx8NymKpz2hEDa3pMnGLyuBoLWxjwSdvo4Q7xNdTkNAQhoAghah26Al9YBDpcg4CEBBK2DUdIcR+tQLS5BAAJtCCBobcDIaZnjQ9jZARCXIOAZAQSti0HyPietS/O5DIFMEUDQupgr76sGujSfyxDIFAEErYu5fF3D16XaXIZAIQkwsTaE2WUHjkl6tjsJAnknYLZliji5d811y2JNnHbBEkELQVXCziULrg5xp51bZCdSV3uOyTKg9Tevbp6hbqfq5AKBVAkgaCHwS9iZ5BQO2dGCWekhDMMtEGggwBhaA5B2H9mmpR0ZzkPAHwIImj+2oCYQgECPBBA0DVC2TCFBAALZJ4CgaRvKi1tJEIBA9gkgaNqGiy7+QfYtSQsgAAHFU07dCWRn2lm3Xxn4uGc8fTTHBCLO92pFQoZLDqn0d4ptVbc0zuGhVagv/n5y88zSMDRl5pPArHOn57NhMVuFh1YBJ2HnikfWxcTI1yCQDoGFcxaozeoha4XLew7mnn9hpPzkO2sjfcPdzQhahS1hp7tORs5uCEi4uXTBNVZXfYiYRX3/gy9iJpQRtLq+JmHnngPpe2lLFlyjWr0RqK6qsQ/lhSGzLb18JHYl+GLPBMSOz6x6SM1+lJCzHiaCVkfDl7Azrdfn1aHg0GMC4pkZMZs63ap35nGTQ1eNhwJ1qEzYqRdvkyDgIwHx2jfe8Ut16NGdpdmIWUsTIWgNWHja2QCEj94QkJ1SbI+ZedM4SxVB0BpAJrlNUEPRfIRARwKD25/ueJ2LvMauqQ+MP2VsadEcVg40geGEdQLicUVJso2V7JUX5TtFuxcPrYXFZW4PCQKNBOTJos0UZw0xL+3pbAEErQWfRQhaCyqciupRdSMWp5/J8jxerdieLNM2WrAxYeddtwabd29rcbXYp+J4KTvfeFWt2bQhcqgkT/Xmz5jT89QECdVe3Le7qfz5K29I1Zhx+5lLL022fp935/VNrMKA2nHPpp5tFaacTvcgaG3omCUlCFoTnTheimwnnuaW4uLV2BCvOGLeBLDhRJx+Ju+4OPzFkUAEsSG7nj/KzsxZ3p2ZkLNNF4gTDrTJitOWCbhaRdGtmjOnnNftlsjXpZ9FFUrzjgstaqRmAghaMxNzhqedrcFMPnNi6wsJno3jJdqongshHeln0R9Crf3D/TaalLs8ELQOJuVpZzMcWU0R1aNozqW3Mwsvii4AvZU4sk27jfG8VvWI088kLGw1Ltgq/yKdQ9A6WJuwszWctLmIsCT9HojFl7nbL++qiy+P9SPh6t2tra2ejbMIWgc7EXa2huPyj7t1ic1nZU1jUklC3Khb6kStW5wfiUH9RFIeDkQtK8/3I2hdrBsnHOiSZeYvi4d0x8IlqbZD6rDmumXO6yDh9cbl7sUz7o/E+i2DzhlkqQAErYu14vxydskyF5fX37y6tMRhGBYGknhN9920Ksytse4Rz+zFux9XSexsETeMJuw83rQI2vE8mj4RdjYhqZ0YXHFvSUK/pMezahXQBysWLS29tmGr1Q0xxSsT72/P/c8muk1PnLePycOBZ3a9QNhZ6RReTKyVqQBRwwf5jp6ZXN+3a8fivkfZF33tc8tr3211sHxgsYo6B6lbnq3KyeK56nY2shxHVlbsPfiWknlSNlLY6RlVD+rgh+8Fm3dtU1te2a53Ht4fqR5S1qwp05QMMcgg/don/hapCVH7r2Te2EdkbefYk0+NVG6nm11MM+lUXmN7Ot3r6pr1mcauKkq+EIhDoNvUBvlhZIfgOGT5DgQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIBAYgT+D6+SMn0jjUoTAAAAAElFTkSuQmCC)</p>
-<section class="tex2jax_ignore mathjax_ignore" id="pole-building-assignment">
+  <section class="tex2jax_ignore mathjax_ignore" id="pole-building-assignment">
 <h1>Pole-Building Assignment<a class="headerlink" href="#pole-building-assignment" title="Permalink to this headline">#</a></h1>
 <p><strong>Jupyter Notebook Created by</strong>:</p>
 <ul class="simple">
+<li><p>Kooshan Amini, Ph.D. Student at Rice University (<a class="reference external" href="mailto:Kooshan&#46;Amini&#37;&#52;&#48;rice&#46;edu">Kooshan<span>&#46;</span>Amini<span>&#64;</span>rice<span>&#46;</span>edu</a>)</p></li>
 <li><p>Mehrzad Rahimi, Postdoctoral fellow at Rice University (<a class="reference external" href="mailto:mr77&#37;&#52;&#48;rice&#46;edu">mr77<span>&#64;</span>rice<span>&#46;</span>edu</a>)</p></li>
-<li><p>Jamie E. Padgett, Professor at Rice University (<a class="reference external" href="mailto:jamie&#46;padgett&#37;&#52;&#48;rice&#46;edu">jamie<span>&#46;</span>padgett<span>&#64;</span>rice<span>&#46;</span>edu</a>)</p></li>
 </ul>
 <section id="initialization">
 <h2>1) Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline">#</a></h2>
@@ -546,34 +531,14 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
-<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span> 
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">sys</span> 
-<span class="kn">import</span> <span class="nn">os</span> 
-<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">contextily</span> <span class="k">as</span> <span class="nn">ctx</span>
-<span class="kn">import</span> <span class="nn">copy</span>
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
-
 <span class="kn">from</span> <span class="nn">pyincore</span> <span class="kn">import</span> <span class="n">IncoreClient</span><span class="p">,</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">DataService</span><span class="p">,</span> <span class="n">HazardService</span><span class="p">,</span> <span class="n">FragilityService</span><span class="p">,</span> <span class="n">MappingSet</span><span class="p">,</span> <span class="n">FragilityCurveSet</span>
-<span class="kn">from</span> <span class="nn">pyincore_viz.geoutil</span> <span class="kn">import</span> <span class="n">GeoUtil</span> <span class="k">as</span> <span class="n">geoviz</span>
-<span class="kn">from</span> <span class="nn">pyincore_viz.plotutil</span> <span class="kn">import</span> <span class="n">PlotUtil</span> <span class="k">as</span> <span class="n">plotviz</span>
-
-<span class="c1"># importing pyIncone analyses:</span>
-<span class="kn">from</span> <span class="nn">pyincore.analyses.buildingdamage</span> <span class="kn">import</span> <span class="n">BuildingDamage</span>
-<span class="kn">from</span> <span class="nn">pyincore.analyses.bridgedamage</span> <span class="kn">import</span> <span class="n">BridgeDamage</span>
-<span class="kn">from</span> <span class="nn">pyincore.analyses.roaddamage</span> <span class="kn">import</span> <span class="n">RoadDamage</span>
-<span class="kn">from</span> <span class="nn">pyincore.analyses.epfdamage</span> <span class="kn">import</span> <span class="n">EpfDamage</span>
-<span class="kn">from</span> <span class="nn">pyincore.analyses.buildingfunctionality</span> <span class="kn">import</span> <span class="n">BuildingFunctionality</span>
-<span class="kn">from</span> <span class="nn">pyincore.analyses.housingunitallocation</span> <span class="kn">import</span> <span class="n">HousingUnitAllocation</span>
-<span class="kn">from</span> <span class="nn">pyincore.analyses.populationdislocation</span> <span class="kn">import</span> <span class="n">PopulationDislocation</span><span class="p">,</span> <span class="n">PopulationDislocationUtil</span>
-<span class="kn">from</span> <span class="nn">pyincore.analyses.housingrecoverysequential</span> <span class="kn">import</span> <span class="n">HousingRecoverySequential</span>
 </pre></div>
 </div>
 </div>
@@ -603,7 +568,7 @@ numpy version:  1.24.1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C:\\Users\\Kooshan\\Box\\Rice\\Software_Projects\\Pycharm\\IN-CORE_Galveston\\jupyter_book\\notebooks\\03_AdditionalNotebooks\\Nearest neighbor analysis_Poles and Buildings&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C:\\Users\\ka50\\Box\\Rice\\Software_Projects\\Pycharm\\IN-CORE_Galveston\\jupyter_book\\notebooks\\03_AdditionalNotebooks\\Nearest neighbor analysis_Poles and Buildings&#39;
 </pre></div>
 </div>
 </div>
@@ -628,21 +593,21 @@ numpy version:  1.24.1
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#client.clear_cache() </span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">data_service</span> <span class="o">=</span> <span class="n">DataService</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="c1"># create data_service object for loading files</span>
 
-<span class="nn">File ~\anaconda3\envs\IN-CORE_Galveston\lib\site-packages\pyincore\client.py:228,</span> in <span class="ni">IncoreClient.__init__</span><span class="nt">(self, service_url, token_file_name)</span>
+<span class="nn">File ~\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\client.py:228,</span> in <span class="ni">IncoreClient.__init__</span><span class="nt">(self, service_url, token_file_name)</span>
 <span class="g g-Whitespace">    </span><span class="mi">225</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection successful to IN-CORE services.&quot;</span><span class="p">,</span> <span class="s2">&quot;pyIncore version detected:&quot;</span><span class="p">,</span> <span class="n">pyglobals</span><span class="o">.</span><span class="n">PACKAGE_VERSION</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">227</span> <span class="k">else</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">228</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">login</span><span class="p">():</span>
 <span class="g g-Whitespace">    </span><span class="mi">229</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection successful to IN-CORE services.&quot;</span><span class="p">,</span> <span class="s2">&quot;pyIncore version detected:&quot;</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">230</span>               <span class="n">pyglobals</span><span class="o">.</span><span class="n">PACKAGE_VERSION</span><span class="p">)</span>
 
-<span class="nn">File ~\anaconda3\envs\IN-CORE_Galveston\lib\site-packages\pyincore\client.py:235,</span> in <span class="ni">IncoreClient.login</span><span class="nt">(self)</span>
+<span class="nn">File ~\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\pyincore\client.py:235,</span> in <span class="ni">IncoreClient.login</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">233</span> <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pyglobals</span><span class="o">.</span><span class="n">MAX_LOGIN_ATTEMPTS</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">234</span>     <span class="k">try</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">235</span>         <span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter username: &quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">236</span>         <span class="n">password</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getpass</span><span class="p">(</span><span class="s2">&quot;Enter password: &quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="k">except</span> <span class="ne">EOFError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 
-<span class="nn">File ~\anaconda3\envs\IN-CORE_Galveston\lib\site-packages\ipykernel\kernelbase.py:1186,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="nn">File ~\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\ipykernel\kernelbase.py:1186,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1184</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
 <span class="g g-Whitespace">   </span><span class="mi">1185</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
 <span class="ne">-&gt; </span><span class="mi">1186</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
@@ -668,14 +633,15 @@ numpy version:  1.24.1
 </div>
 </div>
 </section>
-<section id="poles-buildings-matching">
-<h2>Poles-Buildings matching<a class="headerlink" href="#poles-buildings-matching" title="Permalink to this headline">#</a></h2>
+<section id="getting-needed-data">
+<h2>2) Getting needed data<a class="headerlink" href="#getting-needed-data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Buildings geopandas</span>
 <span class="n">bldg_dataset_id</span> <span class="o">=</span> <span class="s2">&quot;60354b6c123b4036e6837ef7&quot;</span>                    <span class="c1"># defining building dataset (GIS point layer)       </span>
 <span class="n">bldg_dataset</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">from_data_service</span><span class="p">(</span><span class="n">bldg_dataset_id</span><span class="p">,</span> <span class="n">data_service</span><span class="p">)</span>
 <span class="n">bldg_df</span> <span class="o">=</span> <span class="n">bldg_dataset</span><span class="o">.</span><span class="n">get_dataframe_from_shapefile</span><span class="p">()</span>
+<span class="n">bldg_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;guid&quot;</span><span class="p">:</span> <span class="s2">&quot;bldg_guid&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -689,26 +655,226 @@ Unzipped folder found in the local cache. Reading from it...
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Poles geopandas</span>
-<span class="n">Galv_WoodPoles_df</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;Galv_WoodPoles.shp&#39;</span><span class="p">)</span>
-<span class="n">Galv_PrestressedPoles_df</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;Galv_PrestressedPoles.shp&#39;</span><span class="p">)</span>
-<span class="n">Galv_Poles_df</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span> <span class="p">[</span><span class="n">Galv_WoodPoles_df</span><span class="p">,</span> <span class="n">Galv_PrestressedPoles_df</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">galv_elec_id</span> <span class="o">=</span> <span class="s2">&quot;62fc000f88470b319561b58d&quot;</span>
+<span class="n">galv_elec</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">from_data_service</span><span class="p">(</span><span class="n">galv_elec_id</span><span class="p">,</span> <span class="n">data_service</span><span class="p">)</span>
+<span class="n">galv_elec_df</span> <span class="o">=</span> <span class="n">galv_elec</span><span class="o">.</span><span class="n">get_dataframe_from_shapefile</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset already exists locally. Reading from local cached zip.
+Unzipped folder found in the local cache. Reading from it...
 </pre></div>
 </div>
 </div>
 </div>
-<section id="lets-also-make-maps-out-of-them-to-get-a-better-understanding-of-the-data">
-<h3>Let’s also make maps out of them to get a better understanding of the data<a class="headerlink" href="#lets-also-make-maps-out-of-them-to-get-a-better-understanding-of-the-data" title="Permalink to this headline">#</a></h3>
+<p>Here, first the poles and substations have became seperated and then been plotted:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">galv_elec_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>nodenwid</th>
+      <th>epf_class</th>
+      <th>height</th>
+      <th>utilfcltyc</th>
+      <th>spanLength</th>
+      <th>fltytype</th>
+      <th>strctype</th>
+      <th>flow</th>
+      <th>guid</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>709</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>54.051965</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>2525e200-cdc6-4fb8-9952-f17579176fd8</td>
+      <td>POINT (-94.81283 29.29671)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>724</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>21.865475</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>9180f947-26ae-40bd-85f5-83a80525f6c8</td>
+      <td>POINT (-94.81676 29.29552)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>725</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>59.525048</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>11ddc2dc-cc92-4c90-b4cc-a99b92a26f4b</td>
+      <td>POINT (-94.81683 29.29565)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1691</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>23.753117</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>9e58f196-9a2c-40b1-b722-69fa9c53c9d4</td>
+      <td>POINT (-94.79776 29.30243)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1692</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>24.739579</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>a4de2d54-b251-4a02-af0c-d12e0dc3670c</td>
+      <td>POINT (-94.79780 29.30256)</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>16032</th>
+      <td>16031</td>
+      <td>3</td>
+      <td>40.0</td>
+      <td>1</td>
+      <td>26.799330</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>2c896ae9-021c-4dd9-af73-7b7d88442801</td>
+      <td>POINT (-94.79436 29.30382)</td>
+    </tr>
+    <tr>
+      <th>16033</th>
+      <td>16032</td>
+      <td>3</td>
+      <td>40.0</td>
+      <td>1</td>
+      <td>0.000000</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>714fd53b-9020-426f-bece-f090d2682f64</td>
+      <td>POINT (-94.79268 29.30425)</td>
+    </tr>
+    <tr>
+      <th>16034</th>
+      <td>16033</td>
+      <td>3</td>
+      <td>40.0</td>
+      <td>1</td>
+      <td>48.127953</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>eaf8101b-9fc1-4c31-b0f8-d4c0cd01f01a</td>
+      <td>POINT (-94.79253 29.30430)</td>
+    </tr>
+    <tr>
+      <th>16035</th>
+      <td>16034</td>
+      <td>3</td>
+      <td>40.0</td>
+      <td>1</td>
+      <td>62.098186</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0d5d027a-64ad-4321-9754-5adb954ff408</td>
+      <td>POINT (-94.79207 29.30442)</td>
+    </tr>
+    <tr>
+      <th>16036</th>
+      <td>16035</td>
+      <td>3</td>
+      <td>40.0</td>
+      <td>1</td>
+      <td>0.000000</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>edb929c5-1cd2-4409-b51b-d7e9a5a17750</td>
+      <td>POINT (-94.79162 29.30454)</td>
+    </tr>
+  </tbody>
+</table>
+<p>16037 rows × 10 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poles_df</span> <span class="o">=</span> <span class="n">galv_elec_df</span><span class="p">[(</span><span class="n">galv_elec_df</span><span class="p">[</span><span class="s1">&#39;utilfcltyc&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">galv_elec_df</span><span class="p">[</span><span class="s1">&#39;utilfcltyc&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2&#39;</span><span class="p">)]</span>
+<span class="n">poles_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;guid&quot;</span><span class="p">:</span> <span class="s2">&quot;poles_guid&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">substations_df</span> <span class="o">=</span> <span class="n">galv_elec_df</span><span class="p">[</span><span class="n">galv_elec_df</span><span class="p">[</span><span class="s1">&#39;utilfcltyc&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;20&#39;</span><span class="p">]</span>
+<span class="n">substations_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;guid&quot;</span><span class="p">:</span> <span class="s2">&quot;substations_guid&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mf">12.5</span><span class="p">))</span>
 
 <span class="c1"># Plot buildings</span>
 <span class="n">bldg_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">markersize</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Buildings&#39;</span><span class="p">)</span>
 
-<span class="c1"># Plot poles</span>
-<span class="n">Galv_Poles_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">markersize</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Poles&#39;</span><span class="p">);</span>
+<span class="c1"># Plot Poles</span>
+<span class="n">poles_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">markersize</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot Substations</span>
+<span class="n">substations_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Poles and Substations&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -716,9 +882,329 @@ Unzipped folder found in the local cache. Reading from it...
 <img alt="../../../_images/PolesBldgsNearestNeighbor_05_23_22_12_0.png" src="../../../_images/PolesBldgsNearestNeighbor_05_23_22_12_0.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poles_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>nodenwid</th>
+      <th>epf_class</th>
+      <th>height</th>
+      <th>utilfcltyc</th>
+      <th>spanLength</th>
+      <th>fltytype</th>
+      <th>strctype</th>
+      <th>flow</th>
+      <th>poles_guid</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>709</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>54.051965</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>2525e200-cdc6-4fb8-9952-f17579176fd8</td>
+      <td>POINT (-94.81283 29.29671)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>724</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>21.865475</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>9180f947-26ae-40bd-85f5-83a80525f6c8</td>
+      <td>POINT (-94.81676 29.29552)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>725</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>59.525048</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>11ddc2dc-cc92-4c90-b4cc-a99b92a26f4b</td>
+      <td>POINT (-94.81683 29.29565)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1691</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>23.753117</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>9e58f196-9a2c-40b1-b722-69fa9c53c9d4</td>
+      <td>POINT (-94.79776 29.30243)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1692</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>24.739579</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>a4de2d54-b251-4a02-af0c-d12e0dc3670c</td>
+      <td>POINT (-94.79780 29.30256)</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>16032</th>
+      <td>16031</td>
+      <td>3</td>
+      <td>40.0</td>
+      <td>1</td>
+      <td>26.799330</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>2c896ae9-021c-4dd9-af73-7b7d88442801</td>
+      <td>POINT (-94.79436 29.30382)</td>
+    </tr>
+    <tr>
+      <th>16033</th>
+      <td>16032</td>
+      <td>3</td>
+      <td>40.0</td>
+      <td>1</td>
+      <td>0.000000</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>714fd53b-9020-426f-bece-f090d2682f64</td>
+      <td>POINT (-94.79268 29.30425)</td>
+    </tr>
+    <tr>
+      <th>16034</th>
+      <td>16033</td>
+      <td>3</td>
+      <td>40.0</td>
+      <td>1</td>
+      <td>48.127953</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>eaf8101b-9fc1-4c31-b0f8-d4c0cd01f01a</td>
+      <td>POINT (-94.79253 29.30430)</td>
+    </tr>
+    <tr>
+      <th>16035</th>
+      <td>16034</td>
+      <td>3</td>
+      <td>40.0</td>
+      <td>1</td>
+      <td>62.098186</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0d5d027a-64ad-4321-9754-5adb954ff408</td>
+      <td>POINT (-94.79207 29.30442)</td>
+    </tr>
+    <tr>
+      <th>16036</th>
+      <td>16035</td>
+      <td>3</td>
+      <td>40.0</td>
+      <td>1</td>
+      <td>0.000000</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>edb929c5-1cd2-4409-b51b-d7e9a5a17750</td>
+      <td>POINT (-94.79162 29.30454)</td>
+    </tr>
+  </tbody>
+</table>
+<p>15947 rows × 10 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">substations_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>nodenwid</th>
+      <th>epf_class</th>
+      <th>height</th>
+      <th>utilfcltyc</th>
+      <th>spanLength</th>
+      <th>fltytype</th>
+      <th>strctype</th>
+      <th>flow</th>
+      <th>substations_guid</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>268</th>
+      <td>1</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>299.385944</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>9c1bc010-5619-46a8-8a26-be15cdcbe07f</td>
+      <td>POINT (-94.82755 29.29617)</td>
+    </tr>
+    <tr>
+      <th>269</th>
+      <td>2</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>179.501088</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>c2a2fab8-9055-40ef-89a6-d7cce824a1b0</td>
+      <td>POINT (-94.85338 29.26065)</td>
+    </tr>
+    <tr>
+      <th>270</th>
+      <td>3</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>34.217744</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+    </tr>
+    <tr>
+      <th>271</th>
+      <td>4</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>97.567523</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>f3d89f4c-b1ee-40b2-9afb-75e939016ee7</td>
+      <td>POINT (-95.09075 29.11266)</td>
+    </tr>
+    <tr>
+      <th>272</th>
+      <td>5</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>76.204443</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>fcee466c-0554-4f76-a6a4-a6431d563dee</td>
+      <td>POINT (-94.79729 29.30298)</td>
+    </tr>
+    <tr>
+      <th>273</th>
+      <td>6</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>21.078656</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>92f02a57-7c92-4dbe-a449-2054f939676c</td>
+      <td>POINT (-94.77146 29.31085)</td>
+    </tr>
+    <tr>
+      <th>275</th>
+      <td>8</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>94.679718</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>03981b49-9f97-4cc9-85d7-6f5dde50695b</td>
+      <td>POINT (-94.86118 29.25516)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 </section>
-<section id="we-can-see-from-the-coordinates-and-the-map-that-both-of-the-layers-share-the-same-coordinate-reference-system-hence-we-are-ready-to-find-closest-pole-on-the-right-for-each-building-on-the-left-map-lets-first-prepare-a-couple-of-functions-that-does-the-work">
-<h3>we can see from the coordinates and the map that both of the layers share the same coordinate reference system. Hence, we are ready to find closest pole (on the right) for each building on the left map. Let’s first prepare a couple of functions that does the work<a class="headerlink" href="#we-can-see-from-the-coordinates-and-the-map-that-both-of-the-layers-share-the-same-coordinate-reference-system-hence-we-are-ready-to-find-closest-pole-on-the-right-for-each-building-on-the-left-map-lets-first-prepare-a-couple-of-functions-that-does-the-work" title="Permalink to this headline">#</a></h3>
+<section id="poles-substations-building-matching">
+<h2>3) Poles-substations-building matching<a class="headerlink" href="#poles-substations-building-matching" title="Permalink to this headline">#</a></h2>
+<p>we can see from the coordinates and the map that both of the layers share the same coordinate reference system. Hence, we are ready to find closest pole (on the right) for each building on the left map. Let’s first prepare a couple of functions that does the work</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">BallTree</span>
@@ -785,18 +1271,21 @@ Unzipped folder found in the local cache. Reading from it...
 </div>
 </div>
 </div>
-</section>
-<section id="okay-now-we-have-our-functions-defined-so-lets-use-them-and-find-the-nearest-neighbors">
-<h3>Okay, now we have our functions defined. So let’s use them and find the nearest neighbors!<a class="headerlink" href="#okay-now-we-have-our-functions-defined-so-lets-use-them-and-find-the-nearest-neighbors" title="Permalink to this headline">#</a></h3>
+<p>Okay, now we have our functions defined. So let’s use them and find the nearest neighbors!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find closest pole for each building and get also the distance based on haversine distance</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find closest pole and substation for each building and get also the distance based on haversine distance</span>
 <span class="c1"># Note: haversine distance which is implemented here is a bit slower than using e.g. &#39;euclidean&#39; metric</span>
 <span class="c1"># but useful as we get the distance between points in meters</span>
-<span class="n">closest_poles</span> <span class="o">=</span> <span class="n">nearest_neighbor</span><span class="p">(</span><span class="n">bldg_df</span><span class="p">,</span> <span class="n">Galv_Poles_df</span><span class="p">,</span> <span class="n">return_dist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># And the result looks like ..</span>
-<span class="n">closest_poles</span>
+<span class="n">closest_poles</span> <span class="o">=</span> <span class="n">nearest_neighbor</span><span class="p">(</span><span class="n">bldg_df</span><span class="p">,</span> <span class="n">poles_df</span><span class="p">,</span> <span class="n">return_dist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">closest_substations</span> <span class="o">=</span> <span class="n">nearest_neighbor</span><span class="p">(</span><span class="n">bldg_df</span><span class="p">,</span> <span class="n">substations_df</span><span class="p">,</span> <span class="n">return_dist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">closest_poles</span>
 </pre></div>
 </div>
 </div>
@@ -819,13 +1308,15 @@ Unzipped folder found in the local cache. Reading from it...
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>OBJECTID</th>
-      <th>LON</th>
-      <th>LAT</th>
-      <th>CLASS</th>
-      <th>HEIGHT</th>
-      <th>TYPE</th>
-      <th>SpanLength</th>
+      <th>nodenwid</th>
+      <th>epf_class</th>
+      <th>height</th>
+      <th>utilfcltyc</th>
+      <th>spanLength</th>
+      <th>fltytype</th>
+      <th>strctype</th>
+      <th>flow</th>
+      <th>poles_guid</th>
       <th>geometry</th>
       <th>distance</th>
     </tr>
@@ -834,60 +1325,70 @@ Unzipped folder found in the local cache. Reading from it...
     <tr>
       <th>0</th>
       <td>81</td>
-      <td>-94.920949</td>
-      <td>29.227509</td>
       <td>5</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>1</td>
       <td>44.339908</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>ae93ce18-9d11-45a8-bd69-bba2ebc0f0ce</td>
       <td>POINT (-94.92095 29.22751)</td>
       <td>12.972083</td>
     </tr>
     <tr>
       <th>1</th>
       <td>83</td>
-      <td>-94.920726</td>
-      <td>29.227814</td>
       <td>5</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>1</td>
       <td>12.173564</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>fa601b28-94b2-45f6-b95f-cc254835cf93</td>
       <td>POINT (-94.92073 29.22781)</td>
       <td>8.944374</td>
     </tr>
     <tr>
       <th>2</th>
       <td>93</td>
-      <td>-94.921127</td>
-      <td>29.228522</td>
       <td>5</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>1</td>
       <td>31.155735</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>7f471cbc-1e8b-4c59-aba2-001432124595</td>
       <td>POINT (-94.92113 29.22852)</td>
       <td>9.022716</td>
     </tr>
     <tr>
       <th>3</th>
       <td>80</td>
-      <td>-94.921431</td>
-      <td>29.227216</td>
       <td>5</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>1</td>
       <td>65.903857</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0ebc665b-d095-4c24-be3b-e0320fd1011a</td>
       <td>POINT (-94.92143 29.22722)</td>
       <td>8.771394</td>
     </tr>
     <tr>
       <th>4</th>
       <td>80</td>
-      <td>-94.921431</td>
-      <td>29.227216</td>
       <td>5</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>1</td>
       <td>65.903857</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0ebc665b-d095-4c24-be3b-e0320fd1011a</td>
       <td>POINT (-94.92143 29.22722)</td>
       <td>4.127933</td>
     </tr>
@@ -902,91 +1403,430 @@ Unzipped folder found in the local cache. Reading from it...
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>18957</th>
       <td>115</td>
-      <td>-94.923173</td>
-      <td>29.228940</td>
       <td>5</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>1</td>
       <td>59.423983</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>1d909da2-de36-4752-a26e-555f8aa70ecc</td>
       <td>POINT (-94.92317 29.22894)</td>
       <td>8.052183</td>
     </tr>
     <tr>
       <th>18958</th>
       <td>94</td>
-      <td>-94.923030</td>
-      <td>29.228031</td>
       <td>5</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>1</td>
       <td>76.323221</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>1470c7f1-9444-4356-ac12-ea88b166ca25</td>
       <td>POINT (-94.92303 29.22803)</td>
       <td>15.670623</td>
     </tr>
     <tr>
       <th>18959</th>
       <td>114</td>
-      <td>-94.922666</td>
-      <td>29.229132</td>
       <td>5</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>1</td>
       <td>79.698817</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0811043d-6975-45de-8485-13b5fc86d201</td>
       <td>POINT (-94.92267 29.22913)</td>
       <td>11.465839</td>
     </tr>
     <tr>
       <th>18960</th>
       <td>76</td>
-      <td>-94.922322</td>
-      <td>29.226667</td>
       <td>5</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>1</td>
       <td>27.425693</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>e34ddcd5-6113-49f5-acc6-8a71afa9dd9b</td>
       <td>POINT (-94.92232 29.22667)</td>
       <td>16.658708</td>
     </tr>
     <tr>
       <th>18961</th>
       <td>92</td>
-      <td>-94.921502</td>
-      <td>29.228346</td>
       <td>5</td>
-      <td>20</td>
+      <td>20.0</td>
       <td>1</td>
       <td>10.210519</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>967cc4d0-14a9-434a-8eb1-129609cc0dc5</td>
       <td>POINT (-94.92150 29.22835)</td>
       <td>5.825427</td>
     </tr>
   </tbody>
 </table>
-<p>18962 rows × 9 columns</p>
+<p>18962 rows × 11 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now we should have exactly the same number of closest_stops as we have buildings</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">closest_poles</span><span class="p">),</span> <span class="s1">&#39;==&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">bldg_df</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">closest_substations</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18962 == 18962
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>nodenwid</th>
+      <th>epf_class</th>
+      <th>height</th>
+      <th>utilfcltyc</th>
+      <th>spanLength</th>
+      <th>fltytype</th>
+      <th>strctype</th>
+      <th>flow</th>
+      <th>substations_guid</th>
+      <th>geometry</th>
+      <th>distance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>34.217744</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+      <td>1164.185182</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>34.217744</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+      <td>1135.279032</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>34.217744</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+      <td>1169.707088</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>34.217744</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+      <td>1206.401535</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>34.217744</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+      <td>1214.180261</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>18957</th>
+      <td>3</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>34.217744</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+      <td>1403.218901</td>
+    </tr>
+    <tr>
+      <th>18958</th>
+      <td>3</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>34.217744</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+      <td>1373.199646</td>
+    </tr>
+    <tr>
+      <th>18959</th>
+      <td>3</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>34.217744</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+      <td>1339.846677</td>
+    </tr>
+    <tr>
+      <th>18960</th>
+      <td>3</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>34.217744</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+      <td>1310.941029</td>
+    </tr>
+    <tr>
+      <th>18961</th>
+      <td>3</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>34.217744</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+      <td>1224.223041</td>
+    </tr>
+  </tbody>
+</table>
+<p>18962 rows × 11 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="exporting-results">
+<h2>4) Exporting results<a class="headerlink" href="#exporting-results" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_final</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">bldg_df</span><span class="p">[[</span><span class="s2">&quot;bldg_guid&quot;</span><span class="p">,</span><span class="s2">&quot;geometry&quot;</span><span class="p">]],</span> <span class="n">closest_poles</span><span class="p">[[</span><span class="s2">&quot;poles_guid&quot;</span><span class="p">,</span><span class="s2">&quot;geometry&quot;</span><span class="p">]],</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_final</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_final</span><span class="p">,</span> <span class="n">closest_substations</span><span class="p">[[</span><span class="s2">&quot;substations_guid&quot;</span><span class="p">,</span><span class="s2">&quot;geometry&quot;</span><span class="p">]],</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">closest_poles_to_bldgs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">bldg_df</span><span class="p">[[</span><span class="s2">&quot;guid&quot;</span><span class="p">,</span><span class="s2">&quot;geometry&quot;</span><span class="p">]],</span> <span class="n">closest_poles</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_final</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bldg_guid</th>
+      <th>geometry_x</th>
+      <th>poles_guid</th>
+      <th>geometry_y</th>
+      <th>substations_guid</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>b39dd67f-802e-402b-b7d5-51c4bbed3464</td>
+      <td>POINT (-94.92101 29.22867)</td>
+      <td>ae93ce18-9d11-45a8-bd69-bba2ebc0f0ce</td>
+      <td>POINT (-94.92095 29.22751)</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>e7467617-6844-437e-a938-7300418facb8</td>
+      <td>POINT (-94.92075 29.22871)</td>
+      <td>fa601b28-94b2-45f6-b95f-cc254835cf93</td>
+      <td>POINT (-94.92073 29.22781)</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>d7ce12df-660d-42fc-9786-f0f543c00002</td>
+      <td>POINT (-94.92106 29.22799)</td>
+      <td>7f471cbc-1e8b-4c59-aba2-001432124595</td>
+      <td>POINT (-94.92113 29.22852)</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>74aac543-8aae-4779-addf-754e307a772b</td>
+      <td>POINT (-94.92139 29.22800)</td>
+      <td>0ebc665b-d095-4c24-be3b-e0320fd1011a</td>
+      <td>POINT (-94.92143 29.22722)</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ed3147d3-b7b8-49da-96a9-ddedfccae60c</td>
+      <td>POINT (-94.92146 29.22749)</td>
+      <td>0ebc665b-d095-4c24-be3b-e0320fd1011a</td>
+      <td>POINT (-94.92143 29.22722)</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>18957</th>
+      <td>b33b8857-892e-42bb-93c9-4a025fc59d69</td>
+      <td>POINT (-94.92316 29.22811)</td>
+      <td>1d909da2-de36-4752-a26e-555f8aa70ecc</td>
+      <td>POINT (-94.92317 29.22894)</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+    </tr>
+    <tr>
+      <th>18958</th>
+      <td>902f2d0e-5676-4a9d-9873-168dea6b6224</td>
+      <td>POINT (-94.92289 29.22820)</td>
+      <td>1470c7f1-9444-4356-ac12-ea88b166ca25</td>
+      <td>POINT (-94.92303 29.22803)</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+    </tr>
+    <tr>
+      <th>18959</th>
+      <td>6e1cb252-d668-408b-95a5-c00707ed533b</td>
+      <td>POINT (-94.92259 29.22832)</td>
+      <td>0811043d-6975-45de-8485-13b5fc86d201</td>
+      <td>POINT (-94.92267 29.22913)</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+    </tr>
+    <tr>
+      <th>18960</th>
+      <td>d0a45723-a0a3-4be2-87cb-373c7fdc363f</td>
+      <td>POINT (-94.92233 29.22841)</td>
+      <td>e34ddcd5-6113-49f5-acc6-8a71afa9dd9b</td>
+      <td>POINT (-94.92232 29.22667)</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+    </tr>
+    <tr>
+      <th>18961</th>
+      <td>c85edb54-ee68-4c1e-82d9-e73060330223</td>
+      <td>POINT (-94.92155 29.22860)</td>
+      <td>967cc4d0-14a9-434a-8eb1-129609cc0dc5</td>
+      <td>POINT (-94.92150 29.22835)</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+      <td>POINT (-94.91054 29.22762)</td>
+    </tr>
+  </tbody>
+</table>
+<p>18962 rows × 6 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -997,12 +1837,128 @@ Unzipped folder found in the local cache. Reading from it...
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">closest_poles_to_bldgs</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">result_name</span><span class="o">+</span><span class="s1">&#39;.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_final</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">result_name</span><span class="o">+</span><span class="s1">&#39;.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
+<p>Making JSON file:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_nested</span> <span class="o">=</span> <span class="n">df_final</span><span class="p">[[</span><span class="s2">&quot;bldg_guid&quot;</span><span class="p">,</span><span class="s2">&quot;poles_guid&quot;</span><span class="p">,</span><span class="s2">&quot;substations_guid&quot;</span><span class="p">]]</span>
+<span class="n">df_nested</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bldg_guid</th>
+      <th>poles_guid</th>
+      <th>substations_guid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>b39dd67f-802e-402b-b7d5-51c4bbed3464</td>
+      <td>ae93ce18-9d11-45a8-bd69-bba2ebc0f0ce</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>e7467617-6844-437e-a938-7300418facb8</td>
+      <td>fa601b28-94b2-45f6-b95f-cc254835cf93</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>d7ce12df-660d-42fc-9786-f0f543c00002</td>
+      <td>7f471cbc-1e8b-4c59-aba2-001432124595</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>74aac543-8aae-4779-addf-754e307a772b</td>
+      <td>0ebc665b-d095-4c24-be3b-e0320fd1011a</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ed3147d3-b7b8-49da-96a9-ddedfccae60c</td>
+      <td>0ebc665b-d095-4c24-be3b-e0320fd1011a</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>18957</th>
+      <td>b33b8857-892e-42bb-93c9-4a025fc59d69</td>
+      <td>1d909da2-de36-4752-a26e-555f8aa70ecc</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+    </tr>
+    <tr>
+      <th>18958</th>
+      <td>902f2d0e-5676-4a9d-9873-168dea6b6224</td>
+      <td>1470c7f1-9444-4356-ac12-ea88b166ca25</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+    </tr>
+    <tr>
+      <th>18959</th>
+      <td>6e1cb252-d668-408b-95a5-c00707ed533b</td>
+      <td>0811043d-6975-45de-8485-13b5fc86d201</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+    </tr>
+    <tr>
+      <th>18960</th>
+      <td>d0a45723-a0a3-4be2-87cb-373c7fdc363f</td>
+      <td>e34ddcd5-6113-49f5-acc6-8a71afa9dd9b</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+    </tr>
+    <tr>
+      <th>18961</th>
+      <td>c85edb54-ee68-4c1e-82d9-e73060330223</td>
+      <td>967cc4d0-14a9-434a-8eb1-129609cc0dc5</td>
+      <td>655ae679-a718-4895-b29d-65acf441e3bf</td>
+    </tr>
+  </tbody>
+</table>
+<p>18962 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">j</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_nested</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;bldg_guid&#39;</span><span class="p">)</span>
+       <span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[[</span><span class="s1">&#39;poles_guid&#39;</span><span class="p">,</span><span class="s1">&#39;substations_guid&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="s1">&#39;record&#39;</span><span class="p">))</span>
+       <span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">))</span>
+<span class="n">parsed</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<span class="n">final</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">parsed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">result_name</span><span class="o">+</span><span class="s2">&quot;.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
+    <span class="n">outfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">final</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
