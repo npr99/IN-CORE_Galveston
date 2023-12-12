@@ -3,29 +3,31 @@
 
 format: jb-book
 root: intro # TODO:make an introduction document
+
 parts:
-  - caption: Overview
+  - caption: Example Simulation
     chapters:
-    - file: notebooks/Galveston_testbed_2022-09-19
-    - file: notebooks/Galveston_Test
-  - caption: Building
+      - file: notebooks/introduction
+      - file: notebooks/prerequisites
+      - file: notebooks/multi-hazard_building_damage
+      - file: notebooks/electric_power_pole_damage
+      - file: notebooks/monte_carlo_sampling
+      - file: notebooks/building_functionality
+      - file: notebooks/capital_shock
+      - file: notebooks/population_dislocation
+      - file: notebooks/housing_household_recovery
+
+  - caption: Extra Notebooks
     chapters:
-    - file: notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22
-#      sections:
-#      - file: path/to/part1/chapter2/section1
-  - caption: Power
-    chapters:
-    - file: notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22
-    - file: notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22
-    - file: notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22
-    - file: notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22
-    - file: notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22
-    - file: notebooks/02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22
-    - file: notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22
-  - caption: Transportation
-    chapters:
-    - file: notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22
-    - file: notebooks/01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22
-  - caption: Social
-    chapters:
-    - file: notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22
+    - file: notebooks/extra_notebooks/Galveston_testbed_2022-09-19
+    - file: notebooks/extra_notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22
+    - file: notebooks/extra_notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22
+    - file: notebooks/extra_notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22
+    - file: notebooks/extra_notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22
+    - file: notebooks/extra_notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22
+    - file: notebooks/extra_notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22
+    - file: notebooks/extra_notebooks/02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22
+    - file: notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22
+    - file: notebooks/extra_notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22
+    - file: notebooks/extra_notebooks/01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22
+    - file: notebooks/extra_notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22
