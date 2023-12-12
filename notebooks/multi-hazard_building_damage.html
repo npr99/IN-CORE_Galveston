@@ -172,6 +172,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">1. Prerequisites</a></li>
+
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Combined building damage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="electric_power_pole_damage.html">3. Electric Power Pole Damage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monte_carlo_sampling.html">4. Monte Carlo sampling</a></li>
@@ -182,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra Notebooks</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="extra_notebooks/Galveston_testbed_2022-09-19.html">Galveston Testbed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_notebooks/Galveston_testbed_2022-09-19.html">Galveston Testbed (previous version)</a></li>
 
 
 
@@ -479,18 +480,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-hazard">2.1 Define hazard</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-inventory">2.2 Define inventory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-building-damage">2.3 Wind building damage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surge-wave-building-damage">2.4 Surge-Wave building damage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inundation-flood-building-damage">2.5 Inundation (flood) building damage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-wind-surge-wave-and-flood-building-damage">2.6 Combine wind, surge-wave and flood building damage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-surge-wave">2.6.1 Hazard exposure example: surge-wave</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-damage-setup">2.6.2 Combined damage: setup</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-combined">2.6.3 Hazard exposure example: combined</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-building-damage">2.1 Wind building damage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surge-wave-building-damage">2.2 Surge-Wave building damage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inundation-flood-building-damage">2.3 Inundation (flood) building damage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-wind-surge-wave-and-flood-building-damage">2.4 Combine wind, surge-wave and flood building damage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-surge-wave">2.4.1 Hazard exposure example: surge-wave</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-damage-setup">2.4.2 Combined damage: setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-combined">2.4.3 Hazard exposure example: combined</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archetype-mapping">2.7 Archetype mapping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archetype-mapping">2.5 Archetype mapping</a></li>
 </ul>
             </nav>
         </div>
@@ -504,45 +503,8 @@ document.write(`
                   
   <section id="combined-building-damage">
 <h1>2. Combined building damage<a class="headerlink" href="#combined-building-damage" title="Permalink to this heading">#</a></h1>
-<section id="define-hazard">
-<h2>2.1 Define hazard<a class="headerlink" href="#define-hazard" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hazard_type</span> <span class="o">=</span> <span class="s2">&quot;hurricane&quot;</span>
-
-<span class="c1"># 100yr Hazard Event</span>
-<span class="n">hazard_id</span> <span class="o">=</span> <span class="s2">&quot;5fa5a9497e5cdf51ebf1add2&quot;</span>
-
-<span class="c1"># 500yr Hazard Event</span>
-<span class="c1">#hazard_id = &quot;5fa5aa19b6429615aeea4476&quot;</span>
-
-<span class="c1"># Galveston Hurricane Ike</span>
-<span class="c1"># hazard_id = &quot;5fa5a228b6429615aeea4410&quot;</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="define-inventory">
-<h2>2.2 Define inventory<a class="headerlink" href="#define-inventory" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Galveston inventory data</span>
-<span class="c1"># bldg_dataset_id = &quot;63053ddaf5438e1f8c517fed&quot; # Full city</span>
-<span class="n">bldg_dataset_id</span> <span class="o">=</span> <span class="s2">&quot;63ff6b135c35c0353d5ed3ac&quot;</span> <span class="c1"># Island Only</span>
-<span class="n">bldg_dataset_id</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;63ff6b135c35c0353d5ed3ac&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<img src="https://ars.els-cdn.com/content/image/1-s2.0-S2772741623000388-gr3_lrg.jpg" width="700"/></section>
 <section id="wind-building-damage">
-<h2>2.3 Wind building damage<a class="headerlink" href="#wind-building-damage" title="Permalink to this heading">#</a></h2>
+<h2>2.1 Wind building damage<a class="headerlink" href="#wind-building-damage" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Building Wind Fragility mapping</span>
@@ -555,7 +517,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Building Wind Fragility mapping</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">mapping_id</span> <span class="o">=</span> <span class="s2">&quot;62fef3a6cef2881193f2261d&quot;</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">fragility_service</span> <span class="o">=</span> <span class="n">FragilityService</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
@@ -588,7 +550,7 @@ document.write(`
 </div>
 </section>
 <section id="surge-wave-building-damage">
-<h2>2.4 Surge-Wave building damage<a class="headerlink" href="#surge-wave-building-damage" title="Permalink to this heading">#</a></h2>
+<h2>2.2 Surge-Wave building damage<a class="headerlink" href="#surge-wave-building-damage" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Surge-wave mapping</span>
@@ -624,7 +586,7 @@ Unzipped folder found in the local cache. Reading from it...
 </div>
 </section>
 <section id="inundation-flood-building-damage">
-<h2>2.5 Inundation (flood) building damage<a class="headerlink" href="#inundation-flood-building-damage" title="Permalink to this heading">#</a></h2>
+<h2>2.3 Inundation (flood) building damage<a class="headerlink" href="#inundation-flood-building-damage" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># flood mapping</span>
@@ -660,9 +622,9 @@ Unzipped folder found in the local cache. Reading from it...
 </div>
 </section>
 <section id="combine-wind-surge-wave-and-flood-building-damage">
-<h2>2.6 Combine wind, surge-wave and flood building damage<a class="headerlink" href="#combine-wind-surge-wave-and-flood-building-damage" title="Permalink to this heading">#</a></h2>
+<h2>2.4 Combine wind, surge-wave and flood building damage<a class="headerlink" href="#combine-wind-surge-wave-and-flood-building-damage" title="Permalink to this heading">#</a></h2>
 <section id="hazard-exposure-example-surge-wave">
-<h3>2.6.1 Hazard exposure example: surge-wave<a class="headerlink" href="#hazard-exposure-example-surge-wave" title="Permalink to this heading">#</a></h3>
+<h3>2.4.1 Hazard exposure example: surge-wave<a class="headerlink" href="#hazard-exposure-example-surge-wave" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">surge_wave_damage</span> <span class="o">=</span> <span class="n">sw_bldg_dmg</span><span class="o">.</span><span class="n">get_output_dataset</span><span class="p">(</span><span class="s2">&quot;ds_result&quot;</span><span class="p">)</span>
@@ -694,7 +656,7 @@ Total number of rows: 29541
 </div>
 </section>
 <section id="combined-damage-setup">
-<h3>2.6.2 Combined damage: setup<a class="headerlink" href="#combined-damage-setup" title="Permalink to this heading">#</a></h3>
+<h3>2.4.2 Combined damage: setup<a class="headerlink" href="#combined-damage-setup" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">combined_bldg_dmg</span> <span class="o">=</span> <span class="n">CombinedWindWaveSurgeBuildingDamage</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
@@ -715,7 +677,7 @@ Total number of rows: 29541
 </div>
 </section>
 <section id="hazard-exposure-example-combined">
-<h3>2.6.3 Hazard exposure example: combined<a class="headerlink" href="#hazard-exposure-example-combined" title="Permalink to this heading">#</a></h3>
+<h3>2.4.3 Hazard exposure example: combined<a class="headerlink" href="#hazard-exposure-example-combined" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">combined_dmg</span> <span class="o">=</span> <span class="n">combined_bldg_dmg</span><span class="o">.</span><span class="n">get_output_dataset</span><span class="p">(</span><span class="s2">&quot;ds_result&quot;</span><span class="p">)</span>
@@ -750,7 +712,7 @@ Total number of rows: 29541
 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2772741623000388-gr4_lrg.jpg" width="700"/></section>
 </section>
 <section id="archetype-mapping">
-<h2>2.7 Archetype mapping<a class="headerlink" href="#archetype-mapping" title="Permalink to this heading">#</a></h2>
+<h2>2.5 Archetype mapping<a class="headerlink" href="#archetype-mapping" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">buildings</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">from_data_service</span><span class="p">(</span><span class="n">bldg_dataset_id</span><span class="p">,</span> <span class="n">data_service</span><span class="p">)</span>
@@ -1456,18 +1418,16 @@ Unzipped folder found in the local cache. Reading from it...
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-hazard">2.1 Define hazard</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-inventory">2.2 Define inventory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-building-damage">2.3 Wind building damage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surge-wave-building-damage">2.4 Surge-Wave building damage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inundation-flood-building-damage">2.5 Inundation (flood) building damage</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-wind-surge-wave-and-flood-building-damage">2.6 Combine wind, surge-wave and flood building damage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-surge-wave">2.6.1 Hazard exposure example: surge-wave</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-damage-setup">2.6.2 Combined damage: setup</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-combined">2.6.3 Hazard exposure example: combined</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-building-damage">2.1 Wind building damage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surge-wave-building-damage">2.2 Surge-Wave building damage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inundation-flood-building-damage">2.3 Inundation (flood) building damage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-wind-surge-wave-and-flood-building-damage">2.4 Combine wind, surge-wave and flood building damage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-surge-wave">2.4.1 Hazard exposure example: surge-wave</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-damage-setup">2.4.2 Combined damage: setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-combined">2.4.3 Hazard exposure example: combined</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archetype-mapping">2.7 Archetype mapping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archetype-mapping">2.5 Archetype mapping</a></li>
 </ul>
   </nav></div>
 
