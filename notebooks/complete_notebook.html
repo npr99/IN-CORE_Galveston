@@ -170,7 +170,6 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">1. Prerequisites</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="multi-hazard_building_damage.html">2. Combined building damage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="electric_power_pole_damage.html">3. Electric Power Pole Damage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monte_carlo_sampling.html">4. Monte Carlo sampling</a></li>
@@ -478,20 +477,23 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">1. Prerequisites</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-building-damage">2. Combined building damage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-hazard">2.1 Define hazard</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-inventory">2.2 Define inventory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-building-damage">2.3 Wind building damage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surge-wave-building-damage">2.4 Surge-Wave building damage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inundation-flood-building-damage">2.5 Inundation (flood) building damage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-wind-surge-wave-and-flood-building-damage">2.6 Combine wind, surge-wave and flood building damage</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-surge-wave">2.6.1 Hazard exposure example: surge-wave</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-damage-setup">2.6.2 Combined damage: setup</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-combined">2.6.3 Hazard exposure example: combined</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">1. Prerequisites</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-packages">1.1 Load packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-hazard">1.2 Define hazard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-inventory">1.3 Define inventory</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#archetype-mapping">2.7 Archetype mapping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-building-damage">2. Combined building damage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-building-damage">2.1 Wind building damage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surge-wave-building-damage">2.2 Surge-Wave building damage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inundation-flood-building-damage">2.3 Inundation (flood) building damage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-wind-surge-wave-and-flood-building-damage">2.4 Combine wind, surge-wave and flood building damage</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-surge-wave">2.4.1 Hazard exposure example: surge-wave</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-damage-setup">2.4.2 Combined damage: setup</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-combined">2.4.3 Hazard exposure example: combined</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#archetype-mapping">2.5 Archetype mapping</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-power-pole-damage">3. Electric Power Pole Damage</a></li>
@@ -532,8 +534,11 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="example-galveston-testbed">
 <h1>Example: Galveston Testbed<a class="headerlink" href="#example-galveston-testbed" title="Permalink to this heading">#</a></h1>
 <p>Reference paper: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S2772741623000388">Multi-hazard socio-physical resilience assessment of hurricane-induced hazards on coastal communities</a></p>
+<p>Reference notebook: <a class="reference external" href="https://github.com/npr99/IN-CORE_Galveston/blob/kooshan_main/jupyter_book/notebooks/complete_notebook.ipynb">Latest Galveston Jupyter Notebook</a></p>
 <section id="prerequisites">
 <h2>1. Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h2>
+<section id="load-packages">
+<h3>1.1 Load packages<a class="headerlink" href="#load-packages" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
@@ -601,17 +606,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING - client.py:clear_cache() - Cached folder doesn&#39;t exist
-</pre></div>
-</div>
-</div>
 </div>
 </section>
-<section id="combined-building-damage">
-<h2>2. Combined building damage<a class="headerlink" href="#combined-building-damage" title="Permalink to this heading">#</a></h2>
 <section id="define-hazard">
-<h3>2.1 Define hazard<a class="headerlink" href="#define-hazard" title="Permalink to this heading">#</a></h3>
+<h3>1.2 Define hazard<a class="headerlink" href="#define-hazard" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hazard_type</span> <span class="o">=</span> <span class="s2">&quot;hurricane&quot;</span>
@@ -630,7 +628,7 @@ document.write(`
 </div>
 </section>
 <section id="define-inventory">
-<h3>2.2 Define inventory<a class="headerlink" href="#define-inventory" title="Permalink to this heading">#</a></h3>
+<h3>1.3 Define inventory<a class="headerlink" href="#define-inventory" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Galveston inventory data</span>
@@ -647,8 +645,11 @@ document.write(`
 </div>
 </div>
 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2772741623000388-gr3_lrg.jpg" width="700"/></section>
+</section>
+<section id="combined-building-damage">
+<h2>2. Combined building damage<a class="headerlink" href="#combined-building-damage" title="Permalink to this heading">#</a></h2>
 <section id="wind-building-damage">
-<h3>2.3 Wind building damage<a class="headerlink" href="#wind-building-damage" title="Permalink to this heading">#</a></h3>
+<h3>2.1 Wind building damage<a class="headerlink" href="#wind-building-damage" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Building Wind Fragility mapping</span>
@@ -681,7 +682,7 @@ document.write(`
 </div>
 </section>
 <section id="surge-wave-building-damage">
-<h3>2.4 Surge-Wave building damage<a class="headerlink" href="#surge-wave-building-damage" title="Permalink to this heading">#</a></h3>
+<h3>2.2 Surge-Wave building damage<a class="headerlink" href="#surge-wave-building-damage" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Surge-wave mapping</span>
@@ -717,7 +718,7 @@ Unzipped folder found in the local cache. Reading from it...
 </div>
 </section>
 <section id="inundation-flood-building-damage">
-<h3>2.5 Inundation (flood) building damage<a class="headerlink" href="#inundation-flood-building-damage" title="Permalink to this heading">#</a></h3>
+<h3>2.3 Inundation (flood) building damage<a class="headerlink" href="#inundation-flood-building-damage" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># flood mapping</span>
@@ -753,9 +754,9 @@ Unzipped folder found in the local cache. Reading from it...
 </div>
 </section>
 <section id="combine-wind-surge-wave-and-flood-building-damage">
-<h3>2.6 Combine wind, surge-wave and flood building damage<a class="headerlink" href="#combine-wind-surge-wave-and-flood-building-damage" title="Permalink to this heading">#</a></h3>
+<h3>2.4 Combine wind, surge-wave and flood building damage<a class="headerlink" href="#combine-wind-surge-wave-and-flood-building-damage" title="Permalink to this heading">#</a></h3>
 <section id="hazard-exposure-example-surge-wave">
-<h4>2.6.1 Hazard exposure example: surge-wave<a class="headerlink" href="#hazard-exposure-example-surge-wave" title="Permalink to this heading">#</a></h4>
+<h4>2.4.1 Hazard exposure example: surge-wave<a class="headerlink" href="#hazard-exposure-example-surge-wave" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">surge_wave_damage</span> <span class="o">=</span> <span class="n">sw_bldg_dmg</span><span class="o">.</span><span class="n">get_output_dataset</span><span class="p">(</span><span class="s2">&quot;ds_result&quot;</span><span class="p">)</span>
@@ -787,7 +788,7 @@ Total number of rows: 29541
 </div>
 </section>
 <section id="combined-damage-setup">
-<h4>2.6.2 Combined damage: setup<a class="headerlink" href="#combined-damage-setup" title="Permalink to this heading">#</a></h4>
+<h4>2.4.2 Combined damage: setup<a class="headerlink" href="#combined-damage-setup" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">combined_bldg_dmg</span> <span class="o">=</span> <span class="n">CombinedWindWaveSurgeBuildingDamage</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
@@ -808,7 +809,7 @@ Total number of rows: 29541
 </div>
 </section>
 <section id="hazard-exposure-example-combined">
-<h4>2.6.3 Hazard exposure example: combined<a class="headerlink" href="#hazard-exposure-example-combined" title="Permalink to this heading">#</a></h4>
+<h4>2.4.3 Hazard exposure example: combined<a class="headerlink" href="#hazard-exposure-example-combined" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">combined_dmg</span> <span class="o">=</span> <span class="n">combined_bldg_dmg</span><span class="o">.</span><span class="n">get_output_dataset</span><span class="p">(</span><span class="s2">&quot;ds_result&quot;</span><span class="p">)</span>
@@ -843,7 +844,7 @@ Total number of rows: 29541
 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2772741623000388-gr4_lrg.jpg" width="700"/></section>
 </section>
 <section id="archetype-mapping">
-<h3>2.7 Archetype mapping<a class="headerlink" href="#archetype-mapping" title="Permalink to this heading">#</a></h3>
+<h3>2.5 Archetype mapping<a class="headerlink" href="#archetype-mapping" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">buildings</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">from_data_service</span><span class="p">(</span><span class="n">bldg_dataset_id</span><span class="p">,</span> <span class="n">data_service</span><span class="p">)</span>
@@ -1558,7 +1559,7 @@ Unzipped folder found in the local cache. Reading from it...
     <tr>
       <th>0</th>
       <td>f3a21b5f-0334-4d77-911f-faa9a45c92d7</td>
-      <td>1,1,0,1,1,1,1,1,1,0</td>
+      <td>1,0,1,0,0,1,1,0,1,0</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1568,17 +1569,17 @@ Unzipped folder found in the local cache. Reading from it...
     <tr>
       <th>2</th>
       <td>7916eaa8-0bfa-4b32-84ff-20f19a520f5c</td>
-      <td>1,0,1,1,1,1,1,1,1,0</td>
+      <td>1,1,1,1,1,1,1,1,1,1</td>
     </tr>
     <tr>
       <th>3</th>
       <td>79008971-a534-4e45-9e40-43a2a904e59b</td>
-      <td>1,1,1,1,0,0,0,1,1,0</td>
+      <td>1,1,1,1,1,0,0,0,0,0</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2ad8ab6f-057f-468e-9911-6e92d9d4d01f</td>
-      <td>1,1,0,1,1,1,1,0,1,0</td>
+      <td>0,1,0,0,1,0,1,0,1,0</td>
     </tr>
   </tbody>
 </table>
@@ -1685,10 +1686,6 @@ Unzipped folder found in the local cache. Reading from it...
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-</pre></div>
-</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1715,7 +1712,7 @@ Unzipped folder found in the local cache. Reading from it...
     <tr>
       <th>0</th>
       <td>f3a21b5f-0334-4d77-911f-faa9a45c92d7</td>
-      <td>1,1,0,1,1,1,1,1,1,0</td>
+      <td>1,0,1,0,0,1,1,0,1,0</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1725,17 +1722,17 @@ Unzipped folder found in the local cache. Reading from it...
     <tr>
       <th>2</th>
       <td>7916eaa8-0bfa-4b32-84ff-20f19a520f5c</td>
-      <td>1,0,1,1,1,1,1,1,1,0</td>
+      <td>1,1,1,1,1,1,1,1,1,1</td>
     </tr>
     <tr>
       <th>3</th>
       <td>79008971-a534-4e45-9e40-43a2a904e59b</td>
-      <td>0,1,0,0,0,0,0,1,0,0</td>
+      <td>1,0,1,1,1,0,0,0,0,0</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2ad8ab6f-057f-468e-9911-6e92d9d4d01f</td>
-      <td>1,1,0,1,1,1,1,0,1,0</td>
+      <td>0,1,0,0,1,0,1,0,1,0</td>
     </tr>
   </tbody>
 </table>
@@ -1785,9 +1782,9 @@ Unzipped folder found in the local cache. Reading from it...
     <tr>
       <th>0</th>
       <td>f3a21b5f-0334-4d77-911f-faa9a45c92d7</td>
-      <td>0.8</td>
-      <td>1.0</td>
-      <td>Functional</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>Non-Functional</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1799,23 +1796,23 @@ Unzipped folder found in the local cache. Reading from it...
     <tr>
       <th>2</th>
       <td>7916eaa8-0bfa-4b32-84ff-20f19a520f5c</td>
-      <td>0.8</td>
+      <td>1.0</td>
       <td>1.0</td>
       <td>Functional</td>
     </tr>
     <tr>
       <th>3</th>
       <td>79008971-a534-4e45-9e40-43a2a904e59b</td>
-      <td>0.2</td>
+      <td>0.4</td>
       <td>0.0</td>
       <td>Non-Functional</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2ad8ab6f-057f-468e-9911-6e92d9d4d01f</td>
-      <td>0.7</td>
-      <td>1.0</td>
-      <td>Functional</td>
+      <td>0.4</td>
+      <td>0.0</td>
+      <td>Non-Functional</td>
     </tr>
   </tbody>
 </table>
@@ -1846,7 +1843,7 @@ Unzipped folder found in the local cache. Reading from it...
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8c1f402bec43f3e538421925c5c329d2a43edd4fc500851049f5f418c21143c8.png" src="../_images/8c1f402bec43f3e538421925c5c329d2a43edd4fc500851049f5f418c21143c8.png" />
+<img alt="../_images/d0696d8db8cdadf06e46989e99f757704571eb9bf6832fb38cf80ad43e374833.png" src="../_images/d0696d8db8cdadf06e46989e99f757704571eb9bf6832fb38cf80ad43e374833.png" />
 </div>
 </div>
 </section>
@@ -1913,82 +1910,82 @@ Unzipped folder found in the local cache. Reading from it...
     <tr>
       <th>0</th>
       <td>HS3I</td>
-      <td>0.242955</td>
+      <td>0.239563</td>
     </tr>
     <tr>
       <th>1</th>
       <td>HS2I</td>
-      <td>0.169600</td>
+      <td>0.170817</td>
     </tr>
     <tr>
       <th>2</th>
       <td>HS1I</td>
-      <td>0.255521</td>
+      <td>0.254377</td>
     </tr>
     <tr>
       <th>3</th>
       <td>IPROFSER</td>
-      <td>0.337676</td>
+      <td>0.333993</td>
     </tr>
     <tr>
       <th>4</th>
       <td>IRETAIL</td>
-      <td>0.305653</td>
+      <td>0.321528</td>
     </tr>
     <tr>
       <th>5</th>
       <td>IART</td>
-      <td>0.333373</td>
+      <td>0.344518</td>
     </tr>
     <tr>
       <th>6</th>
       <td>ICONS</td>
-      <td>0.240779</td>
+      <td>0.229746</td>
     </tr>
     <tr>
       <th>7</th>
       <td>IHEALTH</td>
-      <td>0.291747</td>
+      <td>0.294179</td>
     </tr>
     <tr>
       <th>8</th>
       <td>ITRANS</td>
-      <td>0.197728</td>
+      <td>0.227090</td>
     </tr>
     <tr>
       <th>9</th>
       <td>IREALE</td>
-      <td>0.426834</td>
+      <td>0.426541</td>
     </tr>
     <tr>
       <th>10</th>
       <td>IACCO</td>
-      <td>0.358318</td>
+      <td>0.361037</td>
     </tr>
     <tr>
       <th>11</th>
       <td>IUTIL</td>
-      <td>0.541621</td>
+      <td>0.565090</td>
     </tr>
     <tr>
       <th>12</th>
       <td>IAGMIN</td>
-      <td>0.102671</td>
+      <td>0.058899</td>
     </tr>
     <tr>
       <th>13</th>
       <td>IEDU</td>
-      <td>0.519007</td>
+      <td>0.541969</td>
     </tr>
     <tr>
       <th>14</th>
       <td>IWHOLE</td>
-      <td>0.083857</td>
+      <td>0.082260</td>
     </tr>
     <tr>
       <th>15</th>
       <td>IMANU</td>
-      <td>0.284975</td>
+      <td>0.267936</td>
     </tr>
   </tbody>
 </table>
@@ -2183,100 +2180,87 @@ For combined_dmg  14896  households are dislocated
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># read in insfrastructure result from a CSV file</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">networkdamage_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./output/final_inf_result/final_df_with_building.csv&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># for network df keep only the first unique guid - todo: This probably needs to be changed</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">networkdamage_df</span> <span class="o">=</span> <span class="n">networkdamage_df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;guid&#39;</span><span class="p">],</span> <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="nn">File ~\miniconda3\envs\2023_galveston_paper\lib\site-packages\pandas\util\_decorators.py:211,</span> in <span class="ni">deprecate_kwarg.&lt;locals&gt;._deprecate_kwarg.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">209</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">210</span>         <span class="n">kwargs</span><span class="p">[</span><span class="n">new_arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_arg_value</span>
+<span class="ne">--&gt; </span><span class="mi">211</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>guid</th>
-      <th>average_power_back_time</th>
-      <th>average_transpo_back_time</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>7916eaa8-0bfa-4b32-84ff-20f19a520f5c</td>
-      <td>0.000</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>42167885-ea18-41b4-be8c-5c09c330d312</td>
-      <td>5.836</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3dab0b4b-42eb-4df6-a5e1-c1882df41704</td>
-      <td>0.000</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>e474c4ef-a091-47ab-85b4-ef0459e37834</td>
-      <td>0.000</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>73</th>
-      <td>335d18da-7a60-4f4d-8c97-d35e0f3a1360</td>
-      <td>0.000</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>33297</th>
-      <td>7a415cb6-d212-450b-b139-f005c89b9656</td>
-      <td>0.000</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>33298</th>
-      <td>74e5fedf-9e22-4434-9128-65ca793df7d2</td>
-      <td>0.000</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>33299</th>
-      <td>1ac5be10-582c-46b2-91ed-469f684bb886</td>
-      <td>0.000</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>33300</th>
-      <td>fbcfb6d6-de13-42fa-9839-d7c80afc651d</td>
-      <td>0.000</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>33301</th>
-      <td>2ee961c9-cd94-499e-b1fe-3e0220a440ea</td>
-      <td>0.000</td>
-      <td>0.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>22015 rows × 3 columns</p>
-</div></div></div>
+<span class="nn">File ~\miniconda3\envs\2023_galveston_paper\lib\site-packages\pandas\util\_decorators.py:331,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">_format_argument_list</span><span class="p">(</span><span class="n">allow_args</span><span class="p">)),</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">find_stack_level</span><span class="p">(),</span>
+<span class="g g-Whitespace">    </span><span class="mi">330</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">331</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\envs\2023_galveston_paper\lib\site-packages\pandas\io\parsers\readers.py:950,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">935</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">936</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">937</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">946</span>     <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">},</span>
+<span class="g g-Whitespace">    </span><span class="mi">947</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">948</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">950</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\envs\2023_galveston_paper\lib\site-packages\pandas\io\parsers\readers.py:605,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">602</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">604</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">605</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">607</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">608</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File ~\miniconda3\envs\2023_galveston_paper\lib\site-packages\pandas\io\parsers\readers.py:1442,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1439</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1441</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1442</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\envs\2023_galveston_paper\lib\site-packages\pandas\io\parsers\readers.py:1735,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1733</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1734</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1735</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1736</span>     <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1737</span>     <span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1738</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1739</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1740</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1741</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1742</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1743</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1744</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1745</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1746</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+
+<span class="nn">File ~\miniconda3\envs\2023_galveston_paper\lib\site-packages\pandas\io\common.py:856,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">851</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">852</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
+<span class="g g-Whitespace">    </span><span class="mi">853</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
+<span class="g g-Whitespace">    </span><span class="mi">854</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">855</span>         <span class="c1"># Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">856</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">857</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">858</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">859</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">860</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">861</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">862</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">863</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">864</span>         <span class="c1"># Binary mode</span>
+<span class="g g-Whitespace">    </span><span class="mi">865</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./output/final_inf_result/final_df_with_building.csv&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2772741623000388-gr7_lrg.jpg" width="700"/>
 <div class="cell docutils container">
@@ -2285,28 +2269,10 @@ For combined_dmg  14896  households are dislocated
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count                                    22015
-unique                                   22015
-top       7916eaa8-0bfa-4b32-84ff-20f19a520f5c
-freq                                         1
-Name: guid, dtype: object
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">popdis_multihazard_df</span><span class="p">[</span><span class="s1">&#39;guid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count                                    33302
-unique                                   22015
-top       2669f722-ae95-4181-90a8-9c4755b7b29c
-freq                                       191
-Name: guid, dtype: object
 </pre></div>
 </div>
 </div>
@@ -2320,15 +2286,6 @@ Name: guid, dtype: object
                                     <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;guid&#39;</span><span class="p">,</span>
                                     <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
 <span class="n">popdis_multihazard_network_df</span><span class="p">[</span><span class="s1">&#39;guid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count                                    33302
-unique                                   22015
-top       2669f722-ae95-4181-90a8-9c4755b7b29c
-freq                                       191
-Name: guid, dtype: object
 </pre></div>
 </div>
 </div>
@@ -2395,34 +2352,6 @@ Name: guid, dtype: object
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>flood_damage Number of households with hazard exposure: 32964
-flood_damage Total number of dislocated households: 10067
-flood_damage Number of households that dislocate but have a low probability of damage: 1190
-flood_damage Number of households that do not dislocate and have no power: 4821
-flood_damage Number of households that do not dislocate and have no connectivity to mainland: 5581
-flood_damage Number of households with safe occupancy: 25638
-wind_damage Number of households with hazard exposure: 33295
-wind_damage Total number of dislocated households: 14292
-wind_damage Number of households that dislocate but have a low probability of damage: 1989
-wind_damage Number of households that do not dislocate and have no power: 3307
-wind_damage Number of households that do not dislocate and have no connectivity to mainland: 3802
-wind_damage Number of households with safe occupancy: 26749
-surge_wave_damage Number of households with hazard exposure: 30463
-surge_wave_damage Total number of dislocated households: 10007
-surge_wave_damage Number of households that dislocate but have a low probability of damage: 1391
-surge_wave_damage Number of households that do not dislocate and have no power: 4514
-surge_wave_damage Number of households that do not dislocate and have no connectivity to mainland: 5372
-surge_wave_damage Number of households with safe occupancy: 25756
-combined_dmg Number of households with hazard exposure: 33295
-combined_dmg Total number of dislocated households: 14896
-combined_dmg Number of households that dislocate but have a low probability of damage: 1333
-combined_dmg Number of households that do not dislocate and have no power: 3142
-combined_dmg Number of households that do not dislocate and have no connectivity to mainland: 3655
-combined_dmg Number of households with safe occupancy: 27506
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="modify-dislocation-for-hhsr">
@@ -2459,50 +2388,10 @@ combined_dmg Number of households with safe occupancy: 27506
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>flood_damage Swith Choice Dislocation Total number of dislocated households: 10067 8877
-flood_damage Switch unsafe occupancy Total number of dislocated households: 8877 8971
-wind_damage Swith Choice Dislocation Total number of dislocated households: 14292 12303
-wind_damage Switch unsafe occupancy Total number of dislocated households: 12303 12715
-surge_wave_damage Swith Choice Dislocation Total number of dislocated households: 10007 8616
-surge_wave_damage Switch unsafe occupancy Total number of dislocated households: 8616 8909
-combined_dmg Swith Choice Dislocation Total number of dislocated households: 14896 13563
-combined_dmg Switch unsafe occupancy Total number of dislocated households: 13563 14288
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">popdis_hhrs_df</span><span class="o">.</span><span class="n">columns</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;guid&#39;, &#39;average_power_back_time&#39;, &#39;average_transpo_back_time&#39;,
-       &#39;DS_0_combined_dmg&#39;, &#39;DS_1_combined_dmg&#39;, &#39;DS_2_combined_dmg&#39;,
-       &#39;DS_3_combined_dmg&#39;, &#39;haz_expose_combined_dmg&#39;, &#39;huid&#39;,
-       &#39;prdis_combined_dmg&#39;, &#39;dislocated_combined_dmg&#39;, &#39;combined_dmg_exp&#39;,
-       &#39;dsds3flag_combined_dmg&#39;, &#39;dsds0flag_combined_dmg&#39;,
-       &#39;DS_0_surge_wave_damage&#39;, &#39;DS_1_surge_wave_damage&#39;,
-       &#39;DS_2_surge_wave_damage&#39;, &#39;DS_3_surge_wave_damage&#39;,
-       &#39;haz_expose_surge_wave_damage&#39;, &#39;prdis_surge_wave_damage&#39;,
-       &#39;dislocated_surge_wave_damage&#39;, &#39;surge_wave_damage_exp&#39;,
-       &#39;dsds3flag_surge_wave_damage&#39;, &#39;dsds0flag_surge_wave_damage&#39;,
-       &#39;DS_0_wind_damage&#39;, &#39;DS_1_wind_damage&#39;, &#39;DS_2_wind_damage&#39;,
-       &#39;DS_3_wind_damage&#39;, &#39;haz_expose_wind_damage&#39;, &#39;prdis_wind_damage&#39;,
-       &#39;dislocated_wind_damage&#39;, &#39;wind_damage_exp&#39;, &#39;dsds3flag_wind_damage&#39;,
-       &#39;dsds0flag_wind_damage&#39;, &#39;DS_0_flood_damage&#39;, &#39;DS_1_flood_damage&#39;,
-       &#39;DS_2_flood_damage&#39;, &#39;DS_3_flood_damage&#39;, &#39;haz_expose_flood_damage&#39;,
-       &#39;prdis_flood_damage&#39;, &#39;dislocated_flood_damage&#39;, &#39;flood_damage_exp&#39;,
-       &#39;dsds3flag_flood_damage&#39;, &#39;dsds0flag_flood_damage&#39;, &#39;powerflag&#39;,
-       &#39;transpoflag&#39;, &#39;powerflag_flood_damage&#39;, &#39;transpoflag_flood_damage&#39;,
-       &#39;safeflag_flood_damage&#39;, &#39;powerflag_wind_damage&#39;,
-       &#39;transpoflag_wind_damage&#39;, &#39;safeflag_wind_damage&#39;,
-       &#39;powerflag_surge_wave_damage&#39;, &#39;transpoflag_surge_wave_damage&#39;,
-       &#39;safeflag_surge_wave_damage&#39;, &#39;powerflag_combined_dmg&#39;,
-       &#39;transpoflag_combined_dmg&#39;, &#39;safeflag_combined_dmg&#39;],
-      dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
@@ -2519,14 +2408,6 @@ combined_dmg Switch unsafe occupancy Total number of dislocated households: 1356
         <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(((</span><span class="n">condition1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">condition2</span><span class="p">)),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">popdis_hhrs_df</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dislocated_</span><span class="si">{</span><span class="n">damage</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">])</span>
     <span class="n">totaldislocation2</span> <span class="o">=</span> <span class="n">popdis_hhrs_df</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dislocated_</span><span class="si">{</span><span class="n">damage</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">damage</span><span class="si">}</span><span class="s2"> Total number of dislocated households without and with power and tranportation effects: </span><span class="si">{</span><span class="n">totaldislocation1</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">totaldislocation2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>flood_damage Total number of dislocated households without and with power and tranportation effects: 8971 15351
-wind_damage Total number of dislocated households without and with power and tranportation effects: 12715 16867
-surge_wave_damage Total number of dislocated households without and with power and tranportation effects: 8909 14771
-combined_dmg Total number of dislocated households without and with power and tranportation effects: 14288 18026
 </pre></div>
 </div>
 </div>
@@ -2550,14 +2431,6 @@ combined_dmg Total number of dislocated households without and with power and tr
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;guid&#39;, &#39;average_power_back_time&#39;, &#39;average_transpo_back_time&#39;, &#39;huid&#39;,
-       &#39;dislocated_combined_dmg&#39;, &#39;dislocated_surge_wave_damage&#39;,
-       &#39;dislocated_wind_damage&#39;, &#39;dislocated_flood_damage&#39;],
-      dtype=&#39;object&#39;)
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2575,15 +2448,6 @@ combined_dmg Total number of dislocated households without and with power and tr
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">popdis_hhrs_df</span><span class="p">[</span><span class="s1">&#39;guid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count                                    33302
-unique                                   22015
-top       2669f722-ae95-4181-90a8-9c4755b7b29c
-freq                                       191
-Name: guid, dtype: object
 </pre></div>
 </div>
 </div>
@@ -2656,20 +2520,6 @@ Name: guid, dtype: object
 <span class="n">social_vulnerability_dem_factors</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">from_dataframe</span><span class="p">(</span><span class="n">social_vulnerability_dem_factors_df</span><span class="p">,</span>
                                                            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;social_vunlnerability_dem_factors&quot;</span><span class="p">,</span>
                                                            <span class="n">data_type</span><span class="o">=</span><span class="s2">&quot;incore:socialVulnerabilityDemFactors&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>csv saved as api_20231211-120109.csv
-csv saved as api_20231211-120109.csv
-csv saved as api_20231211-120110.csv
-csv saved as api_20231211-120111.csv
-csv saved as api_20231211-120112.csv
-csv saved as api_20231211-120113.csv
-csv saved as api_20231211-120114.csv
-csv saved as api_20231211-120115.csv
-csv saved as api_20231211-120117.csv
-csv saved as api_20231211-120118.csv
 </pre></div>
 </div>
 </div>
@@ -2748,35 +2598,10 @@ csv saved as api_20231211-120118.csv
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-Dataset already exists locally. Reading from local cached zip.
-Unzipped folder found in the local cache. Reading from it...
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hh_stagehistory_df</span><span class="p">[</span><span class="s1">&#39;guid&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count                                    33302
-unique                                   22015
-top       2669f722-ae95-4181-90a8-9c4755b7b29c
-freq                                       191
-Name: guid, dtype: object
 </pre></div>
 </div>
 </div>
@@ -2837,20 +2662,23 @@ Name: guid, dtype: object
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">1. Prerequisites</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-building-damage">2. Combined building damage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-hazard">2.1 Define hazard</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-inventory">2.2 Define inventory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-building-damage">2.3 Wind building damage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surge-wave-building-damage">2.4 Surge-Wave building damage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inundation-flood-building-damage">2.5 Inundation (flood) building damage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-wind-surge-wave-and-flood-building-damage">2.6 Combine wind, surge-wave and flood building damage</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-surge-wave">2.6.1 Hazard exposure example: surge-wave</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-damage-setup">2.6.2 Combined damage: setup</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-combined">2.6.3 Hazard exposure example: combined</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">1. Prerequisites</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-packages">1.1 Load packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-hazard">1.2 Define hazard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-inventory">1.3 Define inventory</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#archetype-mapping">2.7 Archetype mapping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-building-damage">2. Combined building damage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-building-damage">2.1 Wind building damage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surge-wave-building-damage">2.2 Surge-Wave building damage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inundation-flood-building-damage">2.3 Inundation (flood) building damage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-wind-surge-wave-and-flood-building-damage">2.4 Combine wind, surge-wave and flood building damage</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-surge-wave">2.4.1 Hazard exposure example: surge-wave</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-damage-setup">2.4.2 Combined damage: setup</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-example-combined">2.4.3 Hazard exposure example: combined</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#archetype-mapping">2.5 Archetype mapping</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-power-pole-damage">3. Electric Power Pole Damage</a></li>
