@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "C:\Users\ka50\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\ka50\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "C:\Users\ka50\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\jupyter_core\utils\__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+  File "C:\Users\ka50\miniconda3\envs\IN-CORE_GAlveston\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\ka50\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\ka50\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\ka50\miniconda3\envs\IN-CORE_GAlveston\lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+pop_dis = PopulationDislocation(client)
+value_loss = "60354810e379f22e16560dbd"
+bg_data = "603545f2dcda03378087e708"
+# hua_result_id = "63ee615d62b9d001e6a2b660" # city
+hua_result_id = "63ff8e895367c2261b4cb2ef" # island
+
+pop_dis.load_remote_input_dataset("block_group_data", bg_data)
+pop_dis.load_remote_input_dataset("value_loss_param", value_loss)
+pop_dis.load_remote_input_dataset("housing_unit_allocation", hua_result_id)
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mNameError[0m                                 Traceback (most recent call last)
+Cell [1;32mIn[1], line 1[0m
+[1;32m----> 1[0m pop_dis [38;5;241m=[39m [43mPopulationDislocation[49m(client)
+[0;32m      2[0m value_loss [38;5;241m=[39m [38;5;124m"[39m[38;5;124m60354810e379f22e16560dbd[39m[38;5;124m"[39m
+[0;32m      3[0m bg_data [38;5;241m=[39m [38;5;124m"[39m[38;5;124m603545f2dcda03378087e708[39m[38;5;124m"[39m
+
+[1;31mNameError[0m: name 'PopulationDislocation' is not defined
+
