@@ -172,13 +172,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">1. Prerequisites</a></li>
-
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Combined building damage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="electric_power_pole_damage.html">3. Electric Power Pole Damage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monte_carlo_sampling.html">4. Monte Carlo sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_functionality.html">5. Building functionality</a></li>
 <li class="toctree-l1"><a class="reference internal" href="capital_shock.html">6. Capital Shocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="population_dislocation.html">7. Population dislocation - Multihazard Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="population_dislocation.html">7. Population dislocation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="housing_household_recovery.html">8. Housing Houshold Recovery Sequentials</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra Notebooks</span></p>
@@ -490,6 +489,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archetype-mapping">2.5 Archetype mapping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-results">2.6 Plot results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.6.1 Combined building damage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paper-figure">2.6.2 Paper figure</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -709,7 +713,7 @@ Total number of rows: 29541
 </div>
 </div>
 </div>
-<img src="https://ars.els-cdn.com/content/image/1-s2.0-S2772741623000388-gr4_lrg.jpg" width="700"/></section>
+</section>
 </section>
 <section id="archetype-mapping">
 <h2>2.5 Archetype mapping<a class="headerlink" href="#archetype-mapping" title="Permalink to this heading">#</a></h2>
@@ -1352,6 +1356,182 @@ Unzipped folder found in the local cache. Reading from it...
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">merged_gdf</span> <span class="o">=</span> <span class="n">bldg_gdf</span><span class="p">[[</span><span class="s1">&#39;guid&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">max_dmg_state_df</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;guid&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;guid&#39;</span><span class="p">)</span>
+<span class="n">merged_gdf</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>guid</th>
+      <th>geometry</th>
+      <th>max_prob</th>
+      <th>max_state</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>f3a21b5f-0334-4d77-911f-faa9a45c92d7</td>
+      <td>POINT (-94.81680 29.31409)</td>
+      <td>0.656011</td>
+      <td>DS_0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>80ab0289-8c72-4699-b12b-08ef2f2a5c91</td>
+      <td>POINT (-94.82295 29.29635)</td>
+      <td>0.711510</td>
+      <td>DS_2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>7916eaa8-0bfa-4b32-84ff-20f19a520f5c</td>
+      <td>POINT (-94.82423 29.29098)</td>
+      <td>0.896200</td>
+      <td>DS_0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>79008971-a534-4e45-9e40-43a2a904e59b</td>
+      <td>POINT (-94.84045 29.29117)</td>
+      <td>0.695918</td>
+      <td>DS_0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2ad8ab6f-057f-468e-9911-6e92d9d4d01f</td>
+      <td>POINT (-94.84242 29.29059)</td>
+      <td>0.575940</td>
+      <td>DS_0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>29536</th>
+      <td>1ac5be10-582c-46b2-91ed-469f684bb886</td>
+      <td>POINT (-94.78968 29.28593)</td>
+      <td>0.999993</td>
+      <td>DS_3</td>
+    </tr>
+    <tr>
+      <th>29537</th>
+      <td>fbcfb6d6-de13-42fa-9839-d7c80afc651d</td>
+      <td>POINT (-94.79154 29.28914)</td>
+      <td>0.357067</td>
+      <td>DS_2</td>
+    </tr>
+    <tr>
+      <th>29538</th>
+      <td>2ee961c9-cd94-499e-b1fe-3e0220a440ea</td>
+      <td>POINT (-94.78782 29.29591)</td>
+      <td>0.545299</td>
+      <td>DS_2</td>
+    </tr>
+    <tr>
+      <th>29539</th>
+      <td>fa15cfbc-8a60-4a3f-b40f-7a6fada625b9</td>
+      <td>POINT (-94.79564 29.29522)</td>
+      <td>0.678298</td>
+      <td>DS_0</td>
+    </tr>
+    <tr>
+      <th>29540</th>
+      <td>3a8a9360-48b1-4399-950d-d32969b0a381</td>
+      <td>POINT (-94.79652 29.29500)</td>
+      <td>0.678298</td>
+      <td>DS_0</td>
+    </tr>
+  </tbody>
+</table>
+<p>29541 rows × 4 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="plot-results">
+<h2>2.6 Plot results<a class="headerlink" href="#plot-results" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h3>2.6.1 Combined building damage<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rename &#39;max_state&#39; values for the legend</span>
+<span class="n">merged_gdf</span><span class="p">[</span><span class="s1">&#39;max_state&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">merged_gdf</span><span class="p">[</span><span class="s1">&#39;max_state&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="s1">&#39;DS_0&#39;</span><span class="p">:</span> <span class="s1">&#39;Insignificant&#39;</span><span class="p">,</span>
+                                                           <span class="s1">&#39;DS_1&#39;</span><span class="p">:</span> <span class="s1">&#39;Moderate&#39;</span><span class="p">,</span>
+                                                           <span class="s1">&#39;DS_2&#39;</span><span class="p">:</span> <span class="s1">&#39;Extensive&#39;</span><span class="p">,</span>
+                                                           <span class="s1">&#39;DS_3&#39;</span><span class="p">:</span> <span class="s1">&#39;Complete&#39;</span><span class="p">})</span>
+
+<span class="c1"># Define colors for each &#39;max_state&#39;</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Insignificant&#39;</span><span class="p">:</span> <span class="s1">&#39;limegreen&#39;</span><span class="p">,</span> <span class="s1">&#39;Moderate&#39;</span><span class="p">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;Extensive&#39;</span><span class="p">:</span> <span class="s1">&#39;darkorange&#39;</span><span class="p">,</span> <span class="s1">&#39;Complete&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">}</span>
+
+<span class="c1"># Function to plot the data with different colors for each &#39;max_state&#39;</span>
+<span class="k">def</span> <span class="nf">plot_data</span><span class="p">(</span><span class="n">point_size</span><span class="p">,</span> <span class="n">use_basemap</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="c1"># Plotting</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>  <span class="c1"># Set axes background to white</span>
+
+    <span class="c1"># Determine bounds from the data</span>
+    <span class="n">bounds</span> <span class="o">=</span> <span class="n">merged_gdf</span><span class="o">.</span><span class="n">total_bounds</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="n">bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="n">bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span>
+
+    <span class="c1"># Plot each category with its color</span>
+    <span class="k">for</span> <span class="n">state</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">data_to_plot</span> <span class="o">=</span> <span class="n">merged_gdf</span><span class="p">[</span><span class="n">merged_gdf</span><span class="p">[</span><span class="s1">&#39;max_state&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">state</span><span class="p">]</span>
+        <span class="n">data_to_plot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="n">point_size</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">state</span><span class="p">)</span>
+
+    <span class="c1"># Add basemap if requested</span>
+    <span class="k">if</span> <span class="n">use_basemap</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ctx</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">merged_gdf</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">to_string</span><span class="p">(),</span> <span class="n">source</span><span class="o">=</span><span class="n">ctx</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">CartoDB</span><span class="o">.</span><span class="n">Positron</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to load basemap: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Add legend and labels</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Damage State&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Damage States of Buildings&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Longitude&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Latitude&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Show plot</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Example usage</span>
+<span class="n">plot_data</span><span class="p">(</span><span class="n">point_size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">use_basemap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/29283bb580cb196840f468595d554797c256a85b569d195206962fe5f563682f.png" src="../_images/29283bb580cb196840f468595d554797c256a85b569d195206962fe5f563682f.png" />
+</div>
+</div>
+</section>
+<section id="paper-figure">
+<h3>2.6.2 Paper figure<a class="headerlink" href="#paper-figure" title="Permalink to this heading">#</a></h3>
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S2772741623000388-gr4_lrg.jpg" width="700"/></section>
 </section>
 </section>
 
@@ -1428,6 +1608,11 @@ Unzipped folder found in the local cache. Reading from it...
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archetype-mapping">2.5 Archetype mapping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-results">2.6 Plot results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.6.1 Combined building damage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paper-figure">2.6.2 Paper figure</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
