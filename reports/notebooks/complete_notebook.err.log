@@ -20,6 +20,8 @@ warnings.filterwarnings("ignore")
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import geopandas as gpd
+import contextily as ctx
 
 from pyincore import IncoreClient, Dataset, DataService, HazardService, FragilityService, MappingSet, FragilityCurveSet
 from pyincore import HHRSOutputProcess
@@ -38,8 +40,8 @@ from pyincore.analyses.socialvulnerability import SocialVulnerability
 from pyincore.analyses.capitalshocks import CapitalShocks
 
 # Functions for visualizing the population data results as tables
-#from pyincore_viz.analysis.popresultstable import PopResultsTable as poptable
-
+from pyincore_viz.analysis.popresultstable import PopResultsTable as poptable
+from pyincore_viz.geoutil import GeoUtil
 ------------------
 
 

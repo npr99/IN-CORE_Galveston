@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/prerequisites';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Combined building damage" href="multi-hazard_building_damage.html" />
+    <link rel="next" title="3. Electric Power Pole Damage" href="electric_power_pole_damage.html" />
     <link rel="prev" title="Introduction" href="introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -172,7 +172,6 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Prerequisites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi-hazard_building_damage.html">2. Combined building damage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="electric_power_pole_damage.html">3. Electric Power Pole Damage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monte_carlo_sampling.html">4. Monte Carlo sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building_functionality.html">5. Building functionality</a></li>
@@ -481,7 +480,13 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-packages">1.1 Load packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-hazard">1.2 Define hazard</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-inventory">1.3 Define inventory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-inventories">1.3 Define inventories</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buildings">1.3.1 Buildings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-infrastructure">1.3.2 Power infrastructure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transportation-infrastructure">1.3.3 Transportation infrastructure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paper-figure">1.3.4 Paper figure</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -504,6 +509,8 @@ document.write(`
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">contextily</span> <span class="k">as</span> <span class="nn">ctx</span>
 
 <span class="kn">from</span> <span class="nn">pyincore</span> <span class="kn">import</span> <span class="n">IncoreClient</span><span class="p">,</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">DataService</span><span class="p">,</span> <span class="n">HazardService</span><span class="p">,</span> <span class="n">FragilityService</span><span class="p">,</span> <span class="n">MappingSet</span><span class="p">,</span> <span class="n">FragilityCurveSet</span>
 <span class="kn">from</span> <span class="nn">pyincore</span> <span class="kn">import</span> <span class="n">HHRSOutputProcess</span>
@@ -522,7 +529,8 @@ document.write(`
 <span class="kn">from</span> <span class="nn">pyincore.analyses.capitalshocks</span> <span class="kn">import</span> <span class="n">CapitalShocks</span>
 
 <span class="c1"># Functions for visualizing the population data results as tables</span>
-<span class="c1">#from pyincore_viz.analysis.popresultstable import PopResultsTable as poptable</span>
+<span class="kn">from</span> <span class="nn">pyincore_viz.analysis.popresultstable</span> <span class="kn">import</span> <span class="n">PopResultsTable</span> <span class="k">as</span> <span class="n">poptable</span>
+<span class="kn">from</span> <span class="nn">pyincore_viz.geoutil</span> <span class="kn">import</span> <span class="n">GeoUtil</span>
 </pre></div>
 </div>
 </div>
@@ -545,10 +553,27 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">IncoreClient</span><span class="p">()</span>
 <span class="c1"># IN-CORE caches files on the local machine, it might be necessary to clear the memory</span>
-<span class="c1"># client.clear_cache()</span>
+<span class="c1"># client.clear_cache() </span>
 <span class="n">data_service</span> <span class="o">=</span> <span class="n">DataService</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="c1"># create data_service object for loading files</span>
 <span class="n">hazard_service</span> <span class="o">=</span> <span class="n">HazardService</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
 <span class="n">fragility_services</span> <span class="o">=</span> <span class="n">FragilityService</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Connection successful to IN-CORE services. pyIncore version detected: 1.9.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">clear_cache</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Connection successful to IN-CORE services. pyIncore version detected: 1.13.0
 </pre></div>
 </div>
 </div>
@@ -573,8 +598,10 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="define-inventory">
-<h2>1.3 Define inventory<a class="headerlink" href="#define-inventory" title="Permalink to this heading">#</a></h2>
+<section id="define-inventories">
+<h2>1.3 Define inventories<a class="headerlink" href="#define-inventories" title="Permalink to this heading">#</a></h2>
+<section id="buildings">
+<h3>1.3.1 Buildings<a class="headerlink" href="#buildings" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Galveston inventory data</span>
@@ -585,7 +612,43 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+<section id="power-infrastructure">
+<h3>1.3.2 Power infrastructure<a class="headerlink" href="#power-infrastructure" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load shapefile</span>
+<span class="n">shp_power</span> <span class="o">=</span> <span class="s1">&#39;./data/power_network/power_network.shp&#39;</span>
+<span class="c1"># Load the shapefile</span>
+<span class="n">gdf_power</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">shp_power</span><span class="p">)</span>
+<span class="c1"># plot and show</span>
+<span class="n">gdf_power</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="transportation-infrastructure">
+<h3>1.3.3 Transportation infrastructure<a class="headerlink" href="#transportation-infrastructure" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load shapefile</span>
+<span class="n">shp_transportation</span> <span class="o">=</span> <span class="s1">&#39;./data/transportation_network/transportation_network.shp&#39;</span>
+<span class="c1"># Load the shapefile</span>
+<span class="n">gdf_transportation</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">shp_transportation</span><span class="p">)</span>
+<span class="c1"># plot and show</span>
+<span class="n">gdf_transportation</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="paper-figure">
+<h3>1.3.4 Paper figure<a class="headerlink" href="#paper-figure" title="Permalink to this heading">#</a></h3>
 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2772741623000388-gr3_lrg.jpg" width="700"/></section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -628,11 +691,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="multi-hazard_building_damage.html"
+       href="electric_power_pole_damage.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">2. Combined building damage</p>
+        <p class="prev-next-title">3. Electric Power Pole Damage</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -653,7 +716,13 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-packages">1.1 Load packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-hazard">1.2 Define hazard</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-inventory">1.3 Define inventory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-inventories">1.3 Define inventories</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buildings">1.3.1 Buildings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-infrastructure">1.3.2 Power infrastructure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transportation-infrastructure">1.3.3 Transportation infrastructure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paper-figure">1.3.4 Paper figure</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
