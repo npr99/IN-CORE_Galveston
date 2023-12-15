@@ -4,380 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Changing the titles on notebooks.">
-      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/Galveston_Test_2.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/building_functionality.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/capital_shock.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/complete_notebook.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/electric_power_pole_damage.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/housing_household_recovery.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/introduction.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/monte_carlo_sampling.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/multi-hazard_building_damage.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/population_dislocation.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/prerequisites.ipynb" afterDir="false" />
+    <list default="true" id="d93c073b-f129-49a8-89f4-7ef3f8be3b7e" name="Changes" comment="Changing the structure of book and adding new jupyter book of Galveston.">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/infrastructures_recovery_result/final_df_with_building.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/power_network/power_network.cpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/power_network/power_network.dbf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/power_network/power_network.prj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/power_network/power_network.sbn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/power_network/power_network.sbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/power_network/power_network.shp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/power_network/power_network.shx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/transportation_network/transportation_network.cpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/transportation_network/transportation_network.dbf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/transportation_network/transportation_network.prj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/transportation_network/transportation_network.qmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/transportation_network/transportation_network.shp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jupyter_book/notebooks/data/transportation_network/transportation_network.shx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/IN-CORE_Galveston.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IN-CORE_Galveston.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/environment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/environment.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/glue_cache.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/intro.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/intro.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/Galveston_testbed_2022-09-19.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/ReadMe.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/.doctrees/notebooks/ReadMe.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/BridgesDamage_05_18_22_19_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/BridgesDamage_05_18_22_23_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/BridgesDamage_05_18_22_28_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/BuildingDamage_Tori_05_18_22_19_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/BuildingDamage_Tori_05_18_22_22_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/BuildingDamage_Tori_05_18_22_27_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/Galveston_testbed_2022-09-19_117_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/Galveston_testbed_2022-09-19_117_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/Galveston_testbed_2022-09-19_117_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/Galveston_testbed_2022-09-19_125_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/Galveston_testbed_2022-09-19_133_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/Galveston_testbed_2022-09-19_133_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/Galveston_testbed_2022-09-19_133_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/Galveston_testbed_2022-09-19_133_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/Galveston_testbed_2022-09-19_147_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/Galveston_testbed_2022-09-19_44_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/PolesBldgsNearestNeighbor_05_23_22_12_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/PopulationDisAnalysis_05_31_22_21_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/PrestressedPolesDamage_05_23_22_25_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/RoadwaysDamage_05_18_22_18_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/RoadwaysDamage_05_18_22_25_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/SubstationDamage_05_23_22_25_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/TowerDamage_05_23_22_25_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/WoodPolesDamage_05_23_22_31_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/WoodPolesDamage_05_23_22_32_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/WoodPolesDamage_05_23_22_33_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/WoodPolesDamage_05_23_22_34_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/WoodPolesDamage_05_23_22_35_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/WoodPolesDamage_05_23_22_37_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/WoodPolesDamage_05_23_22_38_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_images/WoodPolesDamage_05_23_22_39_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/notebooks/01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/notebooks/02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/notebooks/Galveston_testbed_2022-09-19.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sphinx_design_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/basic.css" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/basic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/check-solid.svg" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/check-solid.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/clipboard.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/clipboard.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/copy-button.svg" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/copy-button.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/copybutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/copybutton.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/copybutton.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/copybutton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/copybutton_funcs.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/copybutton_funcs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/doctools.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/doctools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/documentation_options.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/documentation_options.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/images/logo_binder.svg" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/images/logo_binder.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/images/logo_deepnote.svg" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/images/logo_deepnote.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/images/logo_jupyterhub.svg" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/images/logo_jupyterhub.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/jquery-3.5.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/language_data.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/language_data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ar/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ar/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/bg/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/bg/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/bn/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/bn/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ca/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ca/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/cs/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/cs/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/da/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/da/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/de/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/de/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/el/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/el/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/eo/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/eo/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/es/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/es/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/et/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/et/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/fi/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/fi/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/fr/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/fr/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/hr/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/hr/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/id/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/id/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/it/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/it/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/iw/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/iw/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ja/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ja/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ko/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ko/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/lt/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/lt/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/lv/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/lv/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ml/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ml/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/mr/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/mr/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ms/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ms/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/nl/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/nl/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/no/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/no/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/pl/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/pl/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/pt/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/pt/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ro/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ro/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ru/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ru/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/sk/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/sk/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/sl/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/sl/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/sr/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/sr/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/sv/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/sv/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ta/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ta/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/te/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/te/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/tg/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/tg/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/th/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/th/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/tl/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/tl/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/tr/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/tr/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/uk/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/uk/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ur/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/ur/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/vi/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/vi/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/zh_CN/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/zh_CN/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/zh_TW/LC_MESSAGES/booktheme.po" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/locales/zh_TW/LC_MESSAGES/booktheme.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/mystnb.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/pygments.css" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/pygments.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/sbt-webpack-macros.html" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/sbt-webpack-macros.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/scripts/pydata-sphinx-theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/scripts/pydata-sphinx-theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/scripts/sphinx-book-theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/scripts/sphinx-book-theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/scripts/sphinx-book-theme.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/scripts/sphinx-book-theme.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/searchtools.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/searchtools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/sphinx-thebe.css" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/sphinx-thebe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/sphinx-thebe.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/sphinx-thebe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/styles/pydata-sphinx-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/styles/pydata-sphinx-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/styles/sphinx-book-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/styles/sphinx-book-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/styles/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/styles/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/togglebutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/togglebutton.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/togglebutton.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/togglebutton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/underscore-1.13.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/underscore-1.13.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/underscore.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/underscore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/css/all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-regular-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-regular-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-regular-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_static/webpack-macros.html" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_static/webpack-macros.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/_sources/intro.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/genindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/genindex.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/intro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/Galveston_testbed_2022-09-19.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/ReadMe.html" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/notebooks/ReadMe.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/objects.inv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/objects.inv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/reports/BridgesDamage_05_18_22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/reports/BuildingDamage_Tori_05_18_22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/reports/EPN_NetworkAnalysis_05_23_22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/reports/Galveston_testbed_2022-09-19.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/reports/PolesBldgsNearestNeighbor_05_23_22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/reports/PopulationDisAnalysis_05_31_22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/reports/PrestressedPolesDamage_05_23_22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/reports/RoadwaysDamage_05_18_22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/reports/SubstationDamage_05_23_22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/reports/TowerDamage_05_23_22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/reports/WoodPolesDamage_05_23_22.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jupyter_book/_build/html/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_build/html/searchindex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22_19_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22_22_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22_27_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22_25_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22_25_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22_25_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22_31_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22_32_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22_33_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22_34_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22_35_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22_37_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22_38_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22_39_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22_19_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22_23_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22_28_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22_18_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22_25_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22_12_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22_21_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/Galveston_testbed_2022-09-19.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/Galveston_testbed_2022-09-19.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/Galveston_testbed_2022-09-19_117_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/Galveston_testbed_2022-09-19_117_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/Galveston_testbed_2022-09-19_117_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/Galveston_testbed_2022-09-19_125_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/Galveston_testbed_2022-09-19_133_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/Galveston_testbed_2022-09-19_133_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/Galveston_testbed_2022-09-19_133_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/Galveston_testbed_2022-09-19_133_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/Galveston_testbed_2022-09-19_147_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_build/jupyter_execute/notebooks/Galveston_testbed_2022-09-19_44_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/_toc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/_toc.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Buildings/.ipynb_checkpoints/BuildingDamage_Tori_05_18_22-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Buildings/.ipynb_checkpoints/BuildingDamage_Tori_05_18_22-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Buildings/BuildingDamage_Tori_05_18_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Buildings/BuildingDamage_Tori_Figures.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Buildings/BuildingDamage_Tori_Figures.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Buildings/Figure_Bldg_No1_IkeHindcast.png" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Buildings/Figure_Bldg_No1_IkeHindcast.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Buildings/Figure_Bldg_No2_50yrReturnPeriod.png" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Buildings/Figure_Bldg_No2_50yrReturnPeriod.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Buildings/Figure_Bldg_No3_100yrReturnPeriod.png" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Buildings/Figure_Bldg_No3_100yrReturnPeriod.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Buildings/Figure_Bldg_No4_500yrReturnPeriod.png" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Buildings/Figure_Bldg_No4_500yrReturnPeriod.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power/.ipynb_checkpoints/WoodPolesDamage_05_23_22-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power/.ipynb_checkpoints/WoodPolesDamage_05_23_22-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power/Galv_EPNNodes_DataandHazard_100yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power/Galv_EPNNodes_DataandHazard_100yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power/Galv_EPNNodes_DataandHazard_500yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power/Galv_EPNNodes_DataandHazard_500yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power/Galv_EPNNodes_DataandHazard_50yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power/Galv_EPNNodes_DataandHazard_50yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power/Galv_EPNNodes_DataandHazard_Ike.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power/Galv_EPNNodes_DataandHazard_Ike.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power/Galv_bridge_dataandHazards.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power/Galv_bridge_dataandHazards.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power/WoodPolesDamage_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power/woodpoles_worksheet.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power/woodpoles_worksheet.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power/woodpoles_worksheet.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power/woodpoles_worksheet.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power/worksheet.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power/worksheet.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/.ipynb_checkpoints/PrestressedPolesDamage_05_23_22-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Prestressed poles/.ipynb_checkpoints/PrestressedPolesDamage_05_23_22-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/Galv_PrestressedPoles.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Prestressed poles/Galv_PrestressedPoles.cpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/Galv_PrestressedPoles.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Prestressed poles/Galv_PrestressedPoles.dbf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/Galv_PrestressedPoles.prj" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Prestressed poles/Galv_PrestressedPoles.prj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/Galv_PrestressedPoles.qmd" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Prestressed poles/Galv_PrestressedPoles.qmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/Galv_PrestressedPoles.shp" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Prestressed poles/Galv_PrestressedPoles.shp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/Galv_PrestressedPoles.shx" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Prestressed poles/Galv_PrestressedPoles.shx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPolesDamage_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPoles_100yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPoles_100yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPoles_500yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPoles_500yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPoles_50yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPoles_50yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPoles_Ike.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Prestressed poles/PrestressedPoles_Ike.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/.ipynb_checkpoints/SubstationDamage_05_23_22-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Substations/.ipynb_checkpoints/SubstationDamage_05_23_22-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/Galv_Substations.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Substations/Galv_Substations.cpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/Galv_Substations.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Substations/Galv_Substations.dbf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/Galv_Substations.prj" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Substations/Galv_Substations.prj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/Galv_Substations.qmd" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Substations/Galv_Substations.qmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/Galv_Substations.shp" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Substations/Galv_Substations.shp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/Galv_Substations.shx" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Substations/Galv_Substations.shx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Substations/SubstationDamage_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/Substations_100yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Substations/Substations_100yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/Substations_500yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Substations/Substations_500yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/Substations_50yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Substations/Substations_50yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Substations/Substations_Ike.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Substations/Substations_Ike.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/.ipynb_checkpoints/TowerDamage_05_23_22-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Towers/.ipynb_checkpoints/TowerDamage_05_23_22-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/Galv_Towers.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Towers/Galv_Towers.cpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/Galv_Towers.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Towers/Galv_Towers.dbf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/Galv_Towers.prj" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Towers/Galv_Towers.prj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/Galv_Towers.qmd" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Towers/Galv_Towers.qmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/Galv_Towers.shp" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Towers/Galv_Towers.shp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/Galv_Towers.shx" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Towers/Galv_Towers.shx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Towers/TowerDamage_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/Towers_100yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Towers/Towers_100yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/Towers_500yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Towers/Towers_500yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/Towers_50yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Towers/Towers_50yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_Towers/Towers_Ike.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_Towers/Towers_Ike.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/.ipynb_checkpoints/WoodPolesDamage_05_23_22-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_WoodPoles/.ipynb_checkpoints/WoodPolesDamage_05_23_22-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/Galv_WoodPoles.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_WoodPoles/Galv_WoodPoles.cpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/Galv_WoodPoles.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_WoodPoles/Galv_WoodPoles.dbf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/Galv_WoodPoles.prj" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_WoodPoles/Galv_WoodPoles.prj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/Galv_WoodPoles.qmd" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_WoodPoles/Galv_WoodPoles.qmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/Galv_WoodPoles.shp" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_WoodPoles/Galv_WoodPoles.shp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/Galv_WoodPoles.shx" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_WoodPoles/Galv_WoodPoles.shx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_WoodPoles/WoodPolesDamage_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/WoodPoles_100yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_WoodPoles/WoodPoles_100yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/WoodPoles_500yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_WoodPoles/WoodPoles_500yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/WoodPoles_50yr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_WoodPoles/WoodPoles_50yr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Electric Power_WoodPoles/WoodPoles_Ike.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Electric Power_WoodPoles/WoodPoles_Ike.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Bridges/.ipynb_checkpoints/BridgesDamage_05_18_22-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Bridges/.ipynb_checkpoints/BridgesDamage_05_18_22-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Bridges/BridgeDamage_Figures.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Bridges/BridgeDamage_Figures.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Bridges/BridgesDamage_05_18_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Bridges/Figure_Brdg_No1_IkeHindcast.png" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Bridges/Figure_Brdg_No1_IkeHindcast.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Bridges/Figure_Brdg_No2_50yrReturnPeriod.png" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Bridges/Figure_Brdg_No2_50yrReturnPeriod.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Bridges/Figure_Brdg_No3_100yrReturnPeriod.png" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Bridges/Figure_Brdg_No3_100yrReturnPeriod.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Bridges/Figure_Brdg_No4_500yrReturnPeriod.png" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Bridges/Figure_Brdg_No4_500yrReturnPeriod.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Roadways/.ipynb_checkpoints/RoadwaysDamage_05_18_22-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Roadways/.ipynb_checkpoints/RoadwaysDamage_05_18_22-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Roadways/Figure_Road_No1_IkeHindcast.png" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Roadways/Figure_Road_No1_IkeHindcast.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Roadways/Figure_Road_No2_50yrReturnPeriod.png" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Roadways/Figure_Road_No2_50yrReturnPeriod.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Roadways/Figure_Road_No3_100yrReturnPeriod.png" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Roadways/Figure_Road_No3_100yrReturnPeriod.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Roadways/Figure_Road_No4_500yrReturnPeriod.png" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Roadways/Figure_Road_No4_500yrReturnPeriod.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Roadways/RoadwayDamage_Figures.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Roadways/RoadwayDamage_Figures.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/01_Damage_Transportation_Roadways/RoadwaysDamage_05_18_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/.ipynb_checkpoints/EPN_NetworkAnalysis_05_23_22-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/.ipynb_checkpoints/EPN_NetworkAnalysis_05_23_22-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/EPN_NetworkAnalysis_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/GalvRoadData.CSV" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/GalvRoadData.CSV" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/Galv_DistributionNetwork.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/Galv_DistributionNetwork.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/Galv_EPN_poles_result_hurNo1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/Galv_EPN_poles_result_hurNo1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/Galv_EPN_prestressedpoles_result_hurNo1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/Galv_EPN_prestressedpoles_result_hurNo1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/Galv_EPN_substations_result_hurNo1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/Galv_EPN_substations_result_hurNo1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/Galv_EPN_towers_result_hurNo1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/Galv_EPN_towers_result_hurNo1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/Galv_EPN_woodpoles_result_hurNo1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/Galv_EPN_woodpoles_result_hurNo1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/Galv_TransmissionNetwork.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/Galv_TransmissionNetwork.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/Galv_UndergroundNetwork.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/Galv_UndergroundNetwork.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/closest_poles_to_bldgs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/closest_poles_to_bldgs.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/galveston-pop-disl-results_hurNo1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/galveston-pop-disl-results_hurNo1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/02_Damage_EPNAnalysis/housing_recovery_result_hurNo1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/02_Damage_EPNAnalysis/housing_recovery_result_hurNo1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/.ipynb_checkpoints/PolesBldgsNearestNeighbor_05_23_22-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/.ipynb_checkpoints/PolesBldgsNearestNeighbor_05_23_22-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_PrestressedPoles.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_PrestressedPoles.cpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_PrestressedPoles.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_PrestressedPoles.dbf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_PrestressedPoles.prj" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_PrestressedPoles.prj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_PrestressedPoles.qmd" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_PrestressedPoles.qmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_PrestressedPoles.shp" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_PrestressedPoles.shp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_PrestressedPoles.shx" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_PrestressedPoles.shx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_WoodPoles.cpg" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_WoodPoles.cpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_WoodPoles.dbf" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_WoodPoles.dbf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_WoodPoles.prj" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_WoodPoles.prj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_WoodPoles.qmd" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_WoodPoles.qmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_WoodPoles.shp" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_WoodPoles.shp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_WoodPoles.shx" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/Galv_WoodPoles.shx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/PolesBldgsNearestNeighbor_05_23_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/file_name.json" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/file_name.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/output/closest_poles_to_bldgs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/output/closest_poles_to_bldgs.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/sample.json" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/sample.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/test2.json" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_AdditionalNotebooks/Nearest neighbor analysis_Poles and Buildings/test2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_Social_PopulationDislocationAnalysis/.ipynb_checkpoints/PopulationDisAnalysis_05_31_22-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_Social_PopulationDislocationAnalysis/.ipynb_checkpoints/PopulationDisAnalysis_05_31_22-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_Social_PopulationDislocationAnalysis/BlockGroupData/BlockGroupData_Galveston.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_Social_PopulationDislocationAnalysis/BlockGroupData/BlockGroupData_Galveston.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_Social_PopulationDislocationAnalysis/Galveston_HUA_1238.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_Social_PopulationDislocationAnalysis/Galveston_HUA_1238.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_Social_PopulationDislocationAnalysis/Galveston_HUA_1238buildings.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_Social_PopulationDislocationAnalysis/Galveston_HUA_1238buildings.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_Social_PopulationDislocationAnalysis/Galveston_bldg_dmg_result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_Social_PopulationDislocationAnalysis/Galveston_bldg_dmg_result.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_Social_PopulationDislocationAnalysis/Galveston_bldg_dmg_result_additional_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_Social_PopulationDislocationAnalysis/Galveston_bldg_dmg_result_additional_info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_Social_PopulationDislocationAnalysis/PopulationDisAnalysis_05_31_22.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/03_Social_PopulationDislocationAnalysis/galveston-pop-disl-results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/03_Social_PopulationDislocationAnalysis/galveston-pop-disl-results.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/Galveston_Test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/Galveston_Test_1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/Galveston_testbed_2022-09-19.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/Galveston_testbed_2022-09-19.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/intro.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/Galveston_Test_1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/Galveston_Test_2.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/complete_notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/complete_notebook.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/Galveston_testbed_2022-09-19.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/extra_notebooks/Galveston_testbed_2022-09-19.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/introduction.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/introduction.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/multi-hazard_building_damage.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/multi-hazard_building_damage.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/population_dislocation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/population_dislocation.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter_book/notebooks/prerequisites.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter_book/notebooks/prerequisites.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -426,21 +89,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "kooshan__main",
-    "last_opened_file_path": "C:/Users/ka50/Box/Rice/Software_Projects/Pycharm/Galveston_IN-CORE/jupyter_book/notebooks",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;kooshan__main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ka50/Box/Rice/Software_Projects/Pycharm/Galveston_IN-CORE/jupyter_book/notebooks&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ka50\Box\Rice\Software_Projects\Pycharm\Galveston_IN-CORE\jupyter_book\notebooks" />
@@ -503,6 +166,7 @@
       <workItem from="1697659881326" duration="11010000" />
       <workItem from="1698443827051" duration="51000" />
       <workItem from="1698448122470" duration="864000" />
+      <workItem from="1702507267088" duration="10655000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Jupyter Book.">
       <created>1673531499662</created>
@@ -665,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697734587946</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Changing the structure of book and adding new jupyter book of Galveston.">
+      <created>1702364257899</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1702364257899</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -698,6 +369,7 @@
     <MESSAGE value="Some modifications + changing logo." />
     <MESSAGE value="Some modifications + editing &quot;pole-building&quot; assignment notebook." />
     <MESSAGE value="Some modifications." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some modifications." />
+    <MESSAGE value="Changing the structure of book and adding new jupyter book of Galveston." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing the structure of book and adding new jupyter book of Galveston." />
   </component>
 </project>

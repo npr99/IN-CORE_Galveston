@@ -1,0 +1,101 @@
+# Good gitignore examples
+# https://github.com/gboeing/osmnx/blob/main/.gitignore
+
+# Git can ignore folders with a specific format
+# Ignore all folders called output
+###################
+**/[Oo]utput/**
+
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+.vscode/
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyInstaller
+*.manifest
+*.spec
+
+# pytest
+.cache
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# Jupyter Book build output
+_build/
+_build/html/
+_build/latex/
+_build/doctrees/
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Private keys
+*.pem
+
+# Others
+*.log
+*.sqlite
+
+# Directories potentially created by Jupyter
+.notebooks
+
+# IntelliJ IDEA / PyCharm (JetBrains)
+.idea/
